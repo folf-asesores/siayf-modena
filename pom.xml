@@ -10,7 +10,7 @@
     <!-- The Basics -->
     <groupId>mx.com.folfasesores</groupId>
     <artifactId>folf-modena-saludtlax</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.7-SNAPSHOT</version>
     <packaging>jar</packaging>
     <dependencies>
         <!-- JSF -->
@@ -77,7 +77,7 @@
         <name>FOLF Asesores</name>
         <url>folfasesores.com.mx</url>
     </organization>
-        <developers>
+    <developers>
         <developer>
             <id>neo_cs</id>
             <name>Freddy Barrera</name>
@@ -87,4 +87,12 @@
             </roles>
         </developer>
     </developers>
+    
+    <!-- Environment Settings -->
+    <scm>
+        <connection>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</connection>
+        <url>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</url>
+        <developerConnection>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</developerConnection>
+    </scm>
 </project>
+
