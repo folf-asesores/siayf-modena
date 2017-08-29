@@ -10,7 +10,7 @@
     <!-- The Basics -->
     <groupId>mx.com.folfasesores</groupId>
     <artifactId>folf-modena-saludtlax</artifactId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>0.0.7</version>
     <packaging>jar</packaging>
     <dependencies>
         <!-- JSF -->
@@ -98,6 +98,7 @@
         <connection>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</connection>
         <url>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</url>
         <developerConnection>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</developerConnection>
-    </scm>
+      <tag>folf-modena-saludtlax-0.0.7</tag>
+  </scm>
 </project>
 
