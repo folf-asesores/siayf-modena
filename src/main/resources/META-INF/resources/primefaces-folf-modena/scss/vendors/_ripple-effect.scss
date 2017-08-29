@@ -1,0 +1,44 @@
+.ripplelink {
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	@include transition(all 0.2s ease);
+	z-index: 0;
+}
+
+.ink {
+	display: block;
+	position: absolute;
+	background: rgba(white, 0.4);
+	@include border-radius(100%, 100%);
+	@include transform(scale(0));
+}
+
+.animate {
+	animation: ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes ripple {
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes ripple {
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes ripple {
+	100% {
+		opacity: 0;
+		@include transform( scale(2.5));
+	}
+}

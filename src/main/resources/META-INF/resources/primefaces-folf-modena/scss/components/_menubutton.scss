@@ -1,0 +1,12 @@
+///
+/// _menubutton.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente "MenuButton".
+///
+
+.ui-menubutton .ui-icon-triangle-1-s:before {
+    content: map-get($ui-icons, 'carat-1-s');
+}

@@ -1,0 +1,15 @@
+/*Style For UI ToolBar --------------------------------------------------------------------------------------*/
+.ui-toolbar {
+  border: solid 1px #e0e0e0;
+  background-color: #ffffff;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  padding: 10px !important;
+}
+
+/* Style For Toolbar Seperator --------------------------------------------------------------------------------------*/
+.ui-toolbar .ui-separator {
+  padding: 0px 5px;
+  border-bottom: 0px none;
+}

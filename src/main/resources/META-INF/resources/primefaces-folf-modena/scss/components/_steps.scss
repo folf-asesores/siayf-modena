@@ -1,0 +1,37 @@
+/*Style For UI Steps --------------------------------------------------------------------------------------*/
+
+.ui-steps {
+    min-height: 50px;
+    margin-top: 50px;
+    
+    ul { @include display-flex(); }
+    
+    .ui-steps-title {
+        flex: auto;
+        margin: 0px 10px;
+        color: get-theme-color('primary-color-light');
+    }
+
+    .ui-steps-item {
+        background-color: get-theme-color('primary-color-dark');
+        margin-right: 1px;
+        
+        .ui-menuitem-link {
+            height: 10px;
+            padding: 0px 10px !important;
+        }
+        
+        .ui-steps-number {
+            display: inline-block;
+            margin-top: -30px;
+            height: auto !important;
+            padding: 5px 7px !important;
+            font-size: 20px;
+            color: get-theme-color('primary-color-text');
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            background-color: get-theme-color('accent-color') !important;
+        }
+    }
+}

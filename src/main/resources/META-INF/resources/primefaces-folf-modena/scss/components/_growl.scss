@@ -1,0 +1,94 @@
+///
+/// _growl.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo define los estilos para la UI del componente Growl.
+///
+
+
+.ui-growl {
+    width: 315px !important;
+    right: 25px !important;
+    top: 25px !important;
+}
+
+.ui-growl-item-container {
+    @include opacity(0.9);
+}
+
+.ui-growl-item {
+    @include border-radius(2px);
+    padding: 20px 20px !important;
+    background-color: $md-color-white;
+}
+
+.ui-growl-message {
+    width: 220px !important;
+    font-size: 16px !important;
+    line-height: 16px !important;
+    font-family: get-font-family('body');
+}
+
+.ui-growl-image {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.ui-growl-image-info {
+    background-image: $url-icon-warn-blue !important;
+    background-position: center !important;
+    background-size: 140% !important;
+    margin-top: 5px;
+    
+    & + .ui-growl-message {
+        color: get-color-indicativo('color-informacion') !important;
+    }
+}
+
+.ui-growl-image-warn {
+    background-image: $url-icon-warn-hardal !important;
+    background-position: center !important;
+    background-size: 140% !important;
+    margin-top: 5px;
+    
+    & + .ui-growl-message {
+        color: get-color-indicativo('color-advertencia') !important;
+    }
+}
+
+.ui-growl-image-error {
+    background-image: $url-icon-warn-pink !important;
+    background-position: center !important;
+    background-size: 140% !important;
+    margin-top: 5px;
+
+    & + .ui-growl-message {
+        color: get-color-indicativo('color-error') !important;
+    }
+}
+
+.ui-growl-image-fatal {
+    background-image: $url-icon-warn-red !important;
+    background-position: center !important;
+    background-size: 140% !important;
+    margin-top: 5px;
+    
+    & + .ui-growl-message {
+        color: get-color-indicativo('color-peligro') !important;
+    }
+}
+
+.ui-growl-icon-close {
+    width: 12px !important;
+    height: 12px !important;
+    background-image: $url-icon-delete-pink !important;
+    background-position: center !important;
+    background-size: 130% !important;
+    
+    &.ui-icon.ui-icon-closethick {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+    }
+}

@@ -1,0 +1,39 @@
+/*Style For Keypad --------------------------------------------------------------------------------------*/
+#keypad-div {
+  background-color: #ffffff;
+  padding: 15px !important;
+  border-radius: 2px;
+}
+#keypad-div .keypad-row button {
+  font-family: get-font-family('body');
+  font-size: 14px;
+  padding: 2px 3px;
+  border: solid 1px #546e7a;
+  background-color: #546e7a;
+  color: #ffffff;
+}
+#keypad-div .keypad-row button.ui-state-hover {
+  background-color: #03a9f4;
+  color: #f6fafc;
+  border: solid 1px #03a9f4;
+}
+#keypad-div .keypad-row button.keypad-close {
+  background-color: #ce2246;
+  color: #ffffff;
+  border: solid 1px #ce2246;
+}
+#keypad-div .keypad-row button.keypad-back {
+  background-color: #1c75bc;
+  color: #ffffff;
+  border: solid 1px #1c75bc;
+}
+#keypad-div .keypad-row button.keypad-clear {
+  background-color: #fbb040;
+  color: #ffffff;
+  border: solid 1px #fbb040;
+}
+#keypad-div .keypad-row button.keypad-shift {
+  background-color: #2bb673;
+  color: #ffffff;
+  border: solid 1px #2bb673;
+}

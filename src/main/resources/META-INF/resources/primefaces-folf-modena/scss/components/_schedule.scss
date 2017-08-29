@@ -1,0 +1,331 @@
+/*Style For Schedule (5.1) --------------------------------------------------------------------------------------*/
+.fc {
+  border: solid 1px #d1d3d4;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #FBFCFD;
+  color: #778D9B;
+}
+.fc-header {
+  background-color: #19a69a;
+  font-family: get-font-family('body');
+  border-top-left-radius: 1px !important;
+  border-top-right-radius: 1px !important;
+  -webkit-border-top-left-radius: 1px !important;
+  -webkit-border-top-right-radius: 1px !important;
+  -moz-border-top-left-radius: 1px !important;
+  -moz-border-top-right-radius: 1px !important;
+}
+.fc-header-center {
+  font-family: get-font-family('body') !important;
+}
+.fc-header-left {
+  width: 30%;
+}
+.fc-header-right {
+  width: 30%;
+}
+.fc-header tbody tr td {
+  vertical-align: middle;
+  padding: 3.5% 1.5%;
+}
+.fc-header tbody tr td .fc-button {
+  margin: 0px 2px !important;
+  font-size: 16px;
+  overflow: hidden;
+  height: auto !important;
+  color: #FFFFFF;
+  padding: 2px 3px !important;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border: solid 1px transparent;
+  font-family: get-font-family('body');
+}
+.fc-header tbody tr td .ui-state-hover,
+.fc-header tbody tr td .ui-state-active {
+  color: #FFFFFF;
+  background-repeat: no-repeat;
+  border-bottom: solid 1px #FFFFFF;
+}
+.fc-header tbody tr td .fc-button .fc-icon-wrap .ui-icon {
+  margin: 5px;
+}
+.fc-header tbody tr td .fc-button-next .fc-icon-wrap .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 130%;
+}
+.fc-header tbody tr td .fc-button-prev .fc-icon-wrap .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/left-one-arrow-for-data.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 130%;
+}
+.fc-header tbody tr td span h2 {
+  font-size: 26px;
+  margin: 0px;
+  color: #FFFFFF;
+  font-family: get-font-family('body'); font-weight: lighter;
+  font-weight: normal;
+}
+.fc-content {
+  padding: 0px;
+}
+.fc-content .fc-event {
+  background-color: #9bce5f;
+  border: solid 1px #9bce5f;
+}
+.fc-content .fc-event .fc-event-inner {
+  margin: 3px;
+}
+.fc-content .fc-view-month table {
+  border-collapse: inherit;
+  border-spacing: 0px;
+}
+.fc-content table thead tr th {
+  background-color: #00897b;
+  color: #7eccc5;
+  border-collapse: separate;
+  padding: 10px;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  font-family: get-font-family('body');
+  font-weight: normal;
+}
+.fc-content table thead tr .fc-sun,
+.fc-content table thead tr .fc-sat {
+  background-color: #009183;
+}
+.fc-content table tbody tr td {
+  border: solid 1px #e5ebf0;
+  color: #546E7A;
+  border-collapse: separate;
+  padding: 2px;
+  border-radius: 2px !important;
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 3px !important;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-top-width: 1px !important;
+}
+.fc-content .fc-view-month .ui-state-highlight {
+  border-color: #19a69a;
+}
+.fc-content .fc-view-agendaWeek .ui-state-highlight {
+  background-color: #e0e0e0;
+  color: #e0e0e0;
+}
+.fc-agenda-slots tbody tr .ui-widget-header,
+.fc-agenda-allday tbody tr .ui-widget-header {
+  color: #778D9B !important;
+}
+/*Style For Schedule (V. 5.1.12 +) --------------------------------------------------------------------------------------*/
+.fc {
+  border: solid 1px #E0E0E0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #546e7a;
+  font-family: get-font-family('body');
+}
+.fc-toolbar {
+  background-color: #26a69a;
+  padding: 3% 1.5%;
+  margin: 0px !important;
+  border-top-left-radius: 1px !important;
+  border-top-right-radius: 1px !important;
+  -webkit-border-top-left-radius: 1px !important;
+  -webkit-border-top-right-radius: 1px !important;
+  -moz-border-top-left-radius: 1px !important;
+  -moz-border-top-right-radius: 1px !important;
+}
+.fc-toolbar button {
+  border: solid 1px #26a69a;
+  background-color: #26a69a;
+  color: #ffffff;
+  border-radius: 0px !important;
+  font-family: get-font-family('body'); font-weight: lighter;
+  padding: 3px 5px !important;
+  font-size: 16px;
+}
+.fc-toolbar button.ui-state-hover {
+  background-color: #26a69a;
+}
+.fc-toolbar .fc-prev-button .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/left-one-arrow-for-data.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 22px;
+  height: 22px;
+}
+.fc-toolbar .fc-next-button .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 22px;
+  height: 22px;
+}
+.fc-toolbar .fc-button-group button {
+  margin: 0px 1px 1px 0px;
+}
+.fc-toolbar .ui-state-active,
+.fc-toolbar .ui-state-hover {
+  color: #ffffff;
+  border-bottom: solid 1px #ffffff;
+}
+.fc-center {
+  color: #ffffff;
+  font-size: 16px !important;
+  font-family: get-font-family('body'); font-weight: lighter;
+  font-weight: lighter;
+}
+.fc-center h2 {
+  font-weight: normal !important;
+}
+.fc-basic-view td.fc-week-number span,
+.fc-basic-view td.fc-day-number {
+  padding-right: 15px;
+  padding-top: 7px !important;
+}
+.fc-day-grid .fc-week {
+  border-right: solid 1px transparent !important;
+}
+.fc-view-container {
+  padding: 0px;
+}
+.fc-view-container .fc-month-view > table {
+  border-spacing: 0px !important;
+}
+.fc-view-container .fc-month-view > table > thead {
+  background-color: #00897b;
+  border-spacing: 0px;
+}
+.fc-agendaWeek-view .ui-widget-header {
+  border-width: 0px;
+}
+.fc-agendaDay-view .ui-widget-header {
+  border-width: 0px;
+}
+.fc-view-container .fc-month-view > table > thead > tr > td {
+  border-width: 0px;
+}
+.fc-view-container .fc-event {
+  background-color: #9ccc65;
+  border: solid 1px #9ccc65;
+}
+.fc-view-container .fc-event .fc-event-inner {
+  margin: 3px;
+}
+.fc-view-container .fc-month-view table {
+  border-collapse: inherit;
+  border-spacing: 1px;
+}
+.fc-view-container table thead tr th {
+  background-color: #00897b;
+  color: #80cbc4;
+  border-collapse: separate;
+  padding: 15px 0px;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border: 0px;
+  font-family: get-font-family('body'); font-weight: lighter;
+  font-weight: normal;
+}
+.fc-view-container table thead tr .fc-sun,
+.fc-view-container table thead tr .fc-sat {
+  background-color: #069183;
+}
+.fc-view-container .fc-content-skeleton table thead tr .fc-sun,
+.fc-view-container .fc-content-skeleton table thead tr .fc-sat {
+  background-color: transparent;
+  font-family: get-font-family('body');
+}
+.fc-view-container table tbody tr .fc-day {
+  border: solid 1px #f5f5f5 !important;
+  color: #546e7a;
+  border-collapse: separate;
+  padding: 5px;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-top-width: 1px !important;
+  font-family: get-font-family('body');
+  font-weight: normal;
+}
+.fc-view-container .fc-month-view table tbody tr .fc-day:hover {
+  border-color: #26a69a !important;
+  color: #26a69a;
+}
+.fc-view-container .fc-month-view .fc-bg table tbody tr .fc-today {
+  border-color: #26a69a !important;
+  color: #26a69a;
+}
+.fc-view-container .fc-agendaWeek-view .fc-bg table tbody tr .fc-today {
+  background-color: #e0e0e0;
+  color: #26a69a;
+}
+.fc-view-container table tbody tr > .ui-widget-content {
+  border-width: 0px;
+}
+.fc-slats table tbody tr td {
+  border-width: 1px !important;
+  border-color: #e5ebf0;
+}
+.fc-agenda-slots tbody tr .ui-widget-header,
+.fc-agenda-allday tbody tr .ui-widget-header {
+  color: #778d9b !important;
+}
+.fc-daygrid .fc-row {
+  border-right: 0px !important;
+}
+hr.ui-widget-header {
+  background-color: #E5EBF0;
+  border-width: 0px;
+}
+.fc-more-cell .fc-more {
+  color: #27aae1;
+  text-decoration: underline;
+}
+.fc-popover {
+  border: solid 1px #d1d3d4;
+  background-color: #fbfcfd;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.fc-popover .fc-header {
+  padding: 5px 7px !important;
+  color: #778d9b;
+}
+.fc-popover .fc-header .fc-close {
+  background-image: url("/modena/javax.faces.resource/images/delete-gray.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

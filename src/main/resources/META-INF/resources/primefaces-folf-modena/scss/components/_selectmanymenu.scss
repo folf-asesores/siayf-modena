@@ -1,0 +1,88 @@
+///
+/// _selectmanymenu.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente 
+/// "SelectManyMenu".
+///
+
+.ui-selectmanymenu {
+	background-color: $md-color-white;
+	color: get-theme-color('secondary-text-color');
+	padding: 0px !important;
+	font-family: get-font-family('body');
+	border-radius: 2px !important;
+	border: solid 1px $md-color-grey-300;
+	font-size: 14px;
+	height: auto;
+
+    .ui-state-hover {
+        background-color: $md-color-grey-100 !important;
+        color: get-theme-color('accent-color');
+    }
+
+    .ui-state-highlight {
+		background-color: $md-color-grey-100 !important;
+		color: get-theme-color('primary-color');
+		border-radius: 0px !important;
+    }
+
+    .ui-selectlistbox-item {
+		padding: 10px 14px;
+		margin: 0px !important;
+		display: block;
+		border-radius: 0px;
+		
+		&.ui-state-hover td{
+            color: get-theme-color('accent-color');
+		}
+        
+        &.ui-state-highlight td {
+            color: get-theme-color('primary-color');
+        }
+        
+        .ui-chkbox {
+            float: left;
+            margin-top: -2px;
+        }
+    }
+    
+    table.ui-selectlistbox-list td {
+        @media screen and (min-width: 0\0) {
+            padding: 10px 7px !important;
+        }
+    }
+
+    tr.ui-selectlistbox-item {
+        @media screen and (min-width: 0\0) {
+            padding: 0px !important;
+        }
+        
+	    td .ui-chkbox {
+	        float: left;
+	        margin-top: 2px !important;
+	    }
+    }
+
+    .ui-selectlistbox-filter-container {
+        .ui-icon-search {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            width: 30px;
+            height: 30px;
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: put-image-theme-url('search-icon.svg');
+            left: 13px;
+            top: 16px;
+        }
+
+        .ui-inputfield {
+            width: 70%;
+            padding-left: 30px !important;
+        }
+    } 
+}

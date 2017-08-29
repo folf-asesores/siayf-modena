@@ -1,0 +1,136 @@
+///
+/// _theme.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo importa de manera ordenada los archivos parciales necesarios 
+/// para la plantilla y el tema.
+///
+
+///
+/// Es un conjuto de utilidades para Sass.
+///
+@import "compass";
+
+///
+/// Bibliotecas de terceros.
+/// Son las bibliotecas externas al proyecto así como frameworks de terceros.
+///
+@import "vendors/normalize";
+@import "vendors/ripple-effect";
+@import "vendors/perfect-scrollbar.min";
+@import "vendors/material-design-palette";
+
+///
+/// Utilidades
+/// Son las bibliotecas propias con utilidades de apoyo como funciones, mixins 
+/// y además incluye el archivo de configuración.
+///
+@import "util/variables";
+
+ $fm-theme-active : 'salud-tlax';
+
+$fm-colores-indicativos : (
+    'color-informacion' : $md-color-blue,
+    'color-exitoso'     : rgb(76, 175, 80),
+    'color-advertencia' : $md-color-amber-a400,
+    'color-error'       : $md-color-red-400,
+    'color-peligro'     : $md-color-red-900,
+    'color-cerrar'      : rgb(239, 83, 80),
+);
+
+@import "util/mixins";
+@import "util/functions";
+@import "util/helpers";
+
+///
+/// Reset
+/// Contiene los estilos que tendrán por defecto el sistema. 
+///
+@import "base/base";
+@import "base/core";
+@import "base/typography";
+
+///
+/// Layout
+/// Contiene los estilos para la dispoción de la aplicación. 
+///
+@import "layout/principal/header";
+@import "layout/principal/nav";
+@import "layout/principal/main";
+@import "layout/principal/footer";
+@import "layout/secundario/header";
+@import "layout/secundario/sidebar";
+@import "layout/secundario/main";
+@import "layout/secundario/footer";
+@import "layout/miniform/miniform";
+@import "layout/asistente/asistente";
+
+///
+/// Componentes UI
+/// Contiene el estilo de los componentes de PrimeFaces, que mejor dicho, son 
+/// los componentes implementados de la biblioteca de jQuery UI.
+///
+@import "components/core";
+@import "components/icon";
+@import "components/breadcrumb";
+@import "components/datatable";
+@import "components/datagrid";
+@import "components/datalist";
+@import "components/paginator";
+@import "components/picklist";
+@import "components/orderlist";
+@import "components/carousel";
+@import "components/schedule";
+@import "components/tree";
+@import "components/accordion";
+@import "components/panelgrid";
+@import "components/scrollpanel";
+@import "components/toolbar";
+@import "components/notificationbar";
+@import "components/tabs";
+@import "components/dashboard";
+@import "components/dialog";
+@import "components/fieldset";
+@import "components/inputfield";
+@import "components/button";
+@import "components/menu";
+@import "components/messages";
+@import "components/panel";
+@import "components/selectonemenu";
+@import "components/selectcheckboxmenu";
+@import "components/growl";
+@import "components/log";
+@import "components/checkbox";
+@import "components/radiobutton";
+@import "components/separator";
+@import "components/keypad";
+@import "components/passwordpanel";
+@import "components/inputswitch";
+@import "components/selectonelistbox";
+@import "components/selectmanymenu";
+@import "components/slider";
+@import "components/rating";
+@import "components/spinner";
+@import "components/datepicker";
+@import "components/tooltip";
+@import "components/link";
+@import "components/editor";
+@import "components/galleria";
+@import "components/progressbar";
+@import "components/clock";
+@import "components/autocomplete";
+@import "components/multiselectlistbox";
+@import "components/terminal";
+@import "components/menubutton";
+@import "components/jqplotchart";
+@import "components/fileupload";
+@import "components/steps";
+@import "components/tagcloud";
+@import "components/inplace";
+@import "components/datascroller";
+@import "components/layout";
+@import "components/wizard";
+@import "components/focus";
+@import "components/fluid";

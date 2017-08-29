@@ -1,0 +1,42 @@
+///
+/// _base.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial contiene los estilos que tendrán por defecto el sistema.
+///
+
+//urls
+$url_imagen_fondo: put-image-url('fondo-contenido.svg');
+
+@-ms-viewport {
+    width: device-width;
+}
+
+html {
+    @include box-sizing(border-box);
+    min-height: 100%;
+}
+
+body {
+    @include box-sizing(border-box);
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: get-layout-color('background') $url_imagen_fondo no-repeat
+        fixed bottom left;
+    background-size: 100%;
+
+    @include desde(large){
+       background-size: 60%;
+    }
+}
+
+///
+/// Añade un espacio de 5px entre el contenido y el borde de las celdas de 
+/// encabezado y las celdas de datos de una tabla, esto afecta a los Panel 
+/// (excepto a los que usan Grid como layout). 
+th, td {
+    padding: 5px;
+}

@@ -1,0 +1,20 @@
+///
+/// _header.scss
+/// Creado el Mar 10, 2015, 10:00:20 AM
+/// @author Freddy Barrera
+///
+/// Este archivo parcial define las características especificas del header de la
+/// plantilla secundaria. Las características comunes entre la plantilla 
+/// principal y la secundaria se definen en el archivo parcial _header.scss de 
+/// la plantilla principal.
+///
+
+#plantilla-secundaria{
+	
+    ///
+    /// Este estilo hace que el botón cerrar no se mueva de posición.
+    #principal-encabezado #principal-menu-movil 
+    #principal-movil-menu-boton.cerrar-menu {
+        margin-top: 0;
+    }
+}

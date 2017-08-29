@@ -1,0 +1,14 @@
+/*Style For UI Tooltip --------------------------------------------------------------------------------------*/
+.ui-tooltip {
+    background-color: get-theme-color('primary-text-color');
+    color: $md-color-white;
+    border-top-left-radius: 0px;
+    padding: 5px !important;
+  
+    .ui-state-error {
+	  background-color: get-color-indicativo('color-error');
+	  color: $md-color-white;
+	  border-top-left-radius: 0px;
+	  padding: 5px !important;
+	}
+}

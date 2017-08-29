@@ -1,0 +1,231 @@
+///
+/// _button.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI de los componentes 
+/// "Button", "SplitButton" y "Button Sets".
+///
+
+//@extend-elements
+//original selectors
+//.ui-selectonebutton, .ui-selectmanybutton
+%extend_button_1 {
+    @include border-radius(2px !important);
+    border: solid 1px get-theme-color('primary-color');
+    padding: 0 !important;
+}
+
+//original selectors
+//.ui-selectonebutton .ui-button, 
+//.ui-selectonebutton .ui-button .ui-button-text, 
+//.ui-selectmanybutton .ui-button, 
+//.ui-selectmanybutton .ui-button .ui-button-text
+%extend_button_2 {
+    @include border-radius(0 !important);
+}
+
+//original selectors
+//.ui-selectonebutton .ui-button.ui-corner-left, 
+//.ui-selectonebutton .ui-button.ui-corner-left .ui-button-text,
+//.ui-selectmanybutton .ui-button.ui-corner-left, 
+//.ui-selectmanybutton .ui-button.ui-corner-left .ui-button-text
+%extend_button_3 {
+    @include border-top-left-radius(2px !important);
+    @include border-bottom-left-radius(2px !important);
+}
+
+//original selectors
+//.ui-selectonebutton .ui-button.ui-corner-right, 
+//.ui-selectonebutton .ui-button.ui-corner-right .ui-button-text, 
+//.ui-selectmanybutton .ui-button.ui-corner-right, 
+//.ui-selectmanybutton .ui-button.ui-corner-right .ui-button-text
+%extend_button_4 {
+    @include border-top-right-radius(2px !important);
+    @include border-bottom-right-radius(2px !important);
+}
+
+///
+/// Define los estilos para el botón
+///
+.ui-button {
+    @include border-radius(2px !important);
+    @include text-shadow(none);
+    @include transition(all 0.3s ease);
+    outline: none;
+    position: relative;
+    background-color: get-theme-color('primary-color');
+    border: 0 none;
+    color: get-theme-color('primary-color-text');
+    font-size: 14px !important;
+    font-family: get-font-family('body');
+    font-weight: normal;
+    margin: 0.1em;
+    
+    ///
+    /// Cuando el mouse esté sobre el botón se aplicaran estos estilos.
+    ///
+    &.ui-state-hover {
+        background-color: get-theme-color('primary-color-light');
+        color: get-theme-color('primary-color-text');
+    }
+
+    ///
+    /// Este estilo se aplica cuando el botón sólo tiene un icono.
+    ///
+    &.ui-button-icon-only .ui-button-text {
+        @include border-radius(30px !important);
+        padding: 10px 0 !important;
+    }
+}
+
+///
+/// Este estilo coloca una separación a la izquierda del icono.
+///
+.ui-button-icon-left {
+    margin-left: 8px;
+}
+
+.ui-button-icon-only {
+    min-width: 39px !important;
+    max-width: 39px !important;
+    @include border-radius(30px !important);
+
+    .ui-icon {
+        font-size: 16px !important;
+
+        &.fa {
+            margin-top: -8px !important;
+        }
+
+        &::before {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.ui-button-text-icon-left {
+    .ui-button-text {
+        padding: 10px 20px 10px 40px !important;
+    }
+    
+    /// Este estilo es para hacerle un reset para que se pueda visalizar bien 
+    /// el FontIcon de FontAwesome. 
+    .ui-icon.fa {
+        margin-top: -8px !important;
+    }
+}
+
+.ui-button-text-icon-right {
+    .ui-button-text { padding: 10px 40px 10px 20px !important; }
+
+    .ui-button-icon-right { right: 11px; }
+
+    /// Este estilo permite hacer un reset para el FontIcon de FontAwesome.
+    .ui-icon.fa { margin-top: -8px !important; }
+}
+
+.ui-button-text-only .ui-button-text { padding: 10px 24px !important; }
+
+.ui-datepicker-trigger {
+    @include border-radius(2px !important);
+    
+    &.ui-button-icon-only .ui-button-text {
+        @include border-radius(2px !important);
+        padding: 10px 0 !important;
+    }
+}
+
+.ui-buttonset {
+    .ui-state-active {
+        background-color: get-theme-color('primary-color-dark') !important;
+    }
+    .ui-state-hover {
+        background-color: get-theme-color('primary-color-light');
+    }
+}
+
+///
+/// Define los estilos para el SplitButton
+///
+.ui-splitbutton {
+    .ui-button-icon-only {
+        @include border-radius(2px !important);
+    }
+    
+    .ui-splitbutton-menubutton .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        background-image: $url-icon-tres-puntos !important;
+        background-size: 100%;
+        background-position: center;
+    }
+    
+    &.ui-buttonset .ui-menu-list .ui-menuitem.ui-state-hover {
+        background-color: transparent;
+    }
+}
+
+.ui-splitbutton-menubutton {
+    margin-left: -1px !important;
+}
+
+///
+/// Define los estilos para los Button Sets
+///
+.ui-selectonebutton {
+    @extend %extend_button_1;
+    .ui-button {
+        @extend %extend_button_2;
+        border: solid 1px $md-color-white;
+        
+        .ui-button-text {
+            @extend %extend_button_2;
+        }
+        
+        &.ui-corner-left {
+            @extend %extend_button_3;
+            .ui-button-text {
+                @extend %extend_button_3;
+            }
+        }
+        
+        &.ui-corner-right {
+            @extend %extend_button_4;
+            .ui-button-text {
+                @extend %extend_button_4;
+            }
+        }
+    }
+}
+
+.ui-selectmanybutton {
+    @extend %extend_button_1;
+    
+    .ui-button {
+        @extend %extend_button_2;
+        border: solid 1px $md-color-white;
+        
+        .ui-button-text {
+            @extend %extend_button_2;
+        }
+        
+        &.ui-corner-left {
+            @extend %extend_button_3;
+
+            .ui-button-text {
+                @extend %extend_button_3;
+            }
+        }
+        
+        &.ui-corner-right {
+            @extend %extend_button_4;
+            
+            .ui-button-text {
+                @extend %extend_button_4;
+            }
+        }
+    }
+}

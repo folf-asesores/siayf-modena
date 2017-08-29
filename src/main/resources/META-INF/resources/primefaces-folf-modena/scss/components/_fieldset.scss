@@ -1,0 +1,47 @@
+/*Style For UI Fieldset------------------------------------------------------------------------------------- */
+.ui-fieldset {
+  border: solid 1px #e0e0e0;
+  background-color: #ffffff;
+  font-family: get-font-family('body');
+  border-radius: 3px;
+}
+.ui-fieldset-legend {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 15px;
+  font-family: get-font-family('body'); font-weight: lighter;
+  background-color: #0288d1;
+  padding: 13px 20px !important;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.ui-fieldset-legend.ui-state-hover {
+  background-color: #1797dd;
+}
+.ui-fieldset-legend .ui-icon-plusthick {
+  background-image: url("/modena/javax.faces.resource/images/plus-sign-white.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  margin-right: 5px;
+  margin-top: 0px !important;
+}
+.ui-fieldset-legend .ui-icon-minusthick {
+  background-image: url("/modena/javax.faces.resource/images/minus-sign-white.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  margin-right: 5px;
+  margin-top: 0px !important;
+}
+.ui-fieldset-content {
+  font-size: 16px;
+  color: #546e7a;
+}

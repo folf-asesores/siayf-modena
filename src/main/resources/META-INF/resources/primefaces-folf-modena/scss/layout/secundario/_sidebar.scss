@@ -1,0 +1,196 @@
+///
+/// _sidebar.scss
+/// Creado el Jan 7, 2016, 6:54:35 PM
+/// @author Freddy Barrera
+
+#plantilla-secundaria {
+    /// Define la barra lateral de la aplicación.
+    #barra-lateral {
+        @include transition(all 0.5s ease);
+        position: fixed;
+        display: none;
+        overflow: hidden;
+        box-sizing: border-box;
+        height: 100%;
+        padding-top: 50px;
+        background: get-layout-color('cards-background');
+
+        /// Define la forma en la que se mostrará el sidebar cuando sea una 
+        /// definición web.
+        @include desde(large){
+            display: block;
+            width: 30px;
+        }
+        
+        /// Le da el estilo al cuadro de dialogo de busqueda
+	    #principal-menu-buscar-envoltura {
+	        box-sizing: border-box;
+	        padding: 10px 20px;
+	        margin: auto;
+	
+	        input {
+	            width: 100%;
+	            box-sizing: border-box;
+	            padding-right: 30px !important;
+	            background: none;
+	        }
+	        
+	        .ui-icon-search {
+                position: absolute;
+                top: 67px;
+                right: 20px;
+	            color: get-theme-color('primary-color');
+	        }
+	    }
+    
+        /// Define como se verá (estado) de la barra lateral al estar abierta.
+        &.abrir {
+            display: block;
+            width: 320px;
+            z-index: 900;
+
+            @include desde(large){
+                .ui-menu {
+                    .ui-menuitem-link {
+                        .ui-menuitem-icon {
+                            margin: 0px 0px 0px 14px;
+                        }
+                        .ui-menuitem-text {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /// Define como se verá (estado) de la barra lateral al estar cerrada.
+        &.cerrar {
+            
+            /// Le da el estilo al cuadro de dialogo de busqueda
+            #principal-menu-buscar-envoltura { display:none; }
+            
+            @include desde(large){
+                display: block;
+                width: 30px;
+                
+                .ui-menu {
+                    .ui-menuitem-link {
+                        .ui-menuitem-icon {
+                            margin: 0px 0px 0px 6px;
+                        }
+                        .ui-menuitem-text {
+                            display: none;
+                        }
+                    }
+                }
+                
+                .ui-panelmenu .ui-panelmenu-panel {
+                
+                    .ui-panelmenu-header .ui-icon { left: 8px !important; }
+
+                    .ui-menu-list {
+                        .ui-menuitem {
+                            margin: 0 !important;
+                            padding: 5px !important;
+
+                            .ui-menuitem-link .ui-menuitem-text { display: none; }
+
+                            .ui-menuitem-link .ui-icon {
+                                left:  0px !important;
+                                top: 0 !important;
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    
+        /// Define la posición de la barra lateral.
+        &.hacia-izquierda {
+            float: left;
+        }
+        
+        .ui-menu {
+            @include box-shadow(none);
+            width: auto;
+        }
+
+        /// Define la apariencia del menú principal dentro de la barra lateral
+        #nav-principal-menu {
+            .ui-panelmenu {
+                border: none;
+
+                /// Se modifica los estilos por defecto del tema para que 
+                /// coincidan con el estilo de la barra lateral. 
+                .ui-panelmenu-panel {
+                    .ui-panelmenu-header {
+                        padding-left: 20px;
+                        border: none;
+                        background-color: $md-color-white;
+                        color: get-theme-color('primary-text-color');
+                        
+                        a {
+                            color: get-theme-color('primary-text-color');
+
+                            &:hover { color: get-theme-color('primary-color'); }
+                        }
+		                
+                        &.ui-state-hover, &:hover {
+                           background-color: $md-color-grey-100;
+                           color: get-theme-color('primary-color');
+                        }
+
+                        &.ui-state-active { background-color: $md-color-grey-300; }
+
+                        .ui-icon {
+                            left: 17px;
+
+                            &.ui-icon-triangle-1-e {
+                                left: 17px;
+                                background: none; 
+
+                                &:before { @extend .ui-icon-carat-1-e:before; }
+                            }
+
+                            &.ui-icon-triangle-1-s {
+                                left: 17px;
+                                background: none;
+
+                                &:before { @extend .ui-icon-carat-1-s:before; }
+                            }
+                        }
+                    }
+
+                    .ui-panelmenu-content {
+                        background-color: $md-color-grey-100;
+                        
+                        .ui-menu-list .ui-menuitem { margin: 0 20px; }
+                        
+                        .ui-menuitem-link {
+		                    
+                            .ui-icon-triangle-1-e {
+                                background: none;
+                                top: 14px;
+
+                                &:before { @extend .ui-icon-carat-1-e:before; }
+                            }
+		
+                            .ui-icon-triangle-1-s {
+                                background: none;
+                                top: 14px;
+
+                                &:before { @extend .ui-icon-carat-1-s:before; }
+                            }
+                        }
+                    }
+                    
+                    & .ui-menuitem-icon.ui-icon {
+                        top: auto;
+                        bottom: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

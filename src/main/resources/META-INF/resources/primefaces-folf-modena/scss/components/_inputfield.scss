@@ -1,0 +1,97 @@
+///
+/// _inputfield.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial los estilos necesarios para modificar de los componetes 
+/// "InputField" e "InputTextArea.
+///
+
+$input-field--height: 32px;
+$input-field--padding-top: 6px;
+$input-field--padding-right: 10px;
+$input-field--border-bottom-size: 1px;
+$input-field--font-size: ($input-field--height - ($input-field--padding-top * 2) - $input-field--border-bottom-size - 3px);
+
+$input-textarea--height: 150px;
+$input-textarea--padding-top: 8px;
+$input-textarea--padding-right: 10px;
+
+///
+/// InputField
+///
+.ui-inputfield {
+    @include transition(all 0.5s ease);
+    @include box-sizing(border-box);
+    @include border-radius(0);
+    padding: $input-field--padding-top $input-field--padding-right !important;
+    height: $input-field--height;
+    border: none;
+    border-bottom: solid 1px get-theme-color('primary-color-dark');
+    background-color: $md-color-grey-100;
+    color: get-theme-color('secondary-text-color');
+    font-size: get-font-em($input-field--font-size);
+    font-family: get-font-family('body');
+
+    /// Representa el estado del InputField al estar el mouse sobre él.
+    &.ui-state-hover {
+        border: none;
+        border-bottom: solid 1px get-theme-color('primary-color-light');
+        color: get-theme-color('primary-text-color') !important;
+        background-color: $md-color-grey-100;
+        
+        /// Aún cuando el mouse se pase sobre el inputtext el borde se vera igual. 
+        &.ui-state-disabled {
+            border-bottom: solid 1px get-theme-color('primary-color-dark');
+            background-color: get-layout-color('cards-background');
+        }
+    }
+    
+    /// Representa el estado deshabilitado del InputField. 
+    &.ui-state-disabled {
+        color: get-theme-color('secondary-text-color');
+        background-color: get-layout-color('cards-background');
+    }
+    
+    /// Representa el estado del InputField cuado tiene el foco.
+    &.ui-state-focus {
+        border: none;
+        border-bottom: solid 1px get-theme-color('accent-color');
+        color: get-theme-color('primary-text-color') !important;
+        background-color: $md-color-grey-100;
+    }
+    
+    /// Se encarga del InputTextarea
+    /// Elimina los bordes redondos del TextArea
+    &.ui-inputtextarea {
+        @include border-radius(0);
+        height: $input-textarea--height;
+        padding: $input-textarea--padding-top $input-textarea--padding-right !important;
+    }
+}
+
+//
+// Hacks
+// Para el color del placeholder
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: tint(get-theme-color('secondary-text-color'), 20%);
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: tint(get-theme-color('secondary-text-color'), 20%);
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: tint(get-theme-color('secondary-text-color'), 20%);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: tint(get-theme-color('secondary-text-color'), 20%);
+}

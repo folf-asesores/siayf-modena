@@ -1,0 +1,95 @@
+/*Style For UI Log ------------------------------------------------------------------------------------- */
+.ui-log {
+  padding: 2px !important;
+  background-color: #FBFCFD !important;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2) !important;
+  color: #778d9b;
+}
+.ui-log-header {
+  padding: 10px !important;
+  font-size: 16px !important;
+  color: #ffffff;
+  position: relative;
+  z-index: 100;
+  border-radius: 2px !important;
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  background-color: #E53935;
+}
+.ui-log-header .ui-log-clear .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/clear.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+}
+.ui-log-header .ui-log-all .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/all-doc.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+}
+.ui-log-header .ui-log-info .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/info.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+}
+.ui-log-item-info .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/info-gray.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+  width: 20px;
+  height: 20px;
+}
+.ui-log-header .ui-log-warn .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/warn.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+}
+.ui-log-item-warn .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/warn-gray.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+  width: 20px;
+  height: 20px;
+}
+.ui-log-header .ui-log-debug .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/debug.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+}
+.ui-log-item-debug .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/debug-gray.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+  width: 20px;
+  height: 20px;
+}
+.ui-log-header .ui-log-error .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/error.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+}
+.ui-log-item-error .ui-icon {
+  background-image: url("/modena/javax.faces.resource/images/error-gray.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 140%;
+  width: 20px;
+  height: 20px;
+}
+.ui-log-button {
+  top: initial !important;
+  left: initial !important;
+  position: relative !important;
+  display: inline-block !important;
+  padding: 0px !important;
+  margin-right: 5px;
+}
+.ui-log-content {
+  height: 250px !important;
+  color: #546e7a;
+  margin: 5px;
+}
+.ui-log-items {
+  font-size: 14px;
+  color: #546e7a;
+}

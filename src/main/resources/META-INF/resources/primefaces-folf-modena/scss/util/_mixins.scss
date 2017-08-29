@@ -1,0 +1,70 @@
+// Visitar estas páginas
+// http://www.sitepoint.com/using-sass-maps/
+// http://www.sitepoint.com/managing-responsive-breakpoints-sass/
+//
+
+
+/// Permite eliminar el Font Icon
+@mixin fm-eliminar-font-icon() { 
+    &:before { content:none; }
+}
+
+/// Modifica los valores para que no sea visible la "p" que incluye PrimeFaces
+/// después de haber eliminado el FontIcon.
+@mixin fm-restaurar-icono() {
+    width: 16px;
+    height: 16px;
+    display: block;
+    text-indent: -99999px !important;
+}
+
+// Un ejemplo funcional de ED-GRID
+// ED-GRID-master/scss/ed-grid/componentes/_mixins.scss
+//
+@mixin hasta($size){
+  @if map-has-key($breakpoints,$size){
+  // Si el parámetro es el nombre de un tamaño, se extrae desde el map
+    @media screen and (max-width: map-get($breakpoints,$size) - 1){
+      @content;
+    }
+  } @else {
+  // Si el parámetro no existe en el map, se toma su valor para construir la media query
+    @media screen and (max-width: $size){
+      @content;
+    }
+  }
+}
+
+@mixin desde($size){
+  @if map-has-key($breakpoints,$size){
+  // Si el parámetro es el nombre de un tamaño, se extrae desde el map
+    @media screen and (min-width: map-get($breakpoints, $size)){
+      @content;
+    }
+  } @else {
+  // Si el parámetro no existe en el map, se toma su valor para construir la media query
+    @media screen and (min-width: $size){
+      @content;
+    }
+  }
+}
+
+@mixin desde-hasta($desde, $hasta){
+  @if map-has-key($breakpoints,$desde) and map-has-key($breakpoints,$hasta){
+    @media screen and (min-width: map-get($breakpoints,$desde)) and (max-width: map-get($breakpoints,$hasta) - 1){
+      @content;
+    }
+  } @else if map-has-key($breakpoints,$desde) and not map-has-key($breakpoints,$hasta){
+    @media screen and (min-width: map-get($breakpoints,$desde)) and (max-width: $hasta) {
+      @content;
+    }
+  } @else if not map-has-key($breakpoints,$desde) and map-has-key($breakpoints,$hasta) {
+    @media screen and (min-width: $desde) and (max-width: map-get($breakpoints,$hasta) - 1){
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $desde) and (max-width: $hasta){
+      @content;
+    }
+  }
+}

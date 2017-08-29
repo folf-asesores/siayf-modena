@@ -1,0 +1,40 @@
+/*Style For Data Grid ------------------------------------------------------------------------------------- */
+.ui-datagrid {
+  border: solid 1px #e0e0e0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  background-color: #ffffff;
+  color: #778d9b;
+  font-family: get-font-family('body');
+  font-weight: lighter;
+}
+.ui-datagrid .ui-datagrid-header {
+  color: #ffffff;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  font-size: 20px;
+  background-color: #0288d1;
+  padding: 15px 10px !important;
+  font-weight: normal;
+}
+.ui-datagrid .ui-datagrid-content {
+  font-size: 14px;
+  padding: 5px;
+}
+.ui-datagrid-footer {
+  height: auto !important;
+  background-color: #F9FAFC;
+  margin: 0px;
+  padding: 10px 10px !important;
+  border-top: solid 1px #E8EDF2 !important;
+  font-size: 14px;
+  color: #C7D1D7;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  -webkit-border-top-left-radius: 0px !important;
+  -webkit-border-top-right-radius: 0px !important;
+  -moz-border-top-left-radius: 0px !important;
+  -moz-border-top-right-radius: 0px !important;
+}

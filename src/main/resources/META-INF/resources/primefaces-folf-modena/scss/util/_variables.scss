@@ -1,0 +1,196 @@
+///
+/// _variables.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial contiene las configuraciones principales de la 
+/// plantilla y el tema.
+///
+
+///
+/// Breakpoints
+/// Puntos de ruptura define las resoluciones de las pantallas en las que la 
+/// plantilla cambiara su disposión, tomando en cuenta que la resolución cambie.
+/// 
+$breakpoints: (
+  xsmall : 320px,
+  small  : 480px,
+  medium : 768px,
+  large  : 1024px,
+  xlarge : 1400px,
+) !default;
+
+///
+/// Fuentes
+/// Para usar una Web Font (por ejemplo de Google) se recomienda incluir la 
+/// fuente en la carpeta "fuentes" y sí existe ualguna configuración adicional 
+/// del @font-face  se puede modificar en el archivo parcial 
+/// "base/_typography.scss"
+///
+$fm-fonts : ( 
+    'header' :  ('Varela Round', Arial, sans-serif),
+    'body'   :  ('Oxygen', Arial, sans-serif)
+) !default;
+
+$fm-fonts-URLs : (
+    'header_url_prefix' : unquote("url(\"\#\{resource[\'primefaces-folf-modena:fuentes/varela-round/"),
+    'body_url_prefix'   : unquote("url(\"\#\{resource[\'primefaces-folf-modena:fuentes/oxygen/"),
+    'url_sufix'         : unquote("\']\}\")")
+);
+
+$fm-font-header-files-names : (
+    'regular' : 'varela-round-regular.ttf',
+    'bold'    : '',
+    'light'   : ''
+);
+
+$fm-font-body-files-names : (
+    'regular' : 'oxygen-regular.ttf',
+    'bold'    : 'oxygen-bold.ttf',
+    'light'   : 'oxygen-light.ttf'
+);
+
+$font_header_family_name: 'Varela Round';
+$font_body_family_name: 'Oxygen';
+
+///
+/// Tema de los componentes.
+/// En esta área se definen los colores que usara del tema del componentes.
+/// 1. Este color también se emplea para las sombras
+$fm-themes : (
+    'modena' : (
+        'primary-color'        : $md-color-light-blue,
+        'primary-color-dark'   : $md-color-light-blue-700,
+        'primary-color-light'  : $md-color-light-blue-300,
+        'primary-color-text'   : $md-color-white,
+        'accent-color'         : $md-color-pink,
+        'primary-text-color'   : $md-color-blue-grey-600,
+        'secondary-text-color' : $md-color-blue-grey-300,
+        'divider-color'        : $md-color-grey-300, /* 1 */
+    ),
+    
+    'teal' : (
+        'primary-color'        : $md-color-teal,
+        'primary-color-dark'   : $md-color-teal-700,
+        'primary-color-light'  : $md-color-teal-300,
+        'primary-color-text'   : $md-color-white,
+        'accent-color'         : $md-color-orange,
+        'primary-text-color'   : $md-color-blue-grey-600,
+        'secondary-text-color' : $md-color-blue-grey-400,
+        'divider-color'        : $md-color-grey-300, /* 1 */
+    ),
+    
+    'salud-tlax' : (
+        'primary-color'        : rgb(50, 132, 76),
+        'primary-color-dark'   : rgb(42, 111, 64),
+        'primary-color-light'  : rgb(70, 185, 106),
+        'primary-color-text'   : $md-color-white,
+        'accent-color'         : rgb(27, 125, 60), /* 2 */
+        'primary-text-color'   : rgba($md-color-black, 0.87),
+        'secondary-text-color' : rgba($md-color-black, 0.54),
+        'divider-color'        : rgba($md-color-black, 0.38), /* 1 */
+    ),
+) !default;
+
+/// Esta varibla indica un tema para los componentes como valor predefinido,
+/// normalmente su valor se define en el archivo theme.sccs
+$fm-theme-active : 'teal' !default;
+
+$fm-colores-indicativos : (
+    'color-informacion' : $md-color-blue,
+    'color-exitoso'     : rgb(102, 187, 106),
+    'color-advertencia' : $md-color-amber-a400,
+    'color-error'       : rgb(239, 83, 80),
+    'color-peligro'     : $md-color-red-800,
+    'color-cerrar'      : $md-color-red-700,
+) !default;
+
+
+$fm-layout-colors : (
+    'light' : (
+    'app-bar'          : $md-color-grey-100,
+    'background'       : $md-color-grey-50,
+    'cards-background' : $md-color-white,
+    'footer-bar'       : $md-color-grey-300,
+    ),
+    
+    'dark' : (
+    'app-bar'          : $md-color-grey-900,
+    'background'       : rgb(48, 48, 48),
+    'cards-background' : $md-color-grey-800,
+    'footer-bar'       : $md-color-black,
+    ),
+    
+    'folf-modena' : (
+    'app-bar'          : $md-color-grey-100,
+    'background'       : $md-color-grey-50,
+    'cards-background' : $md-color-white,
+    'footer-bar'       : $md-color-black,
+    ),
+);
+
+$fm-layout-active : 'folf-modena' !default;
+
+$fm-colores: (
+    "white"        : White,
+    "white-blue"   : #E1F5FE,
+    "soft-blue"    : #03A9F4,
+    "steel-blue"   : SteelBlue,
+    "blue"         : #0288D1,
+    "turquoise"    : #26C6DA,
+    "soft-gray"    : #ECEFF1,
+    "gray"         : #90A4AE,
+    "bold-gray"    : #546E7A,
+    "soft-orange"  : #FFCC80,
+    "orange"       : #FB8C00,
+    "soft-green"   : #A5D6A7,
+    "green"        : #43A047,
+    "leaden-green" : #26A69A,
+    "soft-red"     : #EF9A9A,
+    "red"          : #E53935,
+    "pink"         : #FF4081,
+    "soft-purple"  : #CE93D8,
+    "purple"       : #8E24AA,
+    "yellow"       : #F7D100,
+);
+
+$fm-images-URLs : (
+    'implementer-url-prefix' : unquote("url(\"\#\{resource[\'imagenes:/"),  
+    'theme-url-prefix' : unquote("url(\"\#\{resource[\'primefaces-folf-modena:imagenes/"),
+    'url_sufix' : unquote("\']\}\")"),
+);
+
+$icon-sizes : (16, 32, 64, 128, 256) !default;
+
+///
+/// Define el radio de los bordes.
+///
+$radius-xsmall:  0px;
+$radius-small:   3px;
+$radius-medium:  6px;
+$radius-large:  12px;
+$radius-shadow:  8px;
+
+//TODO: Colores por eliminar
+$color_alabaster_approx: #fbfcfd;
+$color_aqua_haze_approx: #eef2f7;
+$color_bon_jour_approx: #e0e0e0;
+$color_catskill_white_approx: #f1f6f9;
+$color_celeste_approx: #cccccc;
+$color_cutty_sark_approx: #546e7a;
+$color_geyser_approx: #d9e3e8;
+$color_gothic_approx: #78909c;
+$color_indigo_approx: #5c6bc0;
+$color_jungle_green_approx: #26a69a;
+$color_juniper_approx: #7a8f98;
+$color_link_water_approx: #dae8ef;
+$color_lochmara_approx: #0288d1;
+$color_maroon_flush_approx: #ce2246;
+$color_mystic_approx: #dde4ed;
+$color_quill_gray_approx: #d1d3d4;
+$color_regent_st_blue_approx: #a5d6f0;
+$color_scooter_approx: #27aae1;
+$color_white_lilac_approx: #f6fafc;
+$color_wild_sand_approx: #f5f5f5;
+$color_ziggurat_approx: #c1d5df;

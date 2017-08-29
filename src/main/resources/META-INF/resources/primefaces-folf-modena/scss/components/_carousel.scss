@@ -1,0 +1,92 @@
+/*Style For UI Carousel --------------------------------------------------------------------------------------*/
+.ui-carousel {
+  border: solid 1px #e0e0e0;
+  padding: 2px 1px !important;
+  background-color: #ffffff;
+  color: #546e7a;
+  border-radius: 2px;
+  font-family: get-font-family('body');
+}
+.ui-carousel .ui-carousel-header {
+  background-color: #5c6bc0;
+  height: auto !important;
+  padding: 10px 20px !important;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  font-family: get-font-family('body');
+  color: #ffffff;
+  font-size: 18px;
+  margin: -2px -1px !important;
+  font-weight: lighter;
+}
+.ui-carousel .ui-carousel-dropdown {
+  margin-top: 8px !important;
+}
+.ui-carousel .ui-carousel-header .ui-carousel-header-title {
+  width: 40% !important;
+  padding-top: 5px !important;
+}
+.ui-carousel .ui-carousel-header .ui-carousel-next-button {
+  background-image: put-image-theme-url("right-arrow-white.svg");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 85%;
+  width: 21px;
+  height: 21px;
+  margin-top: 5px;
+  padding: 3px;
+  border-radius: 30px;
+}
+.ui-carousel .ui-carousel-header .ui-carousel-prev-button {
+  background-image: put-image-theme-url("left-arrow-white.svg");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 85%;
+  width: 21px;
+  height: 21px;
+  margin-top: 5px;
+  padding: 3px;
+  border-radius: 30px;
+}
+.ui-carousel .ui-carousel-header .ui-carousel-next-button:hover,
+.ui-carousel .ui-carousel-header .ui-carousel-prev-button:hover {
+  background-color: #6978c8;
+  border-radius: 30px !important;
+}
+.ui-carousel .ui-carousel-header .ui-carousel-page-links {
+  margin-top: 11px;
+}
+.ui-carousel .ui-carousel-header .ui-carousel-page-links .ui-carousel-page-link {
+  background-image: $url-icon-blank;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 140%;
+}
+.ui-carousel .ui-carousel-item {
+  border: 1px solid transparent;
+}
+.ui-carousel .ui-carousel-header .ui-carousel-page-links .ui-icon-radio-on {
+  background-image: $url-icon-blank-active;
+}
+.ui-carousel .ui-carousel-viewport {
+  padding-top: 5px;
+}
+.ui-carousel .ui-carousel-footer {
+  height: auto !important;
+  background-color: #f5f5f5;
+  margin: 0px;
+  padding: 10px 15px !important;
+  margin: 3px -1px -2px -1px !important;
+  font-size: 14px;
+  color: #7a8f98;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  -webkit-border-top-left-radius: 0px !important;
+  -webkit-border-top-right-radius: 0px !important;
+  -moz-border-top-left-radius: 0px !important;
+  -moz-border-top-right-radius: 0px !important;
+}
+.ui-carousel .ui-carousel-mobiledropdown {
+  margin-top: 8px !important;
+}

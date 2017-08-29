@@ -1,0 +1,38 @@
+/*Style For UploadButton --------------------------------------------------------------------------------------*/
+.ui-fileupload-choose input[type="file"] {
+  z-index: 999;
+}
+.ui-fileupload-simple input[type="file"] {
+  z-index: 999;
+  width: 100px;
+  height: 40px;
+}
+.ui-fileupload-choose .ui-icon-plusthick,
+.ui-fileupload-simple .ui-icon-plusthick {
+  background-image: url("/modena/javax.faces.resource/images/plus-sign-white.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+}
+.ui-fileupload-upload .ui-icon-arrowreturnthick-1-n {
+  background-image: url("/modena/javax.faces.resource/images/upload.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+}
+.ui-fileupload-cancel .ui-icon-cancel {
+  background-image: url("/modena/javax.faces.resource/images/delete.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+}
+.ui-fileupload-content .ui-fileupload-cancel .ui-icon-close {
+  background-image: url("/modena/javax.faces.resource/images/delete.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+}
+.ui-fileupload-content .ui-messages-error .ui-icon-close {
+  background-image: url("/modena/javax.faces.resource/images/delete-pink.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+}
+.ui-fileupload-simple .ui-fileupload-filename {
+  color: #546e7a;
+}

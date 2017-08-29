@@ -1,0 +1,16 @@
+/*Style For UI TagCloud --------------------------------------------------------------------------------------*/
+.ui-tagcloud {
+  border: solid 1px #e0e0e0;
+}
+.ui-tagcloud li a {
+  color: #778d9b;
+  padding: 3px;
+  margin: 3px;
+  border-radius: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+.ui-tagcloud li a.ui-state-hover {
+  color: #ffffff;
+  background-color: #ce2246;
+}

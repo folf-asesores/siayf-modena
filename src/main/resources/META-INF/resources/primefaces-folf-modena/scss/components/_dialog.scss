@@ -1,0 +1,248 @@
+///
+/// _dialog.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial contiene los estilos para UI de los componentes 
+/// Dialog, Overlay Panel And Lightbox.
+///
+
+
+//
+// Dialog
+//
+.ui-dialog {
+    @include border-radius(2px);
+    background-color: $md-color-white;
+    color: $color_cutty_sark_approx;
+    
+    .ui-dialog-titlebar {
+        @include border-top-left-radius(1px);
+        @include border-top-right-radius(1px);
+        padding: 10px 20px !important;
+        border-bottom: solid 1px get-theme-color('divider-color') !important;
+        background-color: $md-color-white;
+        color: get-theme-color('primary-text-color');
+        font-size: 19px;
+        font-family: get-font-family('body');
+        font-weight: lighter;
+        
+        .ui-dialog-titlebar-icon {
+            padding: 0;
+            margin-top: 6px;
+            
+            .ui-icon-closethick {
+                @include fm-restaurar-icono;
+                @include fm-eliminar-font-icon;
+                background-image: $url-icon-delete-gray;
+                background-position: center !important;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            
+            .ui-icon-minus {
+                @include fm-restaurar-icono;
+                @include fm-eliminar-font-icon;
+                background-image: $url-icon-minus-sign-gray;
+                background-position: center !important;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            
+            .ui-icon-extlink {
+                @include fm-restaurar-icono;
+                @include fm-eliminar-font-icon;
+                background-image: $url-icon-external-gray;
+                background-position: center !important;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        }
+        
+        .ui-icon-newwin {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            background-image: $url-icon-external-gray-revert;
+            background-position: center !important;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+    
+    .ui-dialog-title {
+        margin: 5px 16px 5px 0 !important;
+    }
+    
+    .ui-dialog-content {
+        padding: 20px !important;
+        color: get-theme-color('primary-text-color');
+        font-size: 16px;
+        
+        .ui-icon-alert {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            background-image: $url-icon-warn-red;
+            background-position: center !important;
+            background-repeat: no-repeat;
+            background-size: 140%;
+            margin: 4px 10px 0 0;
+        }
+        
+        .ui-confirm-dialog-message {
+            margin: 0;
+        }
+    }
+    
+    .ui-dialog-footer {
+        padding: 10px 20px !important;
+        border-top: solid 1px get-theme-color('divider-color') !important;
+        background-color: $md-color-grey-100;
+        margin: 0 !important;
+        text-align: right !important;
+    }
+    
+    .ui-resizable-se {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        background-image: $url-icon-handle-gray;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.ui-dialog-docking-zone {
+    z-index: 999999999999999;
+    
+    .ui-icon-plus {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        background-image: $url-icon-plus-sign-gray;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: 90%;
+    }
+}
+
+.ui-dialog-maximized {
+    z-index: 999999999999999 !important;
+}
+
+.ui-confirm-dialog .ui-dialog-content .ui-confirm-dialog-message {
+    color: get-theme-color('primary-text-color');
+}
+
+//
+// Overlay Panel
+//
+.ui-widget-overlay {
+    @include opacity(0.65);
+    background-color: $md-color-black;
+} 
+
+.ui-overlaypanel {
+    color: get-theme-color('secondary-text-color');
+    
+    .ui-overlaypanel-close {
+        background-color: get-theme-color('primary-text-color');
+        
+        .ui-icon-closethick {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            background-image: $url-icon-delete;
+            background-position: center !important;
+            background-repeat: no-repeat;
+            background-size: 90%;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    .ui-overlaypanel-content {
+        @include border-radius(5px);
+        background-color: get-theme-color('primary-color-text');
+        padding: 20px !important;
+    }
+}
+
+//
+// Overlay Panel
+//
+.ui-lightbox {
+    @include border-radius(2px);
+    color: get-theme-color('primary-text-color');
+    background-color: $md-color-white;
+    padding: 10px;
+    border: solid 1px transparent;
+
+    .ui-lightbox-content-wrapper {
+
+        .ui-lightbox-nav-left {
+            left: 5px;
+
+            .ui-icon {
+                @include opacity(0.6);
+                @include fm-restaurar-icono;
+                @include fm-eliminar-font-icon;
+                background-image: $url-icon-left-arrow;
+                background-position: center !important;
+                background-repeat: no-repeat;
+                background-size: 130%;
+                width: 40px;
+                height: 40px;
+                
+                &:hover {
+                    @include opaque;
+                }
+            }
+        }
+        
+        .ui-lightbox-nav-right {
+            right: 5px;
+            
+            .ui-icon {
+                @include opacity(0.6);
+                @include fm-restaurar-icono;
+                @include fm-eliminar-font-icon;
+                background-image: $url-icon-right-arrow;
+                background-position: center !important;
+                background-repeat: no-repeat;
+                background-size: 130%;
+                width: 40px;
+                height: 40px;
+                
+                &:hover {
+                    @include opaque;
+                }
+            }
+        }
+    }
+    
+    .ui-lightbox-caption {
+        @include border-bottom-right-radius(5px);
+        @include border-bottom-left-radius(5px);
+        padding: 10px 20px 15px 20px !important;
+        border-top: solid 1px get-theme-color('divider-color') !important;
+        background-color: $md-color-white;
+        margin: 10px -10px -10px -10px !important;
+        color: get-theme-color('primary-text-color');
+        font-family: get-font-family('body');
+        font-weight: normal;
+        font-size: 18px;
+        
+        .ui-lightbox-close {
+            padding: 0;
+            margin-top: 8px;
+            
+            .ui-icon {
+                @include fm-restaurar-icono;
+                @include fm-eliminar-font-icon;
+                background-image: $url-icon-delete-gray;
+                background-position: center !important;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+}

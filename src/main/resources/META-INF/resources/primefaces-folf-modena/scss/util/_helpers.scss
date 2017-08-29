@@ -1,0 +1,222 @@
+///
+/// Efectos
+///
+.fm-efecto-sombra {
+    @include box-shadow(rgba($md-color-black, 0.1) 1px 1px 2px);
+    border: none !important;
+}
+
+.fm-efecto-sombra-elevada {
+    @include box-shadow(rgba($md-color-black, 0.5) 2px 2px 10px);
+    border: none !important;
+}
+
+.fm-efecto-animado03 { @include transition(all 0.3s ease); }
+.fm-efecto-animado05 { @include transition(all 0.5s ease); }
+.fm-efecto-animado1 { @include transition(all 1s ease); }
+.fm-efecto-animado12 { @include transition(all 1.2s ease); }
+.fm-sin-efecto-animado { @include transition(none); }
+
+.fm-texto-acotado {
+    text-overflow: ellipsis;
+}
+
+.fm-bloque {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fm-tarjeta {
+    @extend .fm-efecto-sombra;
+    @include border-radius($radius-small);
+    padding: 20px;
+    margin: 0 0 10px;
+    display: block;
+    background-color: get-layout-color('cards-background');
+    font-family: get-font-family('body');
+    color: get-theme-color('primary-text-color');
+
+    ///
+    /// Si dentro de la tarjeta el primer node es un h1, h2 o h3 entonces se 
+    /// eliminara el margen superior.
+    h1:first-child, h2:first-child, h3:first-child {
+        margin-top: 0;
+    }
+    
+    &.ui-fluid {
+        padding: 15px 0;
+        
+        @include desde(medium) {
+            padding: 20px 10px;
+        }
+    }
+    
+    @include desde(medium) {
+        margin: 0 0 20px;    
+    }
+    
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        border-collapse: collapse;
+    }
+}
+
+.fm-tarjeta-tema {
+    padding: 0px 0px 10px 0px;
+    font-size: get-font-em(23px);
+    font-family: get-font-family('header');
+    font-weight: lighter;
+    text-align:left;
+    color: get-theme-color('primary-text-color');
+    border-bottom: none;
+}
+
+.fm-tarjeta-pie {
+    display: block;
+    margin: 10px -5px -12px;
+    padding: 10px;
+    overflow: hidden;
+    border-top: solid 1px get-theme-color('divider-color');
+
+    @include desde(medium) {
+        margin: 10px -10px -12px;
+    }
+}
+
+.fm-tarjeta-pie-boton {
+    padding: 10px;
+    margin: -10px 0px;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.ui-fluid .ui-button.fm-tarjeta-pie-boton {
+    /// Esto corrige el detalle de que los botones que estén en pie de la 
+    /// tarjeta ocupen el ancho completo del contendor aun cuando la resolución 
+    /// de la pantalla no sea pequeña.
+    /// Así que aplicando este estilo el botón recuperara su tamaño normal.
+    @include desde(medium) {
+        width: auto;
+    }
+}
+
+.fm-tarjeta-pie-boton:hover {
+    background-color: $md-color-grey-50;
+}
+
+.fm-separador {
+    border-bottom: solid 1px #E0E0E0;
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    margin: 10px 0px;
+    clear: both;
+}
+
+.fm-separador-completo {
+    border-bottom: solid 1px #E0E0E0;
+    display: block;
+    overflow: hidden;
+    height: 0px;
+    margin: 10px - 20px;
+    clear: both;
+}
+
+.fm-btn-primario {
+    background-color: get-theme-color('primary-color-dark') !important;
+    color: get-theme-color('primary-color-text') !important;
+
+    &.ui-state-hover {
+        background-color: get-theme-color('primary-color-light') !important;
+    }
+}
+
+.fm-btn-inverso {
+    background-color: get-theme-color('primary-color-text') !important;
+    color: get-theme-color('primary-color') !important;
+
+    &.ui-state-hover {
+        background-color: get-theme-color('primary-color-light') !important;
+        color: get-theme-color('primary-color-text') !important;    
+    }
+}
+
+.fm-btn-acento {
+    background-color: get-theme-color('accent-color') !important;
+    color: contrast-color(get-theme-color('accent-color'), get-theme-color('primary-color-text'), get-theme-color('primary-text-color')) !important;
+
+    &.ui-state-hover {
+        background-color: tint(get-theme-color('accent-color'), 20%) !important;
+    }
+} 
+
+.fm-btn-informacion {
+    background-color: get-color-indicativo('color-informacion') !important;
+    color: get-theme-color('primary-color-text') !important;  
+
+    &.ui-state-hover {
+        background-color: tint(get-color-indicativo('color-informacion'), 20%) !important;
+    }
+}
+
+.fm-btn-exitoso {
+    background-color: get-color-indicativo('color-exitoso') !important;
+    color: get-theme-color('primary-color-text') !important;
+
+    &.ui-state-hover {
+        background-color: tint(get-color-indicativo('color-exitoso'), 20%) !important;
+    }
+}
+
+.fm-btn-advertencia {
+    background-color: get-color-indicativo('color-advertencia') !important;
+    color: get-theme-color('primary-color-text') !important;
+
+    &.ui-state-hover {
+        background-color: tint(get-color-indicativo('color-advertencia'), 20%) !important;
+    }
+}
+
+.fm-btn-error {
+    background-color: get-color-indicativo('color-error') !important;
+    color: get-theme-color('primary-color-text') !important;
+            
+    &.ui-state-hover {
+        background-color: tint(get-color-indicativo('color-error'), 20%) !important;
+    }
+}
+
+.fm-btn-peligro {
+    background-color: get-color-indicativo('color-peligro') !important;
+    color: get-theme-color('primary-color-text') !important;
+            
+    &.ui-state-hover {
+        background-color: tint(get-color-indicativo('color-peligro'), 20%) !important;
+    }
+}
+
+.fm-btn-elevado {
+    @include box-shadow(rgba($md-color-black, 0.3) 0px 1px 2px 0px);
+
+    &.ui-state-hover,
+    &.ui-state-focus {
+        @include box-shadow(rgba($md-color-black, 0.3) 0px 1px 3px 0px);
+    }
+    
+    @media screen and (min-width: 0\0) {
+        @include box-shadow(rgba(43, 59, 93, 0.4) 0px 0px 8px 0px !important);
+    }
+}
+
+@each $color-nombre, $color in $fm-colores {
+    .fm-font-color-#{$color-nombre} { color: $color; } 
+}
+
+@each $color-nombre, $color in $fm-colores {
+    .fm-background-color-#{$color-nombre}, 
+    .fm-tarjeta.fm-background-color-#{$color-nombre} {
+        background-color: $color;
+    }
+}

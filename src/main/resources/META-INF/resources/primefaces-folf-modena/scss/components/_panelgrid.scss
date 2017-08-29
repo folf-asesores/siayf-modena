@@ -1,0 +1,39 @@
+/*Style For UI PanelGrid --------------------------------------------------------------------------------------*/
+.ui-panelgrid {
+  border: solid 1px get-theme-color('divider-color');
+  background-color: get-layout-color('cards-background');
+  font-size: 16px;
+  font-family: get-font-family('body');
+  font-weight: lighter;
+}
+
+.ui-panelgrid-header { color: get-theme-color('primary-text-color'); }
+
+.ui-panelgrid-content {
+  color: get-theme-color('primary-text-color');
+}
+
+.ui-panelgrid thead tr td,
+.ui-panelgrid tfoot tr td {
+  color: #26a69a;
+  background-color: #eff3f5;
+  border: solid 1px #c6d6df !important;
+}
+
+.ui-panelgrid tbody tr td {
+	border: #c6d6df solid 1px !important;
+}
+
+.ui-panelgrid.ui-panelgrid-blank {
+  border: 0 none;
+  background: none;
+}
+
+@media (max-width: 640px) {
+  .ui-panelgrid .ui-grid-responsive .ui-grid-row {
+    border-color: #d1d3d4 !important;
+  }
+  .ui-panelgrid.ui-panelgrid-blank .ui-grid-responsive .ui-grid-row {
+    border: none;
+  }
+}

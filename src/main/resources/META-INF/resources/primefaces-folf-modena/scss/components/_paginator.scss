@@ -1,0 +1,182 @@
+//urls
+$url_imagen-fecha-simple-izquierda: put-image-theme-url('left-double-arrow-for-data.svg');
+$url_imagen-fecha-simple-derecha: put-image-theme-url('right-double-arrow-for-data.svg');
+$url_imagen-fecha-doble-izquierda: put-image-theme-url('left-one-arrow-for-data.svg');
+$url_imagen-fecha-doble-derecha: put-image-theme-url('right-one-arrow-for-data.svg');
+
+/// @extend-elements
+/// original selectors
+/// .ui-paginator .ui-paginator-first, 
+/// .ui-paginator .ui-paginator-prev, 
+/// .ui-paginator .ui-paginator-pages .ui-paginator-page, 
+/// .ui-paginator .ui-paginator-next, 
+/// .ui-paginator .ui-paginator-last, 
+/// .ui-paginator .ui-paginator-rpp-options
+%extend_pagginator_1 {
+    @extend .fm-efecto-animado05;
+    @include border-radius(0 !important);
+    padding: 6px 3px !important;
+    border: solid 3px transparent;
+    color: get-theme-color('primary-color-light');
+    font-family: get-font-family('body');
+    font-size: 14px;
+    font-weight: normal;
+}
+
+// original selectors
+// .ui-paginator .ui-state-active, 
+// .ui-paginator .ui-state-hover, 
+// .ui-paginator .ui-paginator-pages .ui-state-active, 
+// .ui-paginator .ui-paginator-pages .ui-state-hover
+%extend_pagginator_2 {
+    @include border-radius(0 !important);
+    color: get-theme-color('primary-color-text') !important;
+    background-repeat: no-repeat;
+    border-bottom: solid 3px get-theme-color('primary-color-text');
+    font-size: 14px;
+}
+
+.ui-paginator {
+    margin: 0;
+    padding: 0 !important;
+    
+    .ui-paginator-pages {
+        padding: 0 6px;
+        
+        .ui-paginator-page {
+            @extend %extend_pagginator_1;
+        }
+        
+        .ui-state-active {
+            @extend %extend_pagginator_2;
+        }
+        
+        .ui-state-hover {
+            @extend %extend_pagginator_2;
+        }
+    }
+    
+    .ui-paginator-first {
+        @extend %extend_pagginator_1;
+        
+        &.ui-state-focus {
+            background-color: get-theme-color('primary-color-dark');
+            color: get-theme-color('primary-color-text');
+        }
+        
+        .ui-icon {
+            @include fm-restaurar-icono;
+            background-image: $url_imagen-fecha-simple-izquierda;
+            background-position: center !important;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            line-height: 14px;
+            
+            &.ui-icon-seek-first::before { content:none; }
+        }
+    }
+    
+    .ui-paginator-prev {
+        @extend %extend_pagginator_1;
+        
+        &.ui-state-focus {
+            background-color: get-theme-color('primary-color-dark');
+            color: get-theme-color('primary-color-text');
+        }
+        
+        .ui-icon {
+            @include fm-restaurar-icono;
+            background-image: $url_imagen-fecha-doble-izquierda;
+            background-position: center !important;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            line-height: 14px;
+            
+            &.ui-icon-seek-prev::before { content:none; }
+        }
+    }
+    
+    .ui-paginator-next {
+        @extend %extend_pagginator_1;
+        
+        &.ui-state-focus {
+            background-color: get-theme-color('primary-color-dark');
+            color: get-theme-color('primary-color-text');
+        }
+        
+        .ui-icon {
+            @include fm-restaurar-icono;
+            background-image: $url_imagen-fecha-doble-derecha;
+            background-position: center !important;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            
+            &.ui-icon-seek-next::before { content:none; }
+        }
+    }
+    
+    .ui-paginator-last {
+        @extend %extend_pagginator_1;
+        
+        &.ui-state-focus {
+            background-color: get-theme-color('primary-color-dark');
+            color: get-theme-color('primary-color-text');
+        }
+        
+        .ui-icon {
+            @include fm-restaurar-icono;
+            background-image: $url_imagen-fecha-simple-derecha;
+            background-position: center !important;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            line-height: 14px;
+            
+            &.ui-icon-seek-end::before { content:none; }
+        }
+    }
+    
+    .ui-paginator-current {
+        font-size: 13px;
+        padding: 15px;
+        color: get-theme-color('primary-color-light');
+        font-family: get-font-family('body');
+    }
+    
+    .ui-paginator-rpp-options {
+        @extend %extend_pagginator_1;
+        outline: none;
+        color: get-theme-color('primary-color-text') !important;
+        font-family: get-font-family('body');
+        font-size: 14px !important;
+        font-weight: lighter;
+        background-color: get-theme-color('primary-color');
+        border: solid 1px transparent;
+        
+        &.ui-state-focus {
+            background-color: get-theme-color('primary-color-dark') !important;
+        }
+    }
+    
+    .ui-state-active {
+        @extend %extend_pagginator_2;
+    }
+    
+    .ui-state-hover {
+        @extend %extend_pagginator_2;
+    }
+}
+
+.ui-paginator-top {
+    @include border-radius(1px);
+    background-color: get-theme-color('primary-color');
+}
+
+.ui-paginator-bottom {
+    @include border-radius(1px);
+    background-color: get-theme-color('primary-color');
+}
+
+.ui-paginator-page.ui-state-focus {
+    background-color: get-theme-color('primary-color-dark');
+    color: get-theme-color('primary-color-text');
+}

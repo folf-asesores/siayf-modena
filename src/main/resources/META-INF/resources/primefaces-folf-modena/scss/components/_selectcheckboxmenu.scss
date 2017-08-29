@@ -1,0 +1,179 @@
+///
+/// _selectcheckboxmenu.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente 
+/// "SelectCheckBoxMenu".
+///
+
+$select-checkbox-menu--height: 32px; 
+$select-checkbox-menu--border-bottom-width: 1px;
+$select-checkbox-menu__trigger--width: ($select-checkbox-menu--height / 2); 
+$select-checkbox-menu--padding-right: ($select-checkbox-menu__trigger--width + 10px);
+$select-checkbox-menu__label--padding-top: 8px; 
+$select-checkbox-menu__label--padding-right: $select-checkbox-menu--padding-right;
+$select-checkbox-menu__label--padding-bottom: 8px;
+$select-checkbox-menu__label--padding-left: 10px; 
+$select-checkbox-menu__label--height: ($select-checkbox-menu--height - $select-checkbox-menu--border-bottom-width); 
+
+///
+/// Define los estilos para el SelectCheckBoxMenu
+///
+.ui-selectcheckboxmenu {
+    @include transition(all 0.5s ease);
+    @include box-sizing(border-box);
+    @include border-radius(0);
+    margin: 0;
+    padding: 0 !important;
+    padding-right: $select-checkbox-menu--padding-right !important;
+    height: $select-checkbox-menu--height;
+    font-size: get-font-em(15px) !important;
+    font-family: get-font-family('body');
+    border-bottom: solid $select-checkbox-menu--border-bottom-width get-theme-color('primary-color-dark') !important;
+    color: get-theme-color('primary-text-color');
+
+    .ui-selectcheckboxmenu-label {
+        @include box-sizing(border-box);
+        @include border-radius(0 !important);
+        height: $select-checkbox-menu__label--height;
+        padding: $select-checkbox-menu__label--padding-top 
+                 $select-checkbox-menu__label--padding-right 
+                 $select-checkbox-menu__label--padding-bottom 
+                 $select-checkbox-menu__label--padding-left !important;
+        background-color: $md-color-grey-100;
+        font-size: get-font-em(15px);
+        color: get-theme-color('secondary-text-color');
+        
+        &.ui-state-hover {
+            color: get-theme-color('primary-text-color') !important;
+        }
+    }
+
+    &.ui-state-focus .ui-selectcheckboxmenu-label {
+        background-color: $md-color-grey-100;
+    }
+    
+    .ui-selectcheckboxmenu-trigger {
+        @include text-shadow(none);
+        @include border-radius(0 !important);
+        z-index: 100;
+        padding: 0 6px !important;
+        border-bottom: solid 1px get-theme-color('primary-color-dark') !important;
+        background-color: $md-color-grey-100;
+        font-size: get-font-em(15px);
+        color: get-theme-color('primary-color-text') !important;
+        
+        .ui-icon { margin: 0 !important; }
+
+		.ui-icon-triangle-1-s:before {
+		    content: map-get($ui-icons, 'carat-1-s');
+		    margin-top: 10px !important;
+		    color: get-theme-color('primary-color');
+		}
+
+        &.ui-state-hover {
+            background-color: $md-color-grey-200;
+            border-bottom: solid 1px get-theme-color('primary-color-light') !important;
+        }
+
+        &.ui-state-focus {
+            background-color: $md-color-grey-100;
+            border-bottom: solid 1px get-theme-color('accent-color') !important;
+        }
+    }
+
+    .ui-selectcheckboxmenu-list {
+        padding: 0 !important;
+        background-color: $md-color-white;
+    }
+}
+
+.ui-selectcheckboxmenu-panel {
+    @include border-radius(2px);
+    @include box-shadow(rgba($md-color-black, 0.30) 0px 1px 1px 0px !important);
+    background-color: $md-color-white;
+    overflow: hidden;
+    padding: 0 !important;
+
+    @media screen and(min-width: 0\0) {
+        @include box-shadow(rgba($md-color-black, 0.40) 0 0 8px 0 !important);
+    }
+    
+    .ui-selectcheckboxmenu-list-item {
+        @include border-radius(0 !important);
+        @include transition(all 0.5s ease);
+        font-size: 14px;
+        margin: 0 0 1px !important;
+        color: get-theme-color('primary-text-color');
+        padding: 10px 14px !important;
+        font-size: get-font-em(14px) !important;
+        border: 0 !important;
+        padding: 10px 14px !important;
+
+        label {
+            padding-top: 3px;
+        }
+
+        .ui-chkbox .ui-chkbox-box {
+            margin-top: 0;
+        }
+    }
+
+    .ui-state-highlight {
+        color: get-theme-color('primary-color') !important;
+        background-color: $md-color-grey-100;
+    }
+
+    .ui-selectcheckboxmenu-header {
+        padding: 15px 15px 0 !important;
+
+        .ui-chkbox {
+            margin-top: 5px !important;
+        }
+    }
+
+    .ui-selectcheckboxmenu-list {
+        padding-bottom: 15px;
+    }
+
+    .ui-selectcheckboxmenu-filter-container {
+        width: 75%;
+
+        .ui-inputfield {
+            width: 100%;
+            padding-left: 30px !important;
+        }
+
+        .ui-icon-search {
+            top: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            width: 30px;
+            height: 30px;
+            
+            &:before {
+                font-size: 20px;
+                margin-top: 8px;
+                margin-left: 4px;
+                color: get-theme-color('primary-color');
+            }
+        }
+    }
+
+    .ui-selectcheckboxmenu-checked {
+        background-color: $color_wild_sand_approx;
+    }
+
+    .ui-selectcheckboxmenu-close {
+        padding: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0;
+        
+        .ui-icon-circle-close:before { content: map-get($ui-icons, 'close'); }
+        
+        &:hover {color: get-color-indicativo('color-cerrar'); } 
+    }
+}

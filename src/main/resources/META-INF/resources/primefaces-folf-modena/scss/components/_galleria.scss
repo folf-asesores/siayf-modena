@@ -1,0 +1,33 @@
+/*Style For UI Galleria --------------------------------------------------------------------------------------*/
+.ui-galleria {
+  border: solid 1px #d1d3d4;
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px  !important;
+  background-color: #fbfcfd;
+  color: #778d9b;
+}
+.ui-galleria-filmstrip-wrapper {
+  border-top: solid 1px #e8edf2 !important;
+  background-color: #f3f5f7;
+}
+.ui-galleria-nav-prev,
+.ui-galleria-nav-next {
+  padding: 2px;
+  bottom: 14px !important;
+}
+.ui-galleria-nav-prev {
+  left: 2px !important;
+  background-image: url("/modena/javax.faces.resource/images/leftarrow-navy.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+}
+.ui-galleria-nav-next {
+  right: 2px !important;
+  background-image: url("/modena/javax.faces.resource/images/rightarrow-navy.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 120% !important;
+}
+.ui-galleria-caption {
+  background-color: rgba(92, 107, 192, 0.4) !important;
+}

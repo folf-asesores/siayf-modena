@@ -1,0 +1,113 @@
+///
+/// _functions.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial contiene los funciones de SASS.
+///
+
+/// Esta función devuelve la ruta de un archivo que se encuentra dentro del 
+/// los recursos de quien implementa el tema.    
+///
+/// @access public
+/// @param {String} $image_name - El nombre del archivo (se debe incluir la
+///                               extensión).
+/// @return {String}
+@function put-image-url($image_name){
+    $prefix : map-get($fm-images-URLs, 'implementer-url-prefix');
+    $sufix : map-get($fm-images-URLs, 'url_sufix');
+    
+    @return  $prefix + $image_name + $sufix;
+}
+
+/// Esta función devuelve la ruta de un archivo que se encuentra dentro del 
+/// mismo tema.
+///
+/// @access public
+/// @param {String} $image-name - El nombre de la imágen de la que se desea 
+///                               obtener la ruta.
+/// @return {String}
+@function put-image-theme-url($image-name){
+    $prefix : map-get($fm-images-URLs, 'theme-url-prefix');
+    $sufix : map-get($fm-images-URLs, 'url_sufix');
+    
+    @return  $prefix + $image-name + $sufix;
+}
+
+/// Esta función devuelve la ruta de un archivo que se encuentra dentro del 
+/// mismo tema.
+///
+/// @access public
+/// @param {String} $font-type   - Tipo de fuentes que se requiere 'header' o 
+///                                'body'
+/// @param {String} $font-weight - Tipo de weight que se requiere 'regular', 
+///                                'bold' o 'light'
+/// @return {String}
+@function put-font-url($font-type, $font-weight) {
+    $prefix : if($font-type == 'header', 
+        map-get($fm-fonts-URLs, 'header_url_prefix'), 
+        map-get($fm-fonts-URLs, 'body_url_prefix'));
+    $font-file-name: if($font-type == 'header', 
+        map-get($fm-font-header-files-names, $font-weight), 
+        map-get($fm-font-body-files-names, $font-weight));
+    $sufix : map-get($fm-fonts-URLs, 'url_sufix');
+
+    @return  $prefix + $font-file-name + $sufix;
+}
+
+/// Esta función devuelve el valor de la fuente en em.
+/// Es una recomendación de W3C usar como unidad para las fuentes em en vez de 
+/// px por ello esta función ayuda al hacer la conversión de px a em.
+/// http://www.w3schools.com/css/css_font.asp
+/// 
+/// @access public
+/// @param {Number} $pixeles - El tamaño de la letra en pixeles 
+/// @return {Number} 
+@function get-font-em($pixeles){
+    @return (($pixeles / 16px) * 1em); 
+}
+
+/// Devuelve una cadena con el font-family según sea para el encabezado o el 
+/// cuerpo.
+/// 
+/// @access public
+/// @param {String} $type - Tipo de font-family que se requiere 'header' o 'body'
+/// @return {String}
+@function get-font-family($type) {
+    @return map-get($fm-fonts, $type);
+}
+
+/// Devuelve un color de señalización o indicativos. 
+/// Por ejemplo:
+///  color-informacion
+/// 
+/// @access public
+/// @param {String} $type - El nombre del color.
+/// @return {Color}
+@function get-color-indicativo($type) {
+    @return map-get($fm-colores-indicativos, $type);
+}
+
+/// Devuelve el color de la palette activa es decir dependiendo el tema que este
+/// activo será el color.
+/// Por ejemplo: 
+///  primary-color
+///
+/// @access public
+/// @param {String} $type-color - El nombre del color.
+/// @return {Color}
+@function get-theme-color($type-color) {
+    @return map-get(map-get($fm-themes, $fm-theme-active), $type-color);
+}
+
+/// Devuelve colores por defecto.
+/// Por ejemplo:
+///  steel-blue
+///
+/// @access public
+/// @param {String} $color-name - El nombre del color.
+/// @return {String}
+@function get-layout-color($color-name) {
+    @return map-get(map-get($fm-layout-colors, $fm-layout-active), $color-name);
+}

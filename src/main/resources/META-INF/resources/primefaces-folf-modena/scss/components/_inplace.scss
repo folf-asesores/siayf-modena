@@ -1,0 +1,17 @@
+/*Style For UI Inplace --------------------------------------------------------------------------------------*/
+.ui-inplace .ui-inplace-editor .ui-button .ui-icon-check {
+  background-image: url("/modena/javax.faces.resource/images/check-white.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 110% !important;
+}
+.ui-inplace .ui-inplace-editor .ui-button .ui-icon-close {
+  background-image: url("/modena/javax.faces.resource/images/delete.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-size: 110% !important;
+}
+.ui-inplace .ui-inplace-display.ui-state-highlight {
+  background-color: #f3f5f7;
+  padding: 3px;
+  border: solid 1px #d1d3d4 !important;
+  border-radius: 3px;
+}

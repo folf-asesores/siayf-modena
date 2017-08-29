@@ -1,0 +1,30 @@
+/*Style For UI Dasboard------------------------------------------------------------------------------------- */
+.ui-dashboard {
+  border: solid 1px #c6d6df;
+  background-color: #fbfcfd;
+  display: table;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.ui-dashboard-column {
+  margin: 2px;
+  min-width: 20px;
+  padding-bottom: 20px !important;
+}
+.ui-dashboard-column .ui-panel {
+  margin-bottom: 2px;
+}
+.ui-dashboard-column .ui-state-hover {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: dashed 1px #27aae1;
+  background-color: #dae8ef;
+}

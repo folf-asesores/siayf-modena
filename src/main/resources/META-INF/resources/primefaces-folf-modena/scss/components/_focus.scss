@@ -1,0 +1,27 @@
+/*Style For UI State Focus --------------------------------------------------------------------------------------*/
+.ui-button.ui-state-focus {
+  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, 0.7) !important;
+  -moz-box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, 0.7) !important;
+  box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, 0.7) !important;
+  background-color: get-theme-color('primary-color-light');
+}
+.ui-inputswitch-handle.ui-state-focus {
+  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, 0.7) !important;
+  -moz-box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, 0.7) !important;
+  box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, 0.7) !important;
+  background-color: #bbdefb;
+}
+.ui-slider-handle.ui-state-focus {
+  background-color: tint(get-theme-color('primary-color-light'), 25%) !important;
+  border-color: tint(get-theme-color('primary-color-light'), 25%) !important;
+}
+.ui-selectonemenu.ui-state-focus,
+.ui-selectcheckboxmenu.ui-state-focus {
+  border-bottom: solid 1px get-theme-color('accent-color') !important;
+}
+.ui-datatable table thead tr th.ui-state-focus {
+  background-color: #c1d5df;
+  -webkit-box-shadow: inset 0px -3px 0px 0px #546e7a;
+  -moz-box-shadow: inset 0px -3px 0px 0px #546e7a;
+  box-shadow: inset 0px -3px 0px 0px #546e7a;
+}

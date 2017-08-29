@@ -1,0 +1,175 @@
+///
+/// _datepicker.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI de los componentes 
+/// "DatePicker" y "Calendar".
+///
+
+
+.ui-datepicker-inline {
+    border: solid 1px contrast-color(get-layout-color('cards-background'), get-layout-color('background'), get-layout-color('app-bar'));
+}
+
+.ui-datepicker {
+    @include border-radius($radius-small);
+    padding: 8px !important;
+    background-color: get-layout-color('cards-background') !important;
+    font-family: get-font-family('body');
+    z-index: 9999;
+
+    &:hover {
+        z-index: 9999;
+    }
+    
+    &:focus {
+        z-index: 9999;
+    }
+    
+    td {
+        span {
+            text-align: center !important;
+        }
+        
+        a {
+            text-align: center !important;
+        }
+    }
+}
+
+.ui-datepicker-header {
+    @include border-radius($radius-small);
+    font-size: 18px;
+    color: get-theme-color('primary-text-color');
+    padding: 10px 0 !important;
+    
+    .ui-datepicker-prev {
+        @include border-radius(30px);
+        left: 3px !important;
+        top: 10px !important;
+        overflow: hidden;
+        width: 1.6em !important;
+        height: 1.6em !important;
+        cursor: pointer;
+        
+        .ui-icon {
+            top: 50%;
+            left: 35%;
+            
+            &.ui-icon-circle-triangle-w:before { content: map-get($ui-icons, 'carat-1-w'); }
+        }
+    }
+    
+    .ui-datepicker-next {
+        @include border-radius(30px);
+        right: 3px !important;
+        top: 10px !important;
+        overflow: hidden;
+        width: 1.6em !important;
+        height: 1.6em !important;
+        cursor: pointer;
+        
+        .ui-icon {
+            top: 51%;
+            left: 50%;
+            
+            &.ui-icon-circle-triangle-e:before { content: map-get($ui-icons, 'carat-1-e'); }
+        }
+    }
+    
+    .ui-datepicker-prev-hover {
+        background-color: contrast-color(get-layout-color('cards-background'), get-layout-color('background'), get-layout-color('app-bar'));
+        left: 3px;
+        top: 3px;
+    }
+    
+    .ui-datepicker-next-hover {
+        background-color: contrast-color(get-layout-color('cards-background'), get-layout-color('background'), get-layout-color('app-bar'));
+        right: 3px;
+        top: 3px;
+    }
+}
+
+.ui-datepicker-calendar {
+    margin: 2px 0 0 0 !important;
+    border-collapse: inherit !important;
+    
+    thead tr th {
+        @include border-radius(30px);
+        padding: 9px 0;
+        color: get-theme-color('primary-text-color');
+        cursor: default;        
+    }
+    
+    tbody tr {
+        td {
+            @include border-radius(30px);
+            @include transition(all 0.5s ease);
+            border: solid 1px transparent !important;            
+            padding: 5px 0;
+            cursor: default;
+            
+            &:hover {
+                background-color: get-theme-color('accent-color');
+                border: solid 1px get-theme-color('accent-color');
+                
+                a {
+                    @include transition(all 0.5s ease);
+                    color: get-theme-color('primary-color-text') !important;
+                }
+            }
+            
+            a {
+                color: get-theme-color('secondary-text-color') !important;
+                background-color: transparent !important;
+            }
+        }
+        
+        .ui-datepicker-today {
+            background-color: contrast-color(get-layout-color('cards-background'), get-layout-color('background'), get-layout-color('app-bar'));
+        }
+        
+        .ui-datepicker-current-day {
+            background-color: get-theme-color('primary-color');
+            border: solid 1px get-theme-color('primary-color');
+            
+            a {
+                color: get-theme-color('primary-color-text') !important;
+            }
+        }
+    }
+}
+
+.ui-datepicker-trigger {
+    min-width: 32px !important;
+	min-height: 32px !important;
+	position: absolute !important;
+	width: 32px !important;
+	height: 32px !important;
+	margin: 0 !important;
+    
+    .ui-icon-calendar {
+        font-size: 90%;
+    }
+}
+
+.ui-timepicker-div {
+    color: get-theme-color('primary-text-color');
+    
+    dl {
+        padding: 1px 10px;
+    }
+    
+    .ui-widget-header {
+        font-size: 18px;
+        padding: 6px;
+        @include border-radius($radius-small);
+        color: get-theme-color('primary-text-color');
+    }
+}
+
+.ui-datepicker-group .ui-datepicker-calendar {
+    width: 100% !important;
+}

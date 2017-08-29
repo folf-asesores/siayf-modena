@@ -1,0 +1,102 @@
+///
+/// _typography.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial contiene los estilos predeterminados para las 
+/// tipografía del tema y la plantilla.
+///
+
+@font-face {
+    font-family: $font_header_family_name;
+    src: put-font-url('header', 'regular');
+}
+
+@font-face {
+    font-family: $font_body_family_name;
+    src: put-font-url('body', 'regular');
+}
+
+@font-face {
+    font-family: $font_body_family_name;
+    src: put-font-url('body', 'bold');
+    font-weight: bold; 
+}
+
+@font-face {
+    font-family: $font_body_family_name;
+    src: put-font-url('body', 'light');
+    font-weight: 300;
+}
+
+legend {
+    font-family: get-font-family('header');
+    font-weight: lighter;
+}
+
+///
+///Encabezados
+///
+@for $i from 1 through 6 {
+    h#{$i} {
+        $sustraendo: (($i - 1) * 4);        
+        $pixeles: ((32 - $sustraendo) * 1px);
+        margin-bottom: 20px;
+        margin-top: 10px;
+        font-family: get-font-family('header');
+        font-weight: lighter;
+        font-size: get-font-em($pixeles);
+    }
+}
+
+label {
+    font-weight: bold;	
+}
+
+///Parrafos y otras ayudas
+p {
+    text-align: justify;
+    margin-bottom: 20px;
+    font: get-font-em(16px) get-font-family('body');
+}
+
+a {
+    text-decoration: none;
+    color: get-theme-color('accent-color');
+	
+    &:hover {
+        text-decoration: underline;		
+    }
+}
+
+em { 
+    font-style: italic;
+}
+
+strong { 
+    font-weight: bold;
+}
+
+body, main, header, footer, section, div {
+    font: get-font-em(16px) get-font-family('body');
+}
+
+::selection {
+    background: get-theme-color('accent-color');
+    color: get-theme-color('primary-color-text');
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: get-theme-color('accent-color');
+    color: get-theme-color('primary-color-text');
+    text-shadow: none;	
+}
+
+///
+/// Alineación del texto
+///
+.fm-texto-alineado-centro { text-align:center; }
+.fm-texto-alineado-izquierda { text-align:left; }
+.fm-texto-alineado-derecha { text-align:right !important; }

@@ -1,0 +1,51 @@
+/// Define el estilo para la plantilla secundaria.
+#plantilla-secundaria {
+    
+    /// Define la ubicación del modulo dentro del diseño.
+    #modulo {
+        box-sizing: border-box;
+        min-width: 100%;
+        padding-top: 50px; //Igual a la altura de la cabecera (header).
+        padding-right: 5%;
+        padding-bottom: 50px;
+        padding-left: 5%;
+
+        /// Cuando la pantalla sea por lo menos de 1024px de ancho se 
+        /// visualizaran los cambios que se encuentran en este breakpoint.
+        /// Para cambiar la resolución en las resoluciones ver el archivo:
+        /// "util/_variables.scss"
+        @include desde(large) {
+            @include transition(all 0.5s ease);
+            float: right;
+            padding-right: 3%;
+            padding-left: 5%;
+        }
+
+        /// Define como se mostrará el encabezado del modulo.    
+        #modulo-encabezado {
+            padding: 20px 0 10px;
+        
+            #modulo-titulo {
+                margin: 0px;
+                color: get-theme-color('primary-text-color');
+            }
+        
+            #modulo-subtitulo {
+                margin: 0px;
+                font-size: get-font-em(14px);
+                color: get-theme-color('secondary-text-color');
+            }
+        }
+        
+        #modulo-contenido { color: get-theme-color('primary-text-color'); }
+        
+        /// Esta clase reduce el tamaño del #modulo al incrementar el padding 
+        /// debiado a que #modulo tiene la propiedad box-sizing: border-box;
+        ///
+        /// 1. Debe ser el ancho del sidebar más 40px para que quede un margen 
+        ///    de separación  
+        &.reducir {
+            padding-left: 360px; /* 1 */
+        }    
+    }
+}

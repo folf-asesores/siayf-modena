@@ -1,0 +1,49 @@
+/*Style For Breadcrumb ------------------------------------------------------------------------------------- */
+
+.ui-breadcrumb {
+    background-image: initial !important;
+    padding: 10px 16px 8px 16px !important;
+    @include border-radius($radius-small, $radius-small !important);
+    background-color: $md-color-white;
+    border: solid 1px $md-color-grey-300;
+
+    .ui-icon-home {
+        background-image: put-image-theme-url("breadcrumb-home.svg") !important;
+        background-position: center 5px !important;
+        background-size: 100% !important;
+        height: 30px;
+        width: 25px;
+        margin-top: -2px !important;
+
+        &:before { content: none; }
+    }
+
+    ul li {
+        z-index: 990 !important;
+        margin-right: 10px !important;
+
+        .ui-menuitem-link {
+            font-size: 16px;
+            color: $md-color-blue-grey-600;
+            letter-spacing: 0;
+            font-family: get-font-family('body');
+            font-weight: normal;
+
+            &:hover {
+                color: $md-color-light-blue-500;
+            }
+        }
+    }
+}
+
+.ui-breadcrumb-chevron {
+    height: 20px !important;
+    background-image: put-image-theme-url("breadcrumb-arrow.svg") !important;
+    background-position: center !important;
+    background-size: 60% !important;
+    margin-top: 3px !important;
+}
+
+.ui-breadcrumb-chevron.ui-icon.ui-icon-triangle-1-e::before {
+    content: "";
+}

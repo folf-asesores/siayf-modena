@@ -1,0 +1,52 @@
+/// Define el estilo del pie de la página en la plantilla secundaria.
+#plantilla-secundaria {
+    #pie {
+        position: absolute;
+        bottom: 0;
+        box-sizing: border-box;
+        min-width: 100%;
+        padding-top: 10px;
+        padding-right: 5%;
+        padding-bottom: 10px;
+        padding-left: 5%;
+        color: get-theme-color('secondary-text-color');
+        line-height: 1em;
+
+        /// Cuando la pantalla sea por lo menos de 1024px de ancho se 
+        /// visualizaran los cambios que se encuentran en este breakpoint.
+        /// Para cambiar la resolución en las resoluciones ver el archivo:
+        /// "util/_variables.scss"
+        @include desde(large) {
+            @include transition(all 0.5s ease);
+            float: right;
+            padding-right: 3%;
+            padding-left: 5%;
+        }        
+        
+        #pie-logo { 
+            float: left;
+            height: 35px; 
+        }
+        
+        #pie-desarrollo {
+            display: block;
+            float: right;
+            font-size: get-font-em(13px);
+        }
+        
+        #pie-version {
+            display: block;
+            float: right;
+            font-size: get-font-em(13px);
+        }
+        
+        /// Esta clase reduce el tamaño del #modulo al incrementar el padding 
+        /// debiado a que #modulo tiene la propiedad box-sizing: border-box;
+        ///
+        /// 1. Debe ser el ancho del sidebar más 40px para que quede un margen 
+        ///    de separación  
+        &.reducir {
+            padding-left: 360px; /* 1 */
+        }
+    }
+}

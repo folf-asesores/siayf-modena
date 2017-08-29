@@ -1,0 +1,41 @@
+///
+/// _rating.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente "Rating".
+///
+
+.ui-rating-star a {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0px 1px;
+  background-image: put-image-theme-url("star.svg") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+}
+
+.ui-rating-cancel a {
+  width: 16px !important;
+  height: 16px !important;
+  margin-right: 3px;
+  background-image: put-image-theme-url("dislike-on.svg") !important;
+  background-position: center !important;
+  background-size: 110% !important;
+  opacity: 1;
+  color: #778d9b;
+}
+
+.ui-rating-cancel-hover a {
+  background-image: put-image-theme-url("dislike-on.svg") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+  opacity: 0.5;
+}
+
+.ui-rating-star-on a {
+  background-image: put-image-theme-url("star-on.svg") !important;
+  background-position: center !important;
+  background-size: 100% !important;
+}

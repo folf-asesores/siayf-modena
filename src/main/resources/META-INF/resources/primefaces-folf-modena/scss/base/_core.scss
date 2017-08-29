@@ -1,0 +1,837 @@
+a,
+div,
+span,
+input,
+textarea,
+li,
+strong,
+button {
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba($md-color-black, 0);
+    -webkit-touch-callout: none;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.fm-clear-both { clear: both; }
+
+.fm-cursor-pointer { cursor: pointer; }
+
+//
+//
+//Sólo es visible en pantallas pequeña (menores a 960px).
+.fm-mostrar-en-mobile { display: none; }
+
+//
+//
+//Sólo es visible en pantallas pequeña (menores a 960px).
+.fm-mostrar-en-escritorio { display: inherit; }
+
+.fm-mostrar { display: block !important; }
+
+.fm-oculto { display: none !important; }
+
+.fm-texto-subrayado { text-decoration: underline; }
+
+.fm-texto-no-seleccionable {
+    -webkit-touch-callout: none;
+    @include user-select(none);
+}
+
+.fm-display-block { display: block; }
+
+.fm-display-table {
+    display: table;
+    vertical-align: middle;
+}
+.fm-display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.fm-display-none { display: none; }
+
+.fm-display-inline-block { display: inline-block; }
+
+.fm-position-fixed { position: fixed; }
+
+.fm-position-absolute { position: absolute; }
+
+.fm-position-relative {position: relative; }
+
+.fm-position-static { position: static; }
+
+.fm-float-left { float: left; }
+
+.fm-float-right { float: right; }
+
+.fm-float-none { float: none !important; }
+
+.fm-overflow-hidden { overflow: hidden; }
+
+.fm-overflow-scroll { overflow: scroll; }
+
+.fm-overflow-auto { overflow: auto; }
+
+.fm-overflow-visible { overflow: visible; }
+
+.fm-overflow-scroll-x { overflow-x: scroll; }
+
+.fm-overflow-scroll-y { overflow-y: scroll; }
+
+.fm-overflow-hidden-x { overflow-x: hidden; }
+
+.fm-overflow-hidden-y { overflow-y: hidden; }
+
+//
+//
+// Crea las clases que agregan espacio de separción vertical entre dos elementos
+// (en pixeles).
+@for $i from 0 through 15 {
+	
+    $box-size: if($i == 0, 5, ($i * 10));
+	
+    .fm-caja-vacia-#{$box-size} {
+        display: block;
+        width: 100%;
+        height: ($box-size * 1px);
+        overflow: hidden;
+    }
+}
+
+//
+//
+// Crea las clases que agregan transparencia a un elemento basado en porcentajes.
+@for $i from 0 through 11 {
+
+    $opacity: 0; 
+    $opacity-name: "";
+    
+    @if $i == 0 {
+        $opacity-name: "transparente"
+    } @else if $i == 10 {
+        $opacity: 0.95;
+        $opacity-name: "95"
+    } @else if $i == 11 {
+        $opacity: 1.0;
+        $opacity-name: "opaco"
+    } @else {
+        $opacity: ($i * 0.10);
+        $opacity-name: #{($i * 10)};
+    }
+    
+    .fm-opacidad-#{$opacity-name} {
+        -webkit-opacity: $opacity;
+        -moz-opacity: $opacity;
+        @include opacity($opacity);
+    }
+}
+
+.fm-border-radius-3 { @include border-radius(3px); }
+
+.fm-border-radius-4 { @include border-radius(4px); }
+
+.fm-border-radius-5 { @include border-radius(5px); }
+
+.fm-border-radius-10 { @include border-radius(10px); }
+
+.fm-border-radius-15 { @include border-radius(15px); }
+
+.fm-border-radius-mitad { @include border-radius(50%); }
+
+.fm-border-arriba {
+    @include box-sizing(border-box);
+    border-top: solid 1px get-theme-color('divider-color');
+}
+
+.fm-border-derecha {
+    @include box-sizing(border-box);
+    border-right: solid 1px get-theme-color('divider-color');
+}
+
+.fm-border-abajo {
+    @include box-sizing(border-box);
+    border-top: solid 1px get-theme-color('divider-color');
+}
+
+.fm-border-izquierdo {
+    @include box-sizing(border-box);
+    border-left: solid 1px get-theme-color('divider-color');
+}
+
+.fm-border-completo {
+    @include box-sizing(border-box);
+    border: solid 1px get-theme-color('divider-color');
+}
+
+//
+//
+// Crea las clases que modifican el ancho de un elemento.
+@for $i from 1 through 10 {
+
+    $width: ($i * 10); 
+    
+    .fm-width-#{$width} {
+        width: ($width * 1%);
+    }
+}
+
+//
+//
+// Clases con anchos especiales de un elemento.
+.fm-width-25 { width: 25%; }
+
+.fm-width-33 { width: 33.3%; }
+
+.fm-width-45 { width: 45%; }
+
+.fm-max-width-500 { max-width: 500px;}
+
+//
+//
+// Crea las clases que modifican lo alto de un elemento.
+@for $i from 1 through 10 {
+
+    $height: ($i * 10); 
+    
+    .fm-height-#{$height} {
+        height: ($height * 1%);
+    }
+}
+
+//
+//
+// Crea las clases que modifican el marge superior en porcentaje de un elemento.
+@for $i from 1 through 5 {
+
+    $porcentaje: ($i * 10); 
+    
+    .fm-margen-superior-porcentaje-#{$porcentaje} {
+        margin-top: ($porcentaje * 1%);
+    }
+}
+
+.fm-margen-superior-porcentaje-5 { margin-top: 5%; }
+
+.fm-margen-superior-25 { margin-top: 25%; }
+
+.fm-margen-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//
+//
+// Crea las clases que modifican el marge superior de un elemento.
+@for $i from 1 through 5 {
+
+    $px: ($i * 10px); 
+    
+    .fm-margen-superior-#{$px} {
+        margin-top: $px;
+    }
+}
+
+//
+//
+// Clase especial que modifican el marge superior de un elemento.
+.fm-margen-superior-5 { margin-top: 5px; }
+
+.fm-margen-inferior-10 { margin-bottom: 10px; }
+
+.fm-margen-derecho-10 { margin-right: 10px; }
+
+.fm-margen-derecho, .fm-margen-derecho-16 { margin-right: 16px; }
+
+.fm-margen-derecho-20 { margin-right: 20px; }
+
+.fm-margen-izquierdo, .fm-margen-izquierdo-16 { margin-left: 16px; }
+
+.fm-sin-relleno, .fm-no-padding { padding: 0 !important; }
+
+.fm-padding-superior-porcentaje-10 { padding-top: 10%; }
+
+///
+///
+/// Crea las clases contenedor
+@for $i from 1 through 10 {
+
+    $percentage: ($i * 10); 
+    
+    .fm-contenedor-#{$percentage} {
+        width: ($percentage * 1%);
+        float: left;
+    }
+}
+
+.fm-contenedor-96 {
+    width: 96%;
+    float: left;
+}
+
+.fm-contenedor-85 {
+    width: 85%;
+    float: left;
+}
+
+.fm-contenedor-66 {
+    width: 66.66%;
+    float: left;
+}
+.fm-contenedor-33 {
+    width: 33.33%;
+    float: left;
+}
+
+.fm-contenedor-25 {
+    width: 25%;
+    float: left;
+}
+
+.fm-contenedor-5 {
+    width: 5%;
+    float: left;
+}
+
+.fm-contenedor-con-sangria {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+///
+///
+/// Relleno con borde transparente
+@for $border from 1 through 5 {
+
+    .fm-relleno-con-borde-#{$border} {
+        border: solid ($border * 1px) transparent;
+    }
+}
+
+.fm-relleno-con-borde-10 { border: solid 10px transparent; }
+
+///
+///
+/// box-size
+.fm-box-size-content { @include box-sizing(content-box); }
+
+.fm-box-size-border { @include box-sizing(border-box); }
+
+///
+///
+/// Tamaño de la fuente
+@for $font-size from 9 through 30 {
+
+    .fm-font-size-#{$font-size} {
+        font-size: ($font-size * 1px) !important;
+    }
+}
+
+.fm-font-size-40 { font-size: 40px !important; }
+
+.fm-font-size-50 { font-size: 50px !important; }
+
+.fm-font-size-60 { font-size: 60px !important; }
+
+.fm-font-size-100 { font-size: 100px !important; }
+
+.fm-font-size-130 { font-size: 130px !important; }
+
+.fm-font-bold { font-weight: bold; }
+
+.fm-font-lighter { font-weight: lighter; }
+
+.fm-font-normal { font-weight: normal; }
+
+@media(min-width: 960px) {
+    .fm-mostrar-en-mobile {
+        display: none;
+        opacity: 0;
+    }
+    
+    .fm-mostrar-en-escritorio {
+        display: inherit;
+        opacity: 1;
+    }
+}
+
+@media(min-width: 960px) and (max-width:1200px) {
+    .fm-responsivo {
+        width: 33.3%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-responsivo-50 {
+        width: 50%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-responsivo-100 {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-width-auto-en-mobile {
+        width: auto !important;
+    }
+    
+    .fm-height-auto-en-mobile {
+        height: auto !important;
+        min-height: 50px !important;
+    }
+}
+
+@media(min-width: 640px) and (max-width: 960px) {
+    .fm-mostrar-en-mobile {
+        display: inherit;
+        opacity: 1;
+    }
+    
+    .fm-mostrar-en-escritorio {
+        display: none;
+        opacity: 0;
+    }
+    
+    .fm-float-none-en-mobile {
+        float: none !important;
+    }
+    
+    .fm-responsivo {
+        width: 50%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-responsivo-50 {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-responsivo-100 {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-contenedor-con-sangria {
+        padding: 5px;
+    }
+    
+    .fm-width-auto-en-mobile {
+        width: auto !important;
+    }
+    
+    .fm-height-auto-en-mobile {
+        height: auto !important;
+        min-height: 50px !important;
+    }
+    
+    .fm-font-size-14 {
+        font-size: 13px !important;
+    }
+    
+    .fm-font-size-15 {
+        font-size: 14px !important;
+    }
+    
+    .fm-font-size-16 {
+        font-size: 15px !important;
+    }
+    
+    .fm-font-size-17 {
+        font-size: 16px !important;
+    }
+    
+    .fm-font-size-18 {
+        font-size: 16px !important;
+    }
+    
+    .fm-font-size-19 {
+        font-size: 16px !important;
+    }
+    
+    .fm-font-size-20 {
+        font-size: 18px !important;
+    }
+    
+    .fm-font-size-21 {
+        font-size: 18px !important;
+    }
+    
+    .fm-font-size-22 {
+        font-size: 20px !important;
+    }
+    
+    .fm-font-size-23 {
+        font-size: 20px !important;
+    }
+    
+    .fm-font-size-24 {
+        font-size: 22px !important;
+    }
+    
+    .fm-font-size-25 {
+        font-size: 22px !important;
+    }
+    
+    .fm-font-size-26 {
+        font-size: 24px !important;
+    }
+    
+    .fm-font-size-27 {
+        font-size: 24px !important;
+    }
+    
+    .fm-font-size-28 {
+        font-size: 26px !important;
+    }
+    
+    .fm-font-size-29 {
+        font-size: 26px !important;
+    }
+    
+    .fm-font-size-30 {
+        font-size: 28px !important;
+    }
+    
+    .fm-font-size-40 {
+        font-size: 30px !important;
+    }
+    
+    .fm-font-size-50 {
+        font-size: 35px !important;
+    }
+    
+    .fm-font-size-60 {
+        font-size: 40px !important;
+    }
+    
+    .fm-font-size-100 {
+        font-size: 60px !important;
+    }
+    
+    .fm-font-size-130 {
+        font-size: 70px !important;
+    }
+}
+
+@media(min-width:480px) and(max-width: 640px) {
+    .fm-mostrar-en-mobile {
+        display: inherit;
+        opacity: 1;
+    }
+    
+    .fm-mostrar-en-escritorio {
+        display: none;
+        opacity: 0;
+    }
+    
+    .fm-float-none-en-mobile {
+        float: none !important;
+    }
+    
+    .fm-responsivo {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-responsivo-50 {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-responsivo-100 {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-contenedor-con-sangria {
+        padding: 5px;
+    }
+    
+    .fm-width-auto-en-mobile {
+        width: auto !important;
+    }
+    
+    .fm-height-auto-en-mobile {
+        height: auto !important;
+        min-height: 50px !important;
+    }
+    
+    .fm-font-size-12 {
+        font-size: 12px !important;
+    }
+    
+    .fm-font-size-13 {
+        font-size: 12px !important;
+    }
+    
+    .fm-font-size-14 {
+        font-size: 13px !important;
+    }
+    
+    .fm-font-size-15 {
+        font-size: 13px !important;
+    }
+    
+    .fm-font-size-16 {
+        font-size: 13px !important;
+    }
+    
+    .fm-font-size-17 {
+        font-size: 14px !important;
+    }
+    
+    .fm-font-size-18 {
+        font-size: 15px !important;
+    }
+    
+    .fm-font-size-19 {
+        font-size: 17px !important;
+    }
+    
+    .fm-font-size-20 {
+        font-size: 17px !important;
+    }
+    
+    .fm-font-size-21 {
+        font-size: 18px !important;
+    }
+    
+    .fm-font-size-22 {
+        font-size: 18px !important;
+    }
+    
+    .fm-font-size-23 {
+        font-size: 20px !important;
+    }
+    
+    .fm-font-size-24 {
+        font-size: 21px !important;
+    }
+    
+    .fm-font-size-25 {
+        font-size: 22px !important;
+    }
+    
+    .fm-font-size-26 {
+        font-size: 23px !important;
+    }
+    
+    .fm-font-size-27 {
+        font-size: 23px !important;
+    }
+    
+    .fm-font-size-28 {
+        font-size: 25px !important;
+    }
+    
+    .fm-font-size-29 {
+        font-size: 25px !important;
+    }
+    
+    .fm-font-size-30 {
+        font-size: 26px !important;
+    }
+    
+    .fm-font-size-40 {
+        font-size: 30px !important;
+    }
+    
+    .fm-font-size-50 {
+        font-size: 32px !important;
+    }
+    
+    .fm-font-size-60 {
+        font-size: 35px !important;
+    }
+    
+    .fm-font-size-100 {
+        font-size: 40px !important;
+    }
+    
+    .fm-font-size-130 {
+        font-size: 50px !important;
+    }
+}
+
+@media(min-width:320px) and(max-width: 480px) {
+    .fm-mostrar-en-mobile {
+        display: inherit;
+        opacity: 1;
+    }
+    
+    .fm-height-auto-en-mobile {
+        display: none;
+        opacity: 0;
+    }
+    
+    .fm-float-none-en-mobile {
+        float: none !important;
+    }
+    
+    .fm-responsivo {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-responsivo-50 {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-responsivo-100 {
+        width: 100%;
+        float: left;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .fm-contenedor-con-sangria {
+        padding: 5px;
+    }
+    
+    .fm-width-auto-en-mobile {
+        width: auto !important;
+    }
+    
+    .fm-height-auto-en-mobile {
+        height: auto !important;
+    }
+    
+    .fm-font-size-12 {
+        font-size: 12px !important;
+    }
+    
+    .fm-font-size-13 {
+        font-size: 12px !important;
+    }
+    
+    .fm-font-size-14 {
+        font-size: 13px !important;
+    }
+    
+    .fm-font-size-15 {
+        font-size: 13px !important;
+    }
+    
+    .fm-font-size-16 {
+        font-size: 13px !important;
+    }
+    
+    .fm-font-size-17 {
+        font-size: 14px !important;
+    }
+    
+    .fm-font-size-18 {
+        font-size: 15px !important;
+    }
+    
+    .fm-font-size-19 {
+        font-size: 17px !important;
+    }
+    
+    .fm-font-size-20 {
+        font-size: 17px !important;
+    }
+    
+    .fm-font-size-21 {
+        font-size: 18px !important;
+    }
+    
+    .fm-font-size-22 {
+        font-size: 18px !important;
+    }
+    
+    .fm-font-size-23 {
+        font-size: 20px !important;
+    }
+    
+    .fm-font-size-24 {
+        font-size: 21px !important;
+    }
+    
+    .fm-font-size-25 {
+        font-size: 22px !important;
+    }
+    
+    .fm-font-size-26 {
+        font-size: 23px !important;
+    }
+    
+    .fm-font-size-27 {
+        font-size: 23px !important;
+    }
+    
+    .fm-font-size-28 {
+        font-size: 25px !important;
+    }
+    
+    .fm-font-size-29 {
+        font-size: 25px !important;
+    }
+    
+    .fm-font-size-30 {
+        font-size: 25px !important;
+    }
+    
+    .fm-font-size-40 {
+        font-size: 28px !important;
+    }
+    
+    .fm-font-size-50 {
+        font-size: 30px !important;
+    }
+    
+    .fm-font-size-60 {
+        font-size: 32px !important;
+    }
+    
+    .fm-font-size-100 {
+        font-size: 35px !important;
+    }
+    
+    .fm-font-size-130 {
+        font-size: 40px !important;
+    }
+}
+
+.fm-contenedor {
+    &:before, &:after {
+        content: "";
+        display: table;
+        border-collapse: collapse;
+    }
+
+    &:after {
+        clear: both;
+    }
+}

@@ -1,0 +1,40 @@
+/*Style For Slider --------------------------------------------------------------------------------------*/
+.ui-slider {
+  background-color: get-theme-color('primary-color-light');
+  color: get-theme-color('primary-text-color');
+}
+.ui-slider-horizontal {
+  margin: 2px 11px;
+}
+.ui-slider-vertical {
+  margin: 11px 5px;
+}
+.ui-slider-range {
+  background-color: get-theme-color('primary-color-dark');
+}
+.ui-slider-handle {
+  width: 20px !important;
+  height: 20px !important;
+  cursor: move !important;
+  border: solid 1px #ffffff !important;
+  background-color: #ffffff;
+  border-radius: 30px !important;
+  opacity: 1;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  border-collapse: separate !important;
+}
+@media screen and (min-width: 0\0) {
+  .ui-slider-handle {
+    box-shadow: 0px 0px 8px 0px rgba(43, 59, 93, 0.4) !important;
+  }
+}
+.ui-slider.ui-corner-all { @include border-radius(10px); }
+
+.ui-slider-vertical .ui-slider-handle {
+  left: -5px !important;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -5px !important;
+}

@@ -1,0 +1,49 @@
+///
+/// _asistente.scss
+/// Creado el Mar 10, 2015, 13:49:23 PM
+/// @author Freddy Barrera
+///
+/// En este archivo parcial se encuentran los estilos de la plantilla asistente. 
+///
+
+#plantilla-asistente {
+	
+    #modulo-encabezado {
+        @include box-shadow(rgba($md-color-black, 0.1) 1px 1px 1px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        padding: 5px 20px;
+        box-sizing: border-box;
+        background-color: get-layout-color('app-bar');
+	   
+        h1 {
+            font-size: get-font-em(20px);
+            margin: 0;
+            line-height: 1em;
+        }
+    }
+	
+    #modulo-contenido {
+        padding: 40px 20px 60px 20px;
+    }
+	
+    #modulo-pie {
+       @include box-shadow(rgba($md-color-grey-800, 0.4) 0px -2px 2px);
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       height: 60px;
+       box-sizing: border-box;
+       padding: 10px 20px;
+       background-color: get-layout-color('footer-bar');
+       color: mix(lighten(get-theme-color('primary-color-text'), 90%), get-theme-color('divider-color'));
+       
+        #modulo-pie-botonera {
+            float: right;
+        }
+    }
+}

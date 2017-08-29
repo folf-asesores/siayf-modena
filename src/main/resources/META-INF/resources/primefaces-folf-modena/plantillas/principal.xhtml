@@ -1,0 +1,114 @@
+<!DOCTYPE html >
+
+<html lang="es-MX" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <f:facet name="first">
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="pragma" content="no-cache" />
+            <meta http-equiv="cache-control" content="no-cache" />
+            <meta http-equiv="expires" content="0" />
+            <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <title>#{ventanaTitulo}</title>
+            <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/resources/imagenes/favicon.png" />
+        </f:facet>
+
+        <f:facet name="last">
+            <h:outputScript library="primefaces-folf-modena" name="js/perfect-scrollbar.jquery.min.js" />
+            <h:outputScript library="primefaces-folf-modena" name="js/primefaces-locales.js" />
+            <h:outputScript library="primefaces-folf-modena" name="js/fm-principal.js" />
+            <ui:insert name="headExtra"/>
+        </f:facet>
+    </h:head>
+
+    <h:body id="plantilla-principal">
+        <f:view locale="es">
+            <ui:insert name="metadata"/>
+
+            <header id="principal-encabezado">
+                <div id="principal-menu-movil">
+                    <a id="principal-movil-menu-boton">
+                        <span id="boton-linea1" class="boton-linea"></span>
+                        <span id="boton-linea2" class="boton-linea"></span>
+                        <span id="boton-linea3" class="boton-linea"></span>
+                    </a>
+                </div>
+
+                <div id="logos">
+                    <p:graphicImage library="imagenes" name="logo-encabezado-izquierdo.png" />
+                    <p:graphicImage library="imagenes" name="logo-encabezado-derecho.png" />
+                </div>
+
+                <div id="encabezado-modulo-titulo"><h1>#{moduloTitulo}</h1></div>
+
+                <div id="secundario-menu-movil">
+                    <a id="secundario-movil-menu-boton">
+                        <span id="boton-circulo1" class="boton-circulo"></span>
+                        <span id="boton-circulo2" class="boton-circulo"></span>
+                        <span id="boton-circulo3" class="boton-circulo"></span>
+                    </a>
+                </div>
+
+                <span id="boton-notificaciones">
+                    <a id="boton-notificaciones-vinculo" >
+                        <span class="fm-icon-bell"></span>
+                        <span class="boton-notificaciones-numero">#{numeroNotificaciones}</span>
+                    </a>
+                </span>
+            </header>
+
+            <nav id="principal-menu" class="fm-efecto-sombra-elevada fm-efecto-animado05">
+                <div id="principal-menu-buscar-envoltura">
+                   <input id="principal-menu-buscar" class="ui-inputfield"
+                          type="text" placeholder="Buscar" />
+                   <span class="ui-icon-search"></span>
+                </div>
+                <ui:insert name="menuPrincipal" />
+            </nav>
+
+            <nav id="secundario-menu" class="fm-efecto-sombra-elevada fm-efecto-animado05">
+                <ui:insert name="menuTareasUsuario" />
+            </nav>
+
+            <div id="notificaciones-menu" class="fm-efecto-sombra-elevada fm-efecto-animado05">
+                <header>
+                    <ui:insert name="menuNotificacionesEncabezado" />
+                </header>
+                <section>
+                    <ui:insert name="menuNotificacionesContenido" />
+                </section>
+                <footer>
+                    <ui:insert name="menuNotificacionesPie" />
+                </footer>
+            </div>
+
+            <section id="tareas-usuario">
+                <ui:insert name="tareasUsuario" />
+            </section>
+
+            <main id="modulo">
+                <header id="modulo-encabezado">
+                    <h1 id="modulo-titulo">#{moduloTitulo}</h1>
+                    <p id="modulo-subtitulo" >#{moduloSubtitulo}</p>
+                </header>
+                <section id="modulo-contenido">
+                    <ui:insert name="moduloContenido" />
+                </section>
+            </main>
+
+            <footer id="pie" >
+                <p:graphicImage id="pie-logo" library="imagenes" name="logo-pie-izquierdo.png" />
+
+                <span id="pie-desarrollo" ><strong>Desarrollado por</strong> #{pieDesarrollo}</span> <br/>
+                <span id="pie-version" ><strong>Versión</strong> #{pieVersion}</span>
+            </footer>
+            <ui:insert name="bodyExtra"/>
+        </f:view>
+    </h:body>
+</html>

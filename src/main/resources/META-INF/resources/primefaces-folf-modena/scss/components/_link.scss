@@ -1,0 +1,23 @@
+///
+/// _link.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define el estilo de la UI de los componentes 
+/// "CommandLink" y "Link".
+///
+
+///
+/// Define los estilos para el UI CommandLink
+///
+.ui-commandlink {
+    color: get-theme-color('primary-color-dark') !important;
+}
+
+///
+/// Define los estilos para el UI Link
+///
+.ui-link {
+    color: get-theme-color('primary-color-dark') !important;
+}

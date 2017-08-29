@@ -1,0 +1,15 @@
+logfile.log.*
+*.log
+*.log.*
+beans.NavData
+faces-config.NavData
+nbactions.xml
+nbproject
+nb-configuration.xml
+bin
+.classpath
+.project
+.settings
+.tern-project
+/target/
+thumbs.db

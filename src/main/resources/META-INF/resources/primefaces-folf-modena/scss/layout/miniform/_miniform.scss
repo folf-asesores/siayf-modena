@@ -1,0 +1,137 @@
+#miniform-wrapper {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 90%;
+    height: 90%;
+
+    @include desde(medium) {
+        height: 90%;
+        width: 45%;
+    }
+
+    @include desde(large) {
+        height: 60%;
+        width: 30%;
+    }
+
+    @include desde(xlarge) {
+        height: 80%;
+        width: 30%;
+    }
+
+    #miniform-header {
+        #logos {
+            width: auto;
+            height: auto;
+            
+            img:last-child {
+                float: right;
+            }
+        }
+
+        #proyecto-nombre {
+            text-align: center;
+
+            h1 {
+                border:none;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                color: get-theme-color('primary-color-dark');
+                text-shadow: 1px 1px 1px rgba($md-color-black, 0.25);
+            }
+        }
+    }
+
+    #miniform-content {
+        @include box-shadow(rgba($md-color-black, 0.1) 2px 2px 2px);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 2em;
+        background-color: get-layout-color('cards-background');
+        color: get-theme-color('secondary-text-color');
+
+        header {
+            text-align: center;
+            color: get-theme-color('secondary-text-color');
+
+            h2 {
+                color: get-theme-color('secondary-text-color');
+            }
+
+            [class^="ui-icon-"]:before, [class*=" ui-icon-"]:before,
+            [class^="fm-icon-"]:before, [class*=" fm-icon-"]:before {
+                color: get-theme-color('secondary-text-color');
+                font-size: 60px;
+            }
+        }
+		
+        label, button {
+            width: 100%;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        input, label, button {
+            margin-top: 15px;
+            margin-bottom: 10px;            
+        }
+    }
+
+    #miniform-pie {
+        color: get-theme-color('secondary-text-color');
+        padding-bottom: 10px;
+
+        #pie-logo {
+            position: relative;
+            height: 50px;
+
+            img {
+                position: absolute;
+                margin: auto;
+                left: 0px;
+                right: 0;
+            }
+        }
+
+        #pie-copyright {
+            & > p { 
+                color: get-theme-color('secondary-text-color');
+                text-align: center;
+            }
+        }
+
+        #pie-contacto {
+            text-align: center;
+            
+            h6 {
+                border: none;
+                margin-bottom: 5px;
+                font-size: get-font-em(16px); 
+            }
+
+            & > address, & > p, & > span,  {
+                color: get-theme-color('secondary-text-color');
+                text-align: center;
+                font-size: get-font-em(14px);
+            }
+            
+            & > address > a {
+                color: get-theme-color('secondary-text-color') !important;
+                text-decoration: none;
+                text-align: center;
+                
+                &:hover {
+                    color: shade(get-theme-color('secondary-text-color'), 20%) !important;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

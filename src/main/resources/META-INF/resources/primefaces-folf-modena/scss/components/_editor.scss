@@ -1,0 +1,36 @@
+///
+/// _editor.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial contiene el estilo de los compomentes Editor y 
+/// OutputLabel.
+///
+
+///
+/// Define los estilos de la UI del componente Editor
+///
+.ui-editor {
+    @extend .fm-efecto-animado05;
+    @include border-radius(2px !important);
+    border: solid 1px get-theme-color('divider-color') !important;    
+    overflow: hidden;
+    padding: 5px !important;
+    font-family: get-font-family('body');
+}
+
+.ui-editor-toolbar {
+    background-image: none !important;
+    background-color: $md-color-grey-300 !important;
+    @include border-radius(1px !important);
+}
+
+///
+/// Define los estilos de la UI del componente OutputLabel
+///
+.ui-outputlabel {
+    font-size: 16px;
+    font-family: get-font-family('body');
+    color: get-theme-color('primary-text-color');
+}

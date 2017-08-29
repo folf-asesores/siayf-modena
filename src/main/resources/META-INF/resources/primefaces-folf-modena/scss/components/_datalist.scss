@@ -1,0 +1,48 @@
+/*Style For Data List ------------------------------------------------------------------------------------- */
+.ui-datalist {
+    @include border-radius(2px);
+    border: solid 1px get-theme-color('divider-color');
+    background-color: get-layout-color('cards-background');
+    color: get-theme-color('primary-text-color');
+    font-family: get-font-family('body');
+
+    .ui-datalist-header {
+        @include border-radius(1px !important);
+        color: get-theme-color('primary-color-text');
+        padding: 15px 5px !important;
+        background-color: get-theme-color('primary-color-dark');
+        font-size: get-font-em(20px);
+        font-family: get-font-family('body');
+        font-weight: lighter;
+    }
+
+    .ui-datalist-content .ui-datalist-data {
+        margin: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+        font-family: get-font-family('body');
+        font-size: get-font-em(16px);
+        color: get-theme-color('primary-text-color');
+    }
+}
+
+.ui-datalist-item {
+    list-style: inherit !important;
+}
+
+.ui-datalist-footer {
+    height: auto !important;
+    background-color: get-theme-color('primary-color-dark');
+    margin: 0px;
+    padding: 10px 10px !important;
+    border-top: solid 1px get-theme-color('divider-color') !important;
+    font-size: get-font-em(14px);
+    color: get-theme-color('primary-color-text');
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    -webkit-border-top-left-radius: 0px !important;
+    -webkit-border-top-right-radius: 0px !important;
+    -moz-border-top-left-radius: 0px !important;
+    -moz-border-top-right-radius: 0px !important;
+}

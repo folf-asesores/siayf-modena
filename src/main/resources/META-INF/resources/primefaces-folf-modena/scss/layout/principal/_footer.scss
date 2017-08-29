@@ -1,0 +1,53 @@
+///
+/// _footer.scss
+/// Creado el Sep 12, 2015, 10:15:35 AM
+/// @author Freddy Barrera
+///
+/// En este archivo parcial se encuentran los estilos del pie de la página Web 
+/// de la plantilla principal. 
+///
+
+/// Define una sección del pie de la página Web.
+%pie-secciones {
+    padding-top: 20px;
+            
+    @include desde(large) {
+        display: inline-block;
+        box-sizing: border-box;
+        float: left;
+    }           
+}
+
+/// Define el estilo del pie de página en la plantilla principal (primaria).
+#plantilla-principal {
+    #pie {
+    	@include box-shadow(rgba($md-color-grey-800, 0.4) 0px -2px 2px);
+    	position: absolute;
+    	height: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    	padding: 10px 5% 0;
+        box-sizing: border-box;
+    	background-color: get-layout-color('footer-bar');
+    	color: contrast-color(get-layout-color('footer-bar'), get-theme-color('secondary-text-color'), get-theme-color('primary-color-text') );
+        line-height: 1em;
+        
+        #pie-logo { 
+            float: left;
+            height: 35px; 
+        }
+        
+        #pie-desarrollo {
+            display: block;
+            float: right;
+            font-size: get-font-em(13px);
+        }
+        
+        #pie-version {
+            display: block;
+            float: right;
+            font-size: get-font-em(13px);
+        }
+    }
+}

@@ -1,0 +1,84 @@
+///
+/// _selectonelistbox.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente 
+/// "SelectOneListBox".
+///
+
+.ui-selectonelistbox {
+	overflow: hidden;
+	height: auto;
+	padding: 0px !important;
+	background-color: $md-color-white;
+	color: get-theme-color('secondary-text-color');
+	font-family: get-font-family('body');
+	border-radius: 2px !important;
+	border: solid 1px $md-color-grey-300;
+  
+    .ui-selectlistbox-item {
+		padding: 10px 7px !important;
+		border-radius: 0px;
+		font-size: 14px;
+		display: block;
+		margin: 0px !important;
+    
+        &.ui-state-hover {
+            background-color: $md-color-grey-100 !important;
+            color: get-theme-color('accent-color') !important;
+        
+            td {
+	           color: get-theme-color('accent-color') !important;
+            }
+	   }
+	   
+        &.ui-state-highlight {
+            background-color: $md-color-grey-100 !important;
+            color: get-theme-color('primary-color') !important;
+            
+            td {
+                color: get-theme-color('primary-color') !important;
+            }
+        }
+	}
+	
+	table.ui-selectlistbox-list td {
+	   padding: 10px 7px !important;
+	}
+	
+    tr.ui-selectlistbox-item {
+        @media screen and (min-width: 0\0) {
+            padding: 0px !important;
+        }
+    
+	    &.ui-state-hover {
+	        @include transition(none);
+	    }
+    }
+
+    .ui-selectlistbox-filter-container {
+        .ui-inputfield {
+            padding-left: 30px !important;
+            width: 70%;
+        }
+    
+        .ui-icon-search {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+			width: 30px;
+			height: 30px;
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: put-image-theme-url('search-icon.svg');
+			left: 14px;
+			top: 16px;
+        }
+    }
+}
+
+.ui-selectlistbox-filter-container {
+    padding: 10px !important;
+}

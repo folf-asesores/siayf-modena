@@ -1,0 +1,87 @@
+///
+/// _radiobutton.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente 
+/// "Radio Button".
+///
+
+%ui-icon-bullet {
+	@include border-radius(50%);
+	@include transition(all 0.5s ease);
+	position: absolute;
+	opacity: 1;
+	width: 16px;
+	height: 16px;
+	margin: 0px !important;	
+	background-image: none !important;
+	background-size: 100%;
+	background-position: center;
+	background-color: get-theme-color('primary-color');
+}
+
+.ui-radiobutton {
+  margin: 5px 5px 0px 0px !important;
+  cursor: pointer;
+
+	.ui-radiobutton-box {
+	  background: none;
+	  box-shadow: none;
+	  color: get-theme-color('secondary-text-color');
+	  border: solid 2px get-theme-color('secondary-text-color');
+	  position: relative;
+	}
+
+	.ui-state-hover { 
+        border: solid 2px get-theme-color('primary-color');
+	   
+        .ui-icon-bullet {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            @extend %ui-icon-bullet;
+        }
+	   
+	}
+	
+	.ui-state-active { 
+		background-color: get-theme-color('primary-color');
+		border: solid 2px get-theme-color('primary-color');
+		
+		.ui-icon-bullet {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            @extend %ui-icon-bullet;
+		} 
+	}
+
+    .ui-state-focus {
+	  outline: dotted 1px #778d9b;
+	  outline-offset: 2px;
+	}
+
+	.ui-radiobutton-icon {
+        @include border-radius(50%);
+		@include transition(all 0.5s ease);		
+		position: absolute;
+		opacity: 0;
+		width: 51px;
+		height: 51px;
+		margin: -16px !important;
+		background-size: 100%;
+		background-position: center;
+		background-image: none !important;
+	}
+}
+
+.ui-selectmanycheckbox.ui-widget td, 
+.ui-selectoneradio.ui-widget td {
+    border: 0px none !important;
+}
+
+.ui-selectoneradio label {
+  margin: 1px 15px 0px 0px !important;
+  color: get-theme-color('secondary-text-color');
+  font-size: 16px;
+}

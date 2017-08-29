@@ -1,0 +1,126 @@
+///
+/// _orderlist.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente 
+/// "UI OrderList".
+///
+
+.ui-orderlist {
+    @include border-radius(2px !important);
+    border: solid 1px get-theme-color('divider-color');
+    background-color: $md-color-white;
+    color: get-theme-color('primary-text-color');
+    font-family: get-font-family('body');
+
+    .ui-orderlist-list {
+        margin-top: 10px !important;
+        
+        .ui-orderlist-item {
+            @include border-radius(0);
+            padding: 10px 8px !important;
+            margin: 0 !important;
+            background-image: $url-icon-move-gray;
+            background-position: center right !important;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            color: get-theme-color('primary-text-color');
+            font-size: 15px;
+        }
+        
+        .ui-state-hover {
+            background-color: $md-color-grey-100;
+            color: get-theme-color('accent-color') !important;
+        
+            table tr td {
+                color: get-theme-color('accent-color') !important;
+            }
+        }
+        
+        .ui-state-highlight {
+            background-color: $md-color-grey-100;
+            color: get-theme-color('accent-color');
+            
+            table tr td {
+                color: get-theme-color('accent-color') !important;
+            }
+        }
+    }
+    
+    .ui-orderlist-caption {
+        @include border-radius(2px);
+        color: get-theme-color('primary-text-color');
+        font-family: get-font-family('body');
+        font-weight: lighter;
+        font-size: 18px;
+    }
+    
+    .ui-orderlist-controls {
+        
+        .ui-button {
+            @include border-radius(2px !important);
+        }
+        
+        .ui-orderlist-button-move-up .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            top: 36% !important;
+            left: 38% !important;
+            height: 26px;
+            width: 26px;
+            margin-top: -8px;
+            margin-left: -8px;
+            background-image: $url-icon-uparrow;
+            background-position: center !important;
+            background-repeat: no-repeat;
+            background-size: 70%;
+        }
+        
+        .ui-orderlist-button-move-top .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            left: 38% !important;
+            top: 36% !important;
+            height: 26px;
+            width: 26px;
+            margin-top: -8px;
+            margin-left: -8px;
+            background-image: $url-icon-toparrow;
+            background-position: center !important;
+            background-repeat: no-repeat;
+            background-size: 70%;
+        }
+        
+        .ui-orderlist-button-move-down .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            top: 38% !important;
+            left: 38% !important;
+            margin-top: -8px;
+            width: 26px;
+            margin-left: -8px;
+            height: 26px;
+            background-image: $url-icon-downarrow-white;
+            background-position: center !important;
+            background-repeat: no-repeat;
+            background-size: 70%;
+        }
+        
+        .ui-orderlist-button-move-bottom .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;
+            top: 36% !important;
+            left: 38% !important;
+            height: 26px;
+            width: 26px;
+            margin-top: -8px;
+            margin-left: -8px;
+            background-image: $url-icon-bottomarrow;
+            background-position: center !important;
+            background-repeat: no-repeat;
+            background-size: 70%;
+        }
+    }
+}

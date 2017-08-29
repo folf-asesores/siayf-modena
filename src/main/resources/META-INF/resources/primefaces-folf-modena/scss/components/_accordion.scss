@@ -1,0 +1,56 @@
+///
+/// _accordion.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente "Accordion".
+///
+
+/// Define las características generales del componente.
+.ui-accordion {
+    @include border-radius($radius-small, $radius-small);
+    width: auto !important;
+    padding: 0 !important;
+    border: solid 1px $md-color-grey-300 !important;
+    background-color: get-layout-color('cards-background');
+    font-family: get-font-family('body');
+
+    /// Define las características del encabezado (header) del componente.
+    .ui-accordion-header {
+        @include border-radius($radius-xsmall, $radius-xsmall);
+        padding: 13px 5px 13px 30px !important;
+        margin-bottom: 1px !important;
+        background-color: get-theme-color('primary-color');
+        color: get-theme-color('primary-color-text');
+        font-family: get-font-family('body');
+        font-weight: normal !important;
+        font-size: 16px !important;
+
+        /// Define el icono para expandir el contenido.
+        .ui-icon-triangle-1-s:before { content: map-get($ui-icons, 'carat-1-s'); } 
+
+        /// Define el icono para colapsar el contenido.
+        .ui-icon-triangle-1-e:before { content: map-get($ui-icons, 'carat-1-e'); }
+
+        /// Define lapariencia del encabezado (header) cuando el ratón este 
+        /// sobre él.
+        .ui-state-hover {
+            background-color: get-theme-color('primary-color-dark');
+            color: get-theme-color('primary-color-text');
+        }
+
+        /// Define la apariencia del encabezado cuando sea el activo.
+        &.ui-state-active {
+            background-color: get-theme-color('primary-color-light');
+            color: get-theme-color('primary-color-text');
+        }
+    }
+
+    /// Define la apariencia del contenido del acordeón.
+    .ui-accordion-content {
+        padding: 5px!important;
+        color: get-theme-color('secondary-text-color');
+        font-size: 16px !important;
+    }
+}

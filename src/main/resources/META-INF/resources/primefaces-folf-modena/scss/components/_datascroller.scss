@@ -1,0 +1,15 @@
+/*Style For UI DataScroller --------------------------------------------------------------------------------------*/
+.ui-datascroller {
+  border: solid 1px #d1d3d4;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: #fbfcfd;
+}
+.ui-datascroller .ui-datascroller-header {
+  background-color: #4db6ac;
+  border-radius: 2px;
+}
+.ui-datascroller .ui-datascroller-item {
+  border-bottom: solid 1px #d1d3d4 !important;
+}

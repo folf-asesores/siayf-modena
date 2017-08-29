@@ -1,0 +1,80 @@
+/*Style For Checkbox --------------------------------------------------------------------------------------*/
+.ui-selectmanycheckbox label {
+  margin: -2px 15px 0px 0px !important;
+  color: get-theme-color('secondary-text-color');
+  font-size: 16px;
+}
+.ui-chkbox .ui-chkbox-box {
+  background: none;
+  box-shadow: none;
+  margin-right: 5px;
+  margin-top: 2px;
+  color: get-theme-color('secondary-text-color');
+  border: solid 2px get-theme-color('secondary-text-color');
+  cursor: pointer;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: transparent;
+}
+.ui-chkbox .ui-state-active {
+  border-color: get-theme-color('secondary-text-color');
+}
+.ui-chkbox .ui-state-focus {
+  outline: dotted 1px #778d9b;
+  outline-offset: 2px;
+}
+.ui-chkbox-box .ui-icon-blank {
+  background-image: none !important;
+  background-size: 100%;
+  background-position: center;
+  border-bottom: solid 2px transparent;
+  border-right: solid 2px transparent;
+  width: 5px;
+  height: 10px;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: rotate(0deg) scale(1);
+  -moz-transform: rotate(0deg) scale(1);
+  -o-transform: rotate(0deg) scale(1);
+  -ms-transform: rotate(0deg) scale(1);
+  transform: rotate(0deg) scale(1);
+}
+.ui-chkbox-box .ui-icon-check {
+  border-radius: 0px;
+  background-image: none !important;
+  background-size: 100%;
+  position: relative;
+  background-position: center;
+  background-color: transparent;
+  border-bottom: solid 3px get-theme-color('primary-color');
+  border-right: solid 3px get-theme-color('primary-color');
+  width: 5px;
+  height: 10px;
+  margin-left: 4px;
+  margin-top: -4px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: rotate(45deg) scale(1.7);
+  -moz-transform: rotate(45deg) scale(1.7);
+  -o-transform: rotate(45deg) scale(1.7);
+  -ms-transform: rotate(45deg) scale(1.7);
+  transform: rotate(45deg) scale(1.7);
+  
+  
+}
+
+/// Se elimina el icon font de la palomita.
+.ui-chkbox-icon.ui-icon-check:before { content: none; }
+
+.ui-chkbox .ui-chkbox-label {
+  margin: 1px 15px 0px 5px !important;
+  font-size: 16px;
+  color: #546e7a;
+}

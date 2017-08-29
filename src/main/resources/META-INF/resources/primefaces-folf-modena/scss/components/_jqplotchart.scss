@@ -1,0 +1,21 @@
+/*Style For Jqplot Charts --------------------------------------------------------------------------------------*/
+/* ... Styles applied to the 2nd, 3rd, etc. x axis only. */
+/* ... Styles applied to the 2nd, 3rd, etc. y axis only. */
+/*Style For UI Outline --------------------------------------------------------------------------------------*/
+.ui-tabs-outline {
+  outline: none !important;
+}
+.ui-tabs-top .ui-tabs-nav .ui-tabs-outline,
+.ui-tabs-bottom .ui-tabs-nav .ui-tabs-outline,
+.ui-tabs-left .ui-tabs-nav .ui-tabs-outline,
+.ui-tabs-right .ui-tabs-nav .ui-tabs-outline {
+  outline: none !important;
+  border: dotted 1px #ffffff !important;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+}
+.ui-accordion .ui-tabs-outline {
+  outline: none !important;
+  background-color: get-theme-color('primary-color');
+  color: get-theme-color('primary-color-text');
+}

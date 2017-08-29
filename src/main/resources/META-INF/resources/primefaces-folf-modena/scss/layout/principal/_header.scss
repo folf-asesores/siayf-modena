@@ -1,0 +1,265 @@
+///
+/// _header.scss
+/// Creado el Sep 12, 2015, 10:15:35 AM
+/// @author Freddy Barrera
+///
+/// Este archivo parcial define los estilos del header de la plantilla 
+/// principal.
+///
+
+
+#principal-encabezado {
+    @include box-shadow(rgba($md-color-black, 0.1) 1px 1px 1px);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    background-color: get-layout-color('app-bar');
+    padding: 5px;
+    box-sizing: border-box;
+
+    #principal-menu-movil {
+    
+        #principal-movil-menu-boton {
+            @include transition(all 0.3s ease);
+            @include border-radius(50%, 50%);
+            text-align: center;
+            float: left;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            overflow: hidden;
+            font-size: 28px;
+            
+            &:hover, &:focus {
+                background-color: contrast-color(get-layout-color('app-bar'), 
+                    rgba($md-color-grey-900, 0.3), rgba($md-color-grey-700, 0.8));
+                
+                .boton-linea {
+                    background-color: contrast-color(get-layout-color('app-bar'), 
+                        rgba($md-color-black, 0.87), $md-color-white);
+                }
+            }
+
+            &.cerrar-menu {
+                @include transform(perspective(500px) rotateX(0deg) rotateY(180deg) rotateZ(0deg));
+                @include transition(all 0.5s ease);
+                background-color: get-color-indicativo('color-cerrar') !important;
+                color: $md-color-white;
+                margin-top: 28px;
+
+                .boton-linea {
+                    background-color: $md-color-white;                
+                }
+                
+                #boton-linea1 {
+                    @include transform(rotate(45deg));
+                    margin-top: 19px;
+                }
+
+                #boton-linea2 {
+                    opacity: 0;
+                }
+
+                #boton-linea3 {
+                    @include transform(rotate(-45deg));
+                    margin-top: -7px;
+                }
+            }
+
+            .boton-linea {
+                @include transition(all 0.3s ease);
+                @include border-radius($radius-xsmall, $radius-xsmall);
+                width: 20px;
+                height: 2px;
+                background-color: contrast-color(get-layout-color('app-bar'), 
+                    rgba($md-color-black, 0.54), rgba($md-color-white, 0.7));
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #boton-linea1 {
+                margin-top: 14px;
+            }
+    
+            #boton-linea2 {
+                margin-top: 3px;
+            }
+    
+            #boton-linea3 {
+                margin-top: 3px;
+            }
+        }
+    }
+    
+    
+    #secundario-menu-movil {
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+        
+        #secundario-movil-menu-boton {
+            @include transition(all 0.3s ease);
+            float: right;
+            font-size: 28px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 50%;
+
+            &:hover, &:focus {
+                background-color: contrast-color(get-layout-color('app-bar'), 
+                    rgba($md-color-grey-900, 0.3), rgba($md-color-grey-700, 0.8));
+                
+                .boton-circulo {
+                    background-color: contrast-color(get-layout-color('app-bar'), 
+                        rgba($md-color-black, 0.87), $md-color-white);
+                }
+            }
+
+            .boton-circulo {
+                @include transition(all 0.3s ease);
+                background-color: contrast-color(get-layout-color('app-bar'), 
+                    rgba($md-color-black, 0.54), rgba($md-color-white, 0.7));
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+            }
+                
+            #boton-circulo1 {
+                margin-top: 12px;
+            }
+            
+            #boton-circulo2 {
+                margin-top: 3px;
+            }
+            
+            #boton-circulo3 {
+                margin-top: 3px;
+            }
+            
+            &.cerrar-menu {
+                @include transform(perspective(500px) rotateX(0deg) rotateY(180deg) rotateZ(0deg));
+                @include transition(all 0.5s ease);
+                z-index:1000;
+                background-color: get-color-indicativo('color-cerrar') !important;
+                border-radius: 50%;
+                color: $md-color-white;
+                margin-top: 28px;
+                
+                .boton-circulo{
+                    width: 20px;
+                    height: 2px;
+                    border-radius: 2px;
+                    background-color: $md-color-white;
+                }
+                
+                #boton-circulo1 {
+                    @include transform(rotate(45deg));
+                    margin-top: 19px;
+                }
+                
+                #boton-circulo2 {
+                    opacity: 0;
+                }
+                
+                #boton-circulo3 {
+                    @include transform(rotate(-45deg));
+                    margin-top: -7px;
+                }
+            }
+        }
+    }
+
+    #boton-notificaciones {
+    	#boton-notificaciones-vinculo {
+            @include transition(all 0.3s ease);
+            @include border-radius(50%);
+            float: right;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            overflow: hidden;
+            color: contrast-color(get-layout-color('app-bar'), 
+                rgba($md-color-black, 0.54), rgba($md-color-white, 0.7));
+            font-size: 20px;
+            text-align: center;
+	        
+            &:hover, &:focus {
+                background-color: contrast-color(get-layout-color('app-bar'), 
+                    rgba($md-color-grey-900, 0.3), rgba($md-color-grey-700, 0.8));
+                color: contrast-color(get-layout-color('app-bar'), 
+                        rgba($md-color-black, 0.87), $md-color-white);
+            }
+            
+            .fm-icon-bell:before { margin: 0.4em 0 0; }
+    		
+                .boton-notificaciones-numero {
+                    @include border-radius(16px);
+                    position: absolute;
+                    display: none;
+                    padding: 2px 4px 3px;
+                    margin-left: -10px;
+                    margin-top: -4px;
+                    font-size: 12px;
+                    color: get-theme-color('primary-color-text');
+                    background-color: get-color-indicativo('color-cerrar');
+    		}
+        }
+        
+        &.cerrar-menu #boton-notificaciones-vinculo {
+            @include transition(all 0.5s ease);
+            z-index:1000;
+            background-color: contrast-color(get-layout-color('app-bar'), 
+                rgba($md-color-grey-900, 0.3), rgba($md-color-grey-700, 0.8)) !important;
+            border-radius: 50%;
+            color: get-theme-color('primary-color-text');
+            margin-top: 28px;
+       }            
+    }
+    
+    #encabezado-modulo-titulo {
+        float: left;
+        display: none;
+        margin: 0px 8px;
+
+        @include desde(medium) {
+            &.mostrar {display: block;}
+
+            h1 { 
+                margin: 0;
+                overflow: hidden;
+                width: 400px;
+                text-overflow: ellipsis;
+                white-space:nowrap;
+            }
+        }
+    }
+    
+    #logos {
+        width: auto;
+        height: auto;
+        display: inline-block;
+        float: left;
+        
+        @include desde-hasta(xsmall, small) {
+            max-width: 180px;
+            max-height: 40px;
+            overflow: hidden;
+        }
+
+        img {
+            width: auto;
+            height: 25px;
+            margin: 8px 0px 0px 10px;
+        }
+    }
+}

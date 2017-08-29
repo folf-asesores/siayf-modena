@@ -1,0 +1,29 @@
+/*Style For UI ScrollPanel --------------------------------------------------------------------------------------*/
+.ui-scrollpanel {
+  border: solid 1px #e0e0e0;
+  padding: 5px !important;
+  color: #546e7a;
+  background-color: #ffffff;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  font-size: 16px;
+}
+.ui-scrollpanel .ui-scrollpanel-vbar {
+  width: 10px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+.ui-scrollpanel .ui-scrollpanel-hbar {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+.ui-scrollpanel .ui-scrollpanel-vbar .ui-scrollpanel-track .ui-scrollpanel-drag,
+.ui-scrollpanel .ui-scrollpanel-hbar .ui-scrollpanel-track .ui-scrollpanel-drag {
+  background-color: #778d9b;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}

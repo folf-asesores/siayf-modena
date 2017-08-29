@@ -1,0 +1,129 @@
+///
+/// _autocomplete.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente 
+/// "Autocomplete".
+///
+
+// TODO Cambiar colores para que se modifiquen según el tema
+$color_ziggurat: #c6d6df;
+$color_tarawera: #003d50;
+$color_quill_gray: #d1d3d4;
+$color_alabaster: #fbfcfd;
+$color_athens_gray: #e8edf2;
+$color_gothic: #778d9b;
+
+.ui-autocomplete {
+    font-family: get-font-family('body');
+
+    .ui-autocomplete-dropdown {
+        @include border-radius($radius-xsmall, $radius-small !important);
+        right: 0;
+        height: 98% !important;
+        margin: 0;
+        background-color: $md-color-grey-100;
+
+        &.ui-state-hover {
+            background-color: $md-color-grey-200 !important;
+        }
+
+        .ui-icon-triangle-1-s:before {
+            @extend .ui-icon-carat-1-s:before;
+            z-index: 998;
+            color: get-theme-color('primary-color');
+        }
+    }
+
+    .ui-corner-left {
+        @include border-radius($radius-xsmall !important);
+    }
+
+    /// 1. Debe ser igual al ancho del botón .ui-autocomplete-dropdown
+    .ui-autocomplete-input {
+        padding-right: 2.4em + 0.1em !important; /* 1 */
+    }
+}
+
+.ui-autocomplete-panel {
+    @include border-radius($radius-small, $radius-small);
+    background-color: $md-color-white;
+    font-family: get-font-family('body');
+
+    .ui-autocomplete-items {
+        padding: 0 !important;
+
+        .ui-autocomplete-item {
+            @include border-radius($radius-xsmall, $radius-xsmall);
+            @include transition(all 0.5s ease);
+            padding: 10px 16px;
+            margin: 0;
+            color: get-theme-color('primary-color-dark');
+            font-size: 14px;
+        }
+
+        .ui-autocomplete-group {
+            padding: 6px 8px;
+            border: 0;
+            margin: 0;
+            background-color: $md-color-blue-grey-600;
+            color: $md-color-white;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .ui-state-highlight {
+            background-color: $md-color-grey-100;
+            color: get-theme-color('primary-color-light');
+
+            td {
+                color: get-theme-color('primary-color-light') !important;
+                background-color: $md-color-grey-100;
+            }
+        }
+    }
+
+    .ui-autocomplete-table {
+        th {
+            padding: 14px 10px !important;
+            border-color: $md-color-grey-100 !important;
+        }
+
+        td {
+            padding: 14px 10px !important;
+            border-color: $md-color-grey-100 !important;
+        }
+    }
+}
+
+.ui-autocomplete-query {
+    font-weight: normal !important;
+}
+
+.ui-autocomplete-itemtip {
+    padding: 2px !important;
+    border: solid 1px $color_quill_gray;
+    background-color: $color_alabaster;
+    font-size: 14px;
+
+    table thead tr th {
+        border-bottom: solid 1px $color_athens_gray !important;
+        color: $color_gothic;
+        font-size: 16px;
+    }
+}
+
+.ui-autocomplete-multiple .ui-autocomplete-multiple-container .ui-autocomplete-token {
+    padding: 5px;
+    background-color: $color_ziggurat;
+
+    .ui-icon-close:before { @extend .ui-icon-closethick:before; }
+}
+
+.ui-autocomplete-input-token input[type = "text"] {
+    color: $color_tarawera;
+    font-size: 14px;
+    font-family: get-font-family('body') !important;
+}

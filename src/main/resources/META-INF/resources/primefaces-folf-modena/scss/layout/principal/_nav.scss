@@ -1,0 +1,257 @@
+///
+/// _nav.scss
+/// Creado el Sep 12, 2015, 10:15:35 AM
+/// @author Freddy Barrera
+///
+/// Este parcial se encarga del menú principal de la página. 
+
+#principal-menu {
+    @include apply-origin(50%, true);
+    @include transform(rotateX(0deg) rotateY(90deg) rotateZ(0deg));
+    position: fixed;
+    display: block;
+    top: 55px;
+    max-height: 90%;
+    width: 320px;
+    margin-left: -320px;
+    vertical-align: top;
+    z-index: 999;
+    background-color: get-layout-color('cards-background');
+    
+    /// Le da el estilo al cuadro de dialogo de busqueda
+    #principal-menu-buscar-envoltura {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        margin: auto;
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 30px !important;
+            background: none;
+        }
+		
+        .ui-icon-search {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: get-theme-color('primary-color');
+        }
+    }
+    
+    .ui-menu {
+        width: 100%;
+        box-shadow: none;
+        background-color: get-layout-color('cards-background');
+    }
+    
+    .ui-panelmenu {
+        border: none;
+        background-color: get-layout-color('cards-background');
+        
+	    .ui-panelmenu-panel {
+	        border: none;
+	        
+	        .ui-panelmenu-header {
+	            padding-left: 20px;
+	            border: none;
+	            background-color: get-layout-color('cards-background');
+	            color: get-theme-color('primary-text-color');
+	            
+	            a {
+	                color: get-theme-color('primary-text-color');
+	                
+	                &:hover { color: get-theme-color('primary-color'); }
+	            }
+
+	            &.ui-state-hover, &:hover {
+	               background-color: $md-color-grey-100;
+	               color: get-theme-color('primary-color');
+	            }
+
+	            &.ui-state-active { background-color: $md-color-grey-300; }
+
+	            .ui-icon {
+                        left: 17px;
+
+                        &.ui-icon-triangle-1-e {
+                           left: 17px;
+                           background: none;
+
+                           &:before { @extend .ui-icon-carat-1-e:before; }
+                        }
+
+                        &.ui-icon-triangle-1-s {
+                           background: none;
+
+                           &:before { @extend .ui-icon-carat-1-s:before; }
+                        }
+                    }
+	        }
+ 
+	        .ui-panelmenu-content {
+	            background-color: $md-color-grey-100;     
+	            
+	            .ui-menu-list .ui-menuitem { margin: 0 20px; }
+	            
+	            .ui-menuitem-link {
+		            
+                        .ui-icon-triangle-1-e {
+                            background: none;
+                            top: 14px;
+
+                            &:before { @extend .ui-icon-carat-1-e:before; }
+                        }
+
+                        .ui-icon-triangle-1-s {
+                            background: none;
+                            top: 14px;
+		              
+                            &:before { @extend .ui-icon-carat-1-s:before; }
+                        }
+	            }
+	        }
+	
+	        & .ui-menuitem-icon.ui-icon {
+	            top: auto;
+	            bottom: auto;
+	            left: 0;
+	        }
+	    }
+    }
+
+    &.mostrar-menu {
+        @include apply-origin(50%, true);
+        @include transform(perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+        @include transition(all 0.5s ease);
+        margin-left: 0px;
+        
+        @include desde(medium){
+            margin-left: 8px;
+        }
+    }
+
+    &.ocultar-menu {
+        @include apply-origin(50%, true);
+        @include transform(rotateX(0deg) rotateY(90deg) rotateZ(0deg));
+        @include transition(all 0.5s ease);
+    }
+}
+
+#secundario-menu {
+    @include apply-origin(50%, true);
+    @include transform(rotateX(90deg) rotateY(0deg) rotateZ(0deg));
+    @include transition(all 0.5s ease);
+    position: fixed;
+    display: block;
+    top: 60px;
+    right: 0px;
+    max-height: 100%;
+    width: 12.5em;
+    margin-right: -12.5em;
+    vertical-align: top;
+    z-index: 999;
+    background-color: get-layout-color('cards-background');
+    overflow: hidden;
+   
+    &.mostrar-menu {
+        @include apply-origin(50%, true);
+        @include transform(perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+        @include transition(all 0.5s ease);
+        margin-right: 0px;
+    }
+
+    &.ocultar-menu {
+        @include apply-origin(50%, true);
+        @include transform(rotateX(0deg) rotateY(90deg) rotateZ(0deg));
+        @include transition(all 0.5s ease);
+    }
+    
+    .ui-menu { background-color:get-layout-color('cards-background'); }
+}
+
+#notificaciones-menu {
+    position: fixed;
+    z-index: 800;
+    top: 55px;
+    right: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 300px;
+    height: 0;
+    padding: 0;
+    background-color:get-layout-color('cards-background');
+    
+    header {
+        box-sizing: border-box;
+        width: 300px;
+        height: 30px;
+        padding: 0 10px;
+        margin: 0;
+        
+        h2 {
+            margin: 7px 0;
+            font-size: get-font-em(16px);
+        }
+    }
+
+    section {
+        overflow: auto;
+        box-sizing: border-box;
+        width: 300px;
+        height: 240px;
+        padding: 0 10px;
+        margin: 0;
+
+        .notificacion-item {
+            padding-bottom: 8px;
+            border-bottom: solid get-theme-color('divider-color') 1px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            h4 {
+                color: get-theme-color('primary-text-color');
+                font-size: get-font-em(15px);
+                padding: 20px 0 0 0;
+                margin: 0;
+            }
+
+            p {
+                color: get-theme-color('secondary-text-color');
+                font-size: get-font-em(14px);
+                padding: 5px 0;
+                margin: 0;
+            }
+        }
+
+        .notificacion-item-pie .fecha-publicacion {
+          display: inline-block;
+          float: right;
+          color: #888;
+          font-size: 12px;
+        }
+    }
+
+    footer {
+        box-sizing: border-box;
+        width: 300px;
+        height: 40px;
+        padding: 0 10px;
+        margin: 0;
+    }
+    
+    &.mostrar-menu {
+        @include apply-origin(50%, true);
+        @include transform(perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+        @include transition(all 0.5s ease);
+        height: 320px;
+    }
+
+    &.ocultar-menu {
+        @include apply-origin(50%, true);
+        @include transform(perspective(500px) rotateX(-90deg) rotateY(0deg) rotateZ(0deg));
+        @include transition(all 0.5s ease);
+    }
+}

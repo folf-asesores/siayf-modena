@@ -1,0 +1,510 @@
+///
+/// _picklist.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente "PickList".
+///
+
+// @extend-elements
+// original selectors
+// .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-move-up .ui-icon, 
+// .ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-up .ui-icon
+%extend-picklist-1 {
+    background-image: $url-icon-uparrow;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 32% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-move-top .ui-icon, 
+// .ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-top .ui-icon
+%extend-picklist-2 {
+    background-image: $url-icon-toparrow;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 39% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-move-down .ui-icon, 
+// .ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-down .ui-icon
+%extend-picklist-3 {
+    background-image: $url-icon-downarrow-white;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 37% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-move-bottom .ui-icon, 
+// .ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-bottom .ui-icon
+%extend-picklist-4 {
+    background-image: $url-icon-bottomarrow;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 33% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-add .ui-icon, 
+// .ui-picklist td .ui-picklist-button-add .ui-icon
+%extend-picklist-5 {
+    background-image: $url-icon-right-arrow-white;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 36% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-add-all .ui-icon, 
+// .ui-picklist td .ui-picklist-button-add-all .ui-icon
+%extend-picklist-6 {
+    background-image: $url-icon-right-end-arrow;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 34% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-remove .ui-icon, 
+// .ui-picklist td .ui-picklist-button-remove .ui-icon
+%extend-picklist-7 {
+    background-image: $url-icon-left-arrow-white;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    left: 36% !important;
+    margin-left: -8px;
+    top: 35% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-remove-all .ui-icon, 
+// .ui-picklist td .ui-picklist-button-remove-all .ui-icon
+%extend-picklist-8 {
+    background-image: $url-icon-left-end-arrow;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 34% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-move-up .ui-icon, 
+// .ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-up .ui-icon
+%extend-picklist-9 {
+    background-image: $url-icon-uparrow;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 32% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-move-top .ui-icon, 
+// .ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-top .ui-icon
+%extend-picklist-10 {
+    background-image: $url-icon-toparrow;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 36% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-move-down .ui-icon, 
+// .ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-down .ui-icon
+%extend-picklist-11 {
+    background-image: $url-icon-downarrow-white;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    left: 36% !important;
+    margin-left: -8px;
+    top: 37% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+// original selectors
+// .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-move-bottom .ui-icon, 
+// .ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-bottom .ui-icon
+%extend-picklist-12 {
+    background-image: $url-icon-bottomarrow;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    left: 37% !important;
+    margin-left: -8px;
+    top: 33% !important;
+    margin-top: -8px;
+    width: 26px;
+    height: 26px;
+}
+
+
+.ui-picklist {
+    display: table !important;
+    color: get-theme-color('primary-text-color');
+    font-size: 14px;
+    font-family: get-font-family('body');
+    
+    .ui-picklist-filter {
+        @include box-sizing(border-box);
+        width: 100% !important;
+        padding: 8px 6px 8px 30px !important;
+    }
+    .ui-picklist-buttons {
+        display: table-cell;
+        float: none;
+        vertical-align: middle;
+        
+        .ui-button {
+            @include border-radius(2px !important);
+        }
+    }
+    .ui-picklist-caption {
+        @include transition(all 0.5s ease);
+        @include border-top-right-radius(2px);
+        @include border-top-left-radius(2px);
+        padding: 10px 0 !important;
+        margin: 6px 0 0;
+        border: solid 1px get-theme-color('divider-color');
+        background-color: get-theme-color('primary-color');
+        color: $md-color-white;
+        font-size: 18px;
+        font-family: get-font-family('body');
+        font-weight: lighter;
+    }
+    
+    .ui-picklist-list {
+        @include border-bottom-right-radius(2px);
+        @include border-bottom-left-radius(2px);
+        width: auto !important;
+        min-width: 200px;
+        padding: 0 !important;
+        border: solid 1px get-theme-color('divider-color');
+        border-top: 0 $md-color-white !important;
+        background-color: $md-color-white;
+        
+        .ui-picklist-item {
+            @include border-radius(0);
+            padding: 10px 8px !important;
+            color: get-theme-color('primary-text-color');
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        .ui-state-hover {
+            background-color: $md-color-grey-100 !important;
+            color: get-theme-color('accent-color');
+            
+            .ui-chkbox-box {
+                background-color: $md-color-grey-100 !important;
+            }
+            
+            table tbody tr td {
+                color: get-theme-color('accent-color') !important;
+                
+                .ui-chkbox-box {
+                    @include transition(none);
+                }
+            }
+        }
+        
+        .ui-state-highlight {
+            background-color: $md-color-grey-200 !important;
+            color: get-theme-color('primary-color');
+            
+            table tbody tr td {
+                color: get-theme-color('primary-color') !important;
+            }
+        }
+    }
+    
+    .ui-picklist-buttons-cell {
+        .ui-picklist-button-move-up .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-1;
+        }
+        
+        .ui-picklist-button-move-top .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-2;
+        }
+        
+        .ui-picklist-button-move-down .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-3;
+        }
+        
+        .ui-picklist-button-move-bottom .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-4;
+        }
+        
+        .ui-picklist-button-add .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-5;
+        }
+        
+        .ui-picklist-button-add-all .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-6;
+        }
+        
+        .ui-picklist-button-remove .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-7;
+        }
+        
+        .ui-picklist-button-remove-all .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-8;
+        }
+    }
+    
+    .ui-picklist-source-controls {
+        .ui-picklist-button-move-up .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-1;
+        }
+        
+        .ui-picklist-button-move-top .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-2;
+        }
+        
+        .ui-picklist-button-move-down .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-3;
+        }
+        
+        .ui-picklist-button-move-bottom .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-4;
+        }
+    }
+    
+    td {
+        .ui-picklist-button-add .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-5;
+        }
+        
+        .ui-picklist-button-add-all .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-6;
+        }
+        
+        .ui-picklist-button-remove .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-7;
+        }
+        
+        .ui-picklist-button-remove-all .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-8;
+        }
+        
+    }
+    
+    .ui-picklist-target-controls {
+        .ui-picklist-button-move-up .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-9;
+        }
+        
+        .ui-picklist-button-move-top .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-10;
+        }
+        
+        .ui-picklist-button-move-down .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-11;
+        }
+        
+        .ui-picklist-button-move-bottom .ui-icon {
+            @include fm-restaurar-icono;
+            @include fm-eliminar-font-icon;        
+            @extend %extend-picklist-12;
+        }
+    }
+    
+    .ui-picklist-filter-container .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        background-image: $url-icon-search;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 28px;
+        height: 28px;
+        left: 3px;
+        top: 5px !important;
+    }
+}
+
+.ui-picklist-vertical .ui-picklist-buttons-cell {
+    .ui-picklist-button-move-up .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        @extend %extend-picklist-9;
+    }
+    
+    .ui-picklist-button-move-top .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        @extend %extend-picklist-10;
+    }
+    
+    .ui-picklist-button-move-down .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        @extend %extend-picklist-11;
+    }
+    
+    .ui-picklist-button-move-bottom .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        @extend %extend-picklist-12;
+    }
+    
+    .ui-picklist-button-add .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        background-image: $url-icon-downarrow;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        left: 36% !important;
+        margin-left: -8px;
+        top: 35% !important;
+        margin-top: -8px;
+        width: 26px;
+        height: 26px;
+    }
+    
+    .ui-picklist-button-add-all .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        background-image: $url-icon-bottomarrow;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        left: 37% !important;
+        margin-left: -8px;
+        top: 34% !important;
+        margin-top: -8px;
+        width: 26px;
+        height: 26px;
+    }
+    
+    .ui-picklist-button-remove .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        background-image: $url-icon-uparrow;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        left: 36% !important;
+        margin-left: -8px;
+        top: 34% !important;
+        margin-top: -8px;
+        width: 26px;
+        height: 26px;
+    }
+    
+    .ui-picklist-button-remove-all .ui-icon {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        background-image: $url-icon-toparrow;
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        left: 37% !important;
+        margin-left: -8px;
+        top: 34% !important;
+        margin-top: -8px;
+        width: 26px;
+        height: 26px;
+    }
+}

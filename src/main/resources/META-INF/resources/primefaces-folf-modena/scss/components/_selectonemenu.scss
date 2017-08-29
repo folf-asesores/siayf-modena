@@ -1,0 +1,156 @@
+///
+/// _selectonemenu.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo parcial define los estilos de la UI del componente 
+/// "SelectOneMenu".
+///
+
+$select-one-menu--height: 32px; 
+$select-one-menu--border-bottom-width: 1px; 
+$select-one-menu__trigger--width: ($select-one-menu--height / 2); 
+
+///
+/// Define los estilos para el SelectCheckBoxMenu
+///
+.ui-selectonemenu {
+    @include transition(none);
+    @include box-sizing(border-box);
+    @include border-radius(0);
+    margin: 0;
+    padding: 0 !important;
+    padding-right: ($select-one-menu__trigger--width + 10px) !important; 
+    height: $select-one-menu--height;
+    z-index: 100;
+    font-size: get-font-em(15px) !important;
+    font-family: get-font-family('body');
+    border-bottom: solid $select-one-menu--border-bottom-width get-theme-color('primary-color-dark') !important;
+    color: get-theme-color('secondary-text-color');
+
+    .ui-selectonemenu-label {
+        @include border-radius(0 !important);
+        height: ($select-one-menu--height - $select-one-menu--border-bottom-width);
+        color: get-theme-color('primary-text-color');
+    }
+
+    &.ui-state-focus .ui-selectonemenu-label {
+        background-color: $md-color-grey-100 !important;
+    }
+
+    .ui-selectonemenu-trigger {
+        @include text-shadow(none);
+        @include border-radius(0 !important);
+        z-index: 100;
+        padding: 0 6px !important;
+        width: $select-one-menu__trigger--width !important;
+        border-bottom: solid 1px get-theme-color('primary-color-dark') !important;
+        text-align: center;
+        font-size: get-font-em(15px);
+        color: get-theme-color('primary-color-text') !important;
+        background-color: $md-color-grey-100;
+        
+        /// Estilo para el icono
+        /// Elimina el margen que agrega PrimeFaces
+        .ui-icon { margin: 0 !important; }
+        
+        .ui-icon-triangle-1-s:before {
+            content: map-get($ui-icons, 'carat-1-s');
+            margin-top: 10px !important;
+            color: get-theme-color('primary-color');
+        }
+
+        /// Estados del trigger (gatillo)
+        &.ui-state-hover {
+            background-color: $md-color-grey-200;
+            border-bottom: solid 1px get-theme-color('primary-color-light') !important;
+        }
+
+        &.ui-state-focus {
+            background-color: $md-color-grey-100;
+            border-bottom: solid 1px get-theme-color('accent-color') !important;
+        }
+    }
+}
+
+/// Representa la la lista en la que se despliegan las opciones
+.ui-selectonemenu-panel {
+    @include border-radius(2px);
+    overflow: hidden;
+    background-color: get-layout-color('cards-background');
+    
+    .ui-selectonemenu-list {
+        padding: 0 !important;
+        background-color: get-layout-color('cards-background');
+    }
+
+    .ui-selectonemenu-list-item {
+        @include border-radius(0 !important);
+        @include transition(all 0.5s ease);
+        font-size: get-font-em(14px);
+        margin: 0 0 1px !important;
+        color: get-theme-color('primary-text-color');
+        padding: 10px 14px !important;
+    }
+
+    .ui-selectonemenu-item-group {
+        @include border-radius(0 !important);
+        @include transition(all 0.5s ease);
+        padding: 10px 14px !important;
+        margin: 0 !important;
+        background-color: get-theme-color('accent-color');
+        color: get-theme-color('primary-color-text');
+        font-size: get-font-em(14px);
+        font-weight: normal !important;
+    }
+
+    .ui-selectonemenu-filter-container {
+
+        .ui-icon-search {
+            top: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            width: 30px;
+            height: 30px;
+            
+            &:before {
+                font-size: 20px;
+                margin-top: 14px;
+                margin-left: 10px;
+                color: get-theme-color('primary-color');
+            }
+        }
+
+        .ui-inputfield {
+            padding-left: 30px !important;
+            width: 100%;
+        }
+    }
+
+    .ui-state-highlight {
+        background-color: contrast-color(get-layout-color('cards-background'), get-layout-color('background'), get-layout-color('app-bar'));
+        color: get-theme-color('primary-color') !important;
+    }
+
+    .ui-state-hover {
+        @include transition(all 0.5s ease);
+        background-color: contrast-color(get-layout-color('cards-background'), get-layout-color('background'), get-layout-color('app-bar'));
+        color: get-theme-color('accent-color') !important;
+    }
+    
+    .ui-selectonemenu-table td {
+        @include border-radius(0 !important);
+        @include transition(all 0.5s ease);
+        padding: 14px 10px !important;
+        border: solid 1px contrast-color(get-layout-color('cards-background'), get-layout-color('background'), get-layout-color('app-bar')) !important;
+        margin: 0 !important;
+        color: get-theme-color('primary-text-color');
+    }
+
+    tr.ui-state-highlight td {
+        background-color: contrast-color(get-layout-color('cards-background'), get-layout-color('background'), get-layout-color('app-bar'));
+        color: get-theme-color('primary-color-light') !important;
+    }
+}

@@ -1,0 +1,502 @@
+///Cargar los fonts icons de Fontello
+$font_icon_url_prefix: unquote("url(\"\#\{resource[\'primefaces-folf-modena:fuentes/modena-icons/");
+$font_icon_url_sufix: unquote("\']\}\")");
+
+@font-face {
+    font-family: 'modena';
+    src: $font_icon_url_prefix + 'modena.eot' + $font_icon_url_sufix;
+    src: $font_icon_url_prefix + 'modena.eot' + $font_icon_url_sufix format('embedded-opentype'),
+         $font_icon_url_prefix + 'modena.woff' + $font_icon_url_sufix format('woff'),
+         $font_icon_url_prefix + 'modena.woff2' + $font_icon_url_sufix format('woff2'),
+         $font_icon_url_prefix + 'modena.ttf' + $font_icon_url_sufix format('truetype'),
+         $font_icon_url_prefix + 'modena.svg' + $font_icon_url_sufix format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="ui-icon-"]:before, [class*=" ui-icon-"]:before,
+[class^="fm-icon-"]:before, [class*=" fm-icon-"]:before {
+    font-family: "modena";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    color: inherit;
+    display: inline-block;
+    text-decoration: inherit;
+    text-indent: 0 !important;
+    width: 1.1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+  
+    /* For safety - reset parent styles, that can break glyph codes */
+    font-variant: normal;
+    text-transform: none;
+ 
+    /* fix buttons height, for twitter bootstrap */
+    //line-height: 1.1em;
+ 
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    // margin-left: .2em;
+ 
+    /* you can be more comfortable with increased icons size */
+    font-size: 110%;
+ 
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+ 
+    /* Uncomment for 3D effect */
+    text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+.ui-icon {
+    text-indent: 0 !important;
+    overflow: visible !important;
+    line-height: 1em;
+}
+
+///
+///
+/// Iconos por defecto de jQuery UI.
+/// Los iconos relacionados con direción se ordenan conforme a los puntos 
+/// cardinales en inglés (n, ne, e, se, s, sw, w, nw) siguiendo en el sentido de 
+/// las manecillas del reloj, o en su casos usando las preposiciones de 
+/// movimiento en inglés (up, left, down, right) y ordenando siguiendo el 
+/// sentido de las manecillas del reloj
+$ui-icons : (
+    'blank' : ' ', /// Este icono debe estar vacio
+
+    'carat-1-n'  : '\e82a',  /* '' */
+    'carat-1-ne' : ' ',      /// No se ha implementado
+    'carat-1-e'  : '\e828',  /* '' */
+    'carat-1-se' : ' ',      /// No se ha implementado
+    'carat-1-s'  : '\e829',  /* '' */
+    'carat-1-sw' : ' ',      /// No se ha implementado
+    'carat-1-w'  : '\e827',  /* '' */
+    'carat-1-nw' : ' ',      /// No se ha implementado
+
+    'carat-2-n-s' : ' ',      /// No se ha implementado
+    'carat-2-e-w' : ' ',      /// No se ha implementado
+
+    'triangle-1-n'  : '\e804',  /* '' */
+    'triangle-1-ne' : ' ',      /// No se ha implementado
+    'triangle-1-e'  : '\e802',  /* '' */
+    'triangle-1-se' : ' ',      /// No se ha implementado 
+    'triangle-1-s'  : '\e803',  /* '' */
+    'triangle-1-sw' : ' ',      /// No se ha implementado
+    'triangle-1-w'  : '\e801',  /* '' */
+    'triangle-1-nw' : ' ',      /// No se ha implementado
+
+    'triangle-2-n-s' : ' ',     /// No se ha implementado
+    'triangle-2-e-w' : ' ',     /// No se ha implementado
+
+    'arrow-1-n'  : '\e870',  /* '' */
+    'arrow-1-ne' : ' ',      /// No se ha implementado
+    'arrow-1-e'  : '\e86f',  /* '' */
+    'arrow-1-se' : ' ',      /// No se ha implementado
+    'arrow-1-s'  : '\e86d',  /* '' */
+    'arrow-1-sw' : ' ',      /// No se ha implementado
+    'arrow-1-w'  : '\e86e',  /* '' */
+    'arrow-1-nw' : ' ',      /// No se ha implementado
+
+    'arrow-2-n-s'   : ' ',  /// No se ha implementado
+    'arrow-2-ne-sw' : ' ',  /// No se ha implementado
+    'arrow-2-e-w'   : ' ',  /// No se ha implementado
+    'arrow-2-se-nw' : ' ',  /// No se ha implementado
+
+    'arrowstop-1-n' : ' ',  /// No se ha implementado
+    'arrowstop-1-e' : ' ',  /// No se ha implementado
+    'arrowstop-1-s' : ' ',  /// No se ha implementado
+    'arrowstop-1-w' : ' ',  /// No se ha implementado
+
+    'arrowthick-1-n'  : '\e866',  /* '' */
+    'arrowthick-1-ne' : ' ',      /// No se ha implementado
+    'arrowthick-1-e'  : '\e867',  /* '' */
+    'arrowthick-1-se' : ' ',      /// No se ha implementado
+    'arrowthick-1-s'  : '\e868',  /* '' */
+    'arrowthick-1-sw' : ' ',      /// No se ha implementado
+    'arrowthick-1-w'  : '\e869',  /* '' */
+    'arrowthick-1-nw' : ' ',      /// No se ha implementado
+
+    'arrowthick-2-n-s'   : ' ',  /// No se ha implementado
+    'arrowthick-2-ne-sw' : ' ',  /// No se ha implementado
+    'arrowthick-2-e-w'   : ' ',  /// No se ha implementado
+    'arrowthick-2-se-nw' : ' ',  /// No se ha implementado
+
+    'arrowthickstop-1-n'  : ' ',  /// No se ha implementado
+    'arrowthickstop-1-e'  : ' ',  /// No se ha implementado
+    'arrowthickstop-1-s'  : ' ',  /// No se ha implementado
+    'arrowthickstop-1-w'  : ' ',  /// No se ha implementado
+
+    'arrowreturnthick-1-n' : ' ',  /// No se ha implementado
+    'arrowreturnthick-1-e' : ' ',  /// No se ha implementado
+    'arrowreturnthick-1-s' : ' ',  /// No se ha implementado
+    'arrowreturnthick-1-w' : ' ',  /// No se ha implementado
+
+    'arrowreturn-1-n'  : ' ',  /// No se ha implementado
+    'arrowreturn-1-e'  : ' ',  /// No se ha implementado
+    'arrowreturn-1-s'  : ' ',  /// No se ha implementado
+    'arrowreturn-1-w'  : ' ',  /// No se ha implementado
+
+    'arrowrefresh-1-n'  : ' ',  /// No se ha implementado
+    'arrowrefresh-1-e'  : '\e83a', /* '' */
+    'arrowrefresh-1-s'  : ' ',  /// No se ha implementado
+    'arrowrefresh-1-w'  : ' ',  /// No se ha implementado
+
+    'arrow-4'      : ' ',  /// No se ha implementado
+    'arrow-4-diag' : ' ',  /// No se ha implementado
+
+    'extlink' : '\e839', /* '' */
+    'newwin'  : '\e847', /* '' */
+    'refresh' : '\e848', /* '' */
+    'shuffle' : '\e862', /* '' */
+
+    'transfer-e-w'      : '\e865', /* '' */
+    'transferthick-e-w' : ' ',     /// No se ha implementado
+
+    'folder-collapsed' : '\e80c', /* '' */
+    'folder-open'      : '\e80d', /* '' */
+
+    'document'   : '\e835', /* '' */
+    'document-b' : ' ',     /// No se ha implementado
+    'note'       : ' ',     /// No se ha implementado
+
+    'mail-closed' : '\e834', /* '' */
+    'mail-open'   : ' ',     /// No se ha implementado
+
+    'suitcase' : '\e857', /* '' */
+    'comment'  : '\e86a', /* '' */
+
+    'person' : '\e83f', /* '' */
+
+    'print' : '\e819', /* '' */
+
+    'trash' : '\e81d', /* '' */
+
+    'locked'   : '\e80f', /* '' */
+    'unlocked' : '\e810', /* '' */
+
+    'bookmark' : '\e84d', /* '' */
+
+    'tag' : '\e84c', /* '' */
+
+    'home' : '\e80e', /* '' */
+
+    'flag'       : '\e84e', /* '' */
+    'calendar'   : '\e84f', /* '' */
+    'cart'       : '\e844', /* '' */
+    'pencil'     : '\e807', /* '' */
+    'clock'      : '\e849', /* '' */
+    'disk'       : '\e836', /* '' */
+    'calculator' : '\e850', /* '' */
+
+    'zoomin'  : '\e851', /* '' */
+    'zoomout' : '\e852', /* '' */
+
+    'search' : '\e815', /* '' */
+    'wrench' : '\e83d', /* '' */
+    'gear'   : '\e81a', /* '' */
+    'heart'  : '\e84a', /* '' */
+    'star'   : '\e831', /* '' */
+    'link'   : '\e853', /* '' */
+
+    'cancel' :'\e812', /* '' */
+
+    'plusthick'  : '\e813', /* '' */
+    'plus'       : '\e813', /* '' Herencia de "plusthick" */
+    'minusthick' : '\e83e', /* '' */
+    'minus'      : '\e83e', /* '' Herencia de "minusthick" */
+    'closethick' : '\e814', /* '' */
+    'close'      : '\e814', /* '' Herencia de "closethick" */
+
+    'key' : '\e854', /* '' */
+
+    'lightbulb' : '\e84b', /* '' */
+
+    'scissors' : '\e855', /* '' */
+
+    'clipboard' : '\e856', /* '' */
+    'copy'      : ' ',  /// No se ha implementado
+
+    'contact' : '\e859', /* '' */
+
+    'image' : '\e808', /* '' */
+    'video' : ' ',  /// No se ha implementado
+
+    'script' : ' ',  /// No se ha implementado
+
+    'alert'  : '\e82f', /* '' */
+    'info'   : '\e837', /* '' */
+    'notice' : '\e858', /* '' */
+    'help'   : '\e83c', /* '' */
+
+    'check' : '\e81e', /* '' */
+
+    'bullet' : '\e82c', /* '' */
+
+    'radio-on'  : ' ',    /// No se ha implementado
+    'radio-off' :'\e82d', /* '' */
+
+    'pin-w' : ' ',     /// No se ha implementado
+    'pin-s' : '\e85b', /* '' */
+
+    'play'       : '\e85c', /* '' */
+    'pause'      : '\e85e', /* '' */
+    'seek-next'  : '\e871', /* '' */
+    'seek-prev'  : '\e872', /* '' */
+    'seek-end'   : '\e874', /* '' */
+    'seek-start' : ' ',     /// No se ha implementado
+    'seek-first' : '\e873', /* '' */
+    'stop'       : '\e85d', /* '' */
+    'eject'      : '\e85f', /* '' */
+
+    'volume-off' : '\e860', /* '' */
+    'volume-on'  : '\e861', /* '' */
+
+    'power' : '\e820', /* '' */
+
+    'signal-diag' : '\e864', /* '' */
+    'signal'      : '\e863', /* '' */
+
+    'battery-0' : ' ',  /// No se ha implementado
+    'battery-1' : ' ',  /// No se ha implementado
+    'battery-2' : ' ',  /// No se ha implementado
+    'battery-3' : ' ',  /// No se ha implementado
+
+    'circle-plus'  : '\e86c', /* '' */
+    'circle-minus' : '\e86b', /* '' */
+
+    'circle-close' :'\e817', /* '' */
+
+    'circle-triangle-n' : ' ',  /// No se ha implementado
+    'circle-triangle-e' : ' ',  /// No se ha implementado
+    'circle-triangle-s' : ' ',  /// No se ha implementado
+    'circle-triangle-w' : ' ',  /// No se ha implementado
+
+    'circle-arrow-n' : '\e826', /* '' */
+    'circle-arrow-e' : '\e824', /* '' */
+    'circle-arrow-s' : '\e825', /* '' */
+    'circle-arrow-w' : '\e823', /* '' */
+
+    'circle-zoomout' : ' ',  /// No se ha implementado
+    'circle-zoomin'  : ' ',  /// No se ha implementado
+
+    'circle-check' : '\e816', /* '' */
+
+    'circlesmall-plus'  : ' ',  /// No se ha implementado
+    'circlesmall-minus' : ' ',  /// No se ha implementado
+    'circlesmall-close' : ' ',  /// No se ha implementado
+
+    'squaresmall-plus'  : ' ',  /// No se ha implementado
+    'squaresmall-minus' : ' ',  /// No se ha implementado
+    'squaresmall-close' : ' ',  /// No se ha implementado
+
+    'grip-dotted-vertical'   : ' ',  /// No se ha implementado
+    'grip-dotted-horizontal' : ' ',  /// No se ha implementado
+
+    'grip-solid-vertical'   : ' ',  /// No se ha implementado
+    'grip-solid-horizontal' : ' ',  /// No se ha implementado
+
+    'gripsmall-diagonal-se' : ' ',  /// No se ha implementado
+
+    'grip-diagonal-se' : ' ',  /// No se ha implementado
+);
+
+@each $icono-nombre, $icono in $ui-icons {
+    .ui-icon-#{$icono-nombre}:before { content: '#{$icono}'; }
+}
+
+///
+/// Iconos personalizados.
+/// Aquí se definen los iconos que no están por defecto en el jQuery UI
+$fm-icons : (
+    'attach' : '\e800', /* '' */
+
+    'upload'   : '\e805', /* '' */
+    'download' : '\e806', /* '' */
+
+    'file-zip'   : '\e809', /* '' */
+    'file-excel' : '\e80a', /* '' */
+    'file-pdf'   : '\e80b', /* '' */
+    'file-markup': '\e822', /* '' */
+
+    'user-plus'  :'\e840', /* '' */
+    'user-times' :'\e841', /* '' */
+    'users'      :'\e842', /* '' */
+
+    'eye'     : '\e811', /* '' */
+    'eye-off' : '\e830', /* '' */
+
+    'sitemap'   :'\e818', /* '' */
+    'chart-pie' :'\e81b', /* '' */
+
+    'cog-alt' : '\e82b', /* '' */
+
+    'circle' : '\e82c', /* '' */
+
+    'target' : '\e82e', /* '' */
+
+    'phone'    : '\e832', /* '' */
+    'location' : '\e833', /* '' */
+
+    'help-circled' : '\e83b', /* '' */
+    'info'         : '\e838', /* '' */
+
+    'credit-card' : '\e843', /* '' */
+    'money'       : '\e845', /* '' */
+    'coins'       : '\e846', /* '' */
+
+    'popup' : '\e847', /* '' */
+
+    'bell' : '\e821',  /* '' */
+);
+
+@each $icono-nombre, $icono in $fm-icons {
+    .fm-icon-#{$icono-nombre}:before { content: '#{$icono}'; }
+}
+
+/// Iconos a los que se les definen alias.
+.fm-icon-up-dir:before { @extend .ui-icon-carat-1-n:before; } 
+.fm-icon-right-dir:before { @extend .ui-icon-carat-1-e:before; }
+.fm-icon-down-dir:before { @extend .ui-icon-carat-1-s:before; }
+.fm-icon-left-dir:before { @extend .ui-icon-carat-1-w:before; }
+
+.fm-icon-up-circled:before { @extend .ui-icon-circle-arrow-n:before; }
+.fm-icon-right-circled:before { @extend .ui-icon-circle-arrow-e:before; }
+.fm-icon-down-circled:before { @extend .ui-icon-circle-arrow-s:before; }
+.fm-icon-left-circled:before { @extend .ui-icon-circle-arrow-w:before; }
+
+.fm-icon-file-image:before { @extend .ui-icon-image:before; }
+
+.fm-icon-folder-empty:before { @extend .ui-icon-folder-collapsed:before; }
+.fm-icon-folder-open-empty:before { @extend .ui-icon-folder-open:before; }
+
+.fm-icon-ok:before { @extend .ui-icon-check:before; }
+.fm-icon-block:before { @extend .ui-icon-cancel:before; }
+
+.fm-icon-floppy:before { @extend .ui-icon-disk:before; }
+
+.fm-icon-update:before { @extend .ui-icon-arrowrefresh-1-e:before; }
+
+.fm-icon-attention:before { @extend .ui-icon-alert:before; }
+
+.fm-icon-popup:before { @extend .ui-icon-newwin:before; }
+
+.fm-icon-user:before { @extend .ui-icon-person:before; }
+
+.fm-icon-logout:before { @extend .ui-icon-locked:before; }
+.fm-icon-login:before { @extend .ui-icon-unlocked:before; }
+
+.fm-icon-ok-circled:before { @extend .ui-icon-circle-check:before; }
+.fm-icon-cancel-circled:before { @extend .ui-icon-circle-close:before; }
+
+.fm-icon-circle-empty:before { @extend .ui-icon-radio-off:before; }
+
+.fm-icon-basket:before { @extend .ui-icon-cart:before; } 
+
+@each $icon-size in $icon-sizes {
+    $icon-size-px :  $icon-size * 1px;
+
+    .fm-icon-size-#{$icon-size}{
+        width:  $icon-size-px;
+        height: $icon-size-px;
+        background-size: $icon-size-px;
+    }
+
+    [class^="ui-icon-"].fm-icon-size-#{$icon-size}:before, 
+    [class*=" ui-icon-"].fm-icon-size-#{$icon-size}:before { 
+       font-size: $icon-size-px; 
+    }
+}
+
+///
+/// Iconos de uso estandar para archivos
+///
+$fm-iconos-archivos : (
+    'word'       : 'icon-docx.svg',
+    'excel'      : 'icon-xlsx.svg',
+    'powerpoint' : 'icon-pptx.svg',
+    'pdf'        : 'icon-pdf.svg',
+    'zip'        : 'icon-zip.png',
+    'xml'        : 'icon-xml.png',
+);
+
+@each $icono-nombre, $icono in $fm-iconos-archivos {
+    .fm-icon-#{$icono-nombre} {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-clip: border-box;
+        background-image: put-image-theme-url($icono);
+    }
+}
+
+.fm-icon-color-primario:before {
+    color: get-theme-color('primary-color') !important;
+}
+
+.fm-icon-color-inverso:before {
+    color: get-theme-color('primary-color-text') !important;
+}
+
+.fm-icon-color-acento:before {
+    color: get-theme-color('accent-color') !important;
+}
+
+@each $color-nombre, $color in $fm-colores-indicativos {
+    .fm-icon-#{$color-nombre}:before { color: $color !important; } 
+}
+
+///
+/// SVG icons
+///
+$url-icon-blank: put-image-theme-url('blank.svg');
+$url-icon-blank-active: put-image-theme-url('blank-active.svg');
+
+$url-icon-search: put-image-theme-url('search-icon.svg');
+$url-icon-tres-puntos: put-image-theme-url('menu-dots.svg');
+$url-icon-move-gray: put-image-theme-url('move-gray.svg');
+$url-icon-calendar: put-image-theme-url('calendar.svg');
+
+$url-icon-delete: put-image-theme-url('delete.svg');
+$url-icon-delete-gray: put-image-theme-url('delete-gray.svg');
+$url-icon-delete-pink: put-image-theme-url('delete-pink.svg');
+
+$url-icon-minus-sign-gray: put-image-theme-url('minus-sign-gray.svg');
+$url-icon-plus-sign-gray: put-image-theme-url('plus-sign-gray.svg');
+$url-icon-plus-sign-white: put-image-theme-url('plus-sign-white.svg');
+$url-icon-external-gray: put-image-theme-url('external-gray.svg');
+$url-icon-external-gray-revert: put-image-theme-url('external-gray-revert.svg');
+$url-icon-handle-gray: put-image-theme-url('handle-gray.svg');
+
+$url-icon-warn-pink: put-image-theme-url('warn-pink.svg');
+$url-icon-warn-hardal: put-image-theme-url('warn-hardal.svg');
+$url-icon-warn-blue: put-image-theme-url('warn-blue.svg');
+$url-icon-warn-red: put-image-theme-url('warn-red.svg');
+
+///
+/// Fechas
+$url-icon-right-arrow: put-image-theme-url('right-arrow.svg');
+$url-icon-left-arrow: put-image-theme-url('left-arrow.svg');
+
+$url-icon-uparrow: put-image-theme-url('uparrow.svg');
+$url-icon-downarrow: put-image-theme-url('downarrow.svg');
+$url-icon-bottomarrow: put-image-theme-url('bottomarrow.svg');
+$url-icon-toparrow: put-image-theme-url('toparrow.svg');
+$url-icon-right-end-arrow: put-image-theme-url('right-end-arrow.svg');
+$url-icon-left-end-arrow: put-image-theme-url('left-end-arrow.svg');
+
+/// Blancas
+$url-icon-left-arrow-white: put-image-theme-url('left-arrow-white.svg');
+$url-icon-downarrow-white: put-image-theme-url('downarrow-white.svg');
+$url-icon-right-arrow-white: put-image-theme-url('right-arrow-white.svg');
+
+/// Azul (Navy)
+$url-icon-downarrow-navy: put-image-theme-url('downarrow-navy.svg');
+$url-icon-rightarrow-navy: put-image-theme-url('rightarrow-navy.svg');
+
+/// Gris
+$url-icon-leftarrow-gray: put-image-theme-url('leftarrow-gray.svg');

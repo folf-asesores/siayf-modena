@@ -1,0 +1,90 @@
+<!-- 
+    Documentación y ayuda en cuanto a como modificar el POM ir a:
+    https://maven.apache.org/pom.html
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- The Basics -->
+    <groupId>mx.com.folfasesores</groupId>
+    <artifactId>folf-modena-saludtlax</artifactId>
+    <version>0.0.7</version>
+    <packaging>jar</packaging>
+    <dependencies>
+        <!-- JSF -->
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.2.12</version>
+        </dependency>
+
+        <!-- Primefaces -->
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>5.3</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <!-- Build Settings -->
+    <build>
+        <resources>
+            <resource>
+                <targetPath>META-INF</targetPath>
+                <directory>${basedir}/src/main/resources/META-INF</directory>
+                <excludes>
+                    <exclude>**/*.scss</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <targetPath>mx/com/folfasesores/modena</targetPath>
+                <directory>${basedir}/src/main/resources/mx/com/folfasesores/modena</directory>
+                <includes>
+                    <include>build.properties</include>
+                </includes>
+            </resource>
+            <resource>
+                <targetPath>org/primefaces/</targetPath>
+                <directory>${basedir}/src/main/resources/org/primefaces/</directory>
+                <includes>
+                    <include>Messages_es.properties</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <!-- More Project Information -->
+    <name>FOLF Theme and Layout para el proyecto de Salud de Tlaxcala</name>
+    <description>Este proyecto define un tema y diseño personalizado para los 
+        componetes de PrimeFaces basado en Modena</description>
+    <organization>
+        <name>FOLF Asesores</name>
+        <url>folfasesores.com.mx</url>
+    </organization>
+        <developers>
+        <developer>
+            <id>neo_cs</id>
+            <name>Freddy Barrera</name>
+            <email>freddy.barrera@folfasesores.com.mx</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+</project>

@@ -1,0 +1,336 @@
+/*Style For Tree --------------------------------------------------------------------------------------*/
+.ui-tree {
+  border: solid 1px #e0e0e0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  color: #546e7a;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #ffffff;
+  padding: 10px;
+  font-family: get-font-family('body');
+}
+.ui-tree .ui-treenode {
+  padding: 3px !important;
+}
+.ui-tree .ui-treenode .ui-treenode-label.ui-state-hover {
+  color: #03a9f4;
+}
+.ui-tree .ui-tree-droppoint.ui-state-hover {
+  background-color: #f7941e;
+}
+.ui-tree .ui-treenode .ui-state-highlight {
+  color: #03a9f4;
+}
+.ui-tree .ui-treenode .ui-treenode-leaf-icon {
+  /*background-image:url("/modena/javax.faces.resource/images/treenode-gray.svg.xhtml?ln=primefaces-modena");*/
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+.ui-tree .ui-treenode .ui-icon-grip-dotted-vertical {
+  background-image: url("/modena/javax.faces.resource/images/treenode-dots-gray.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.ui-tree .ui-treenode-content {
+  line-height: 16px;
+}
+.ui-tree .ui-treenode-content .ui-chkbox-box {
+  margin-top: 0px;
+}
+.ui-tree .ui-treenode .ui-treenode-label {
+  margin: 0px;
+  padding: 2px 6px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+.ui-tree .ui-treenode-content .ui-chkbox-box .ui-icon-minus {
+  background-image: url("/modena/javax.faces.resource/images/minus-sign-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 0px;
+}
+.ui-tree .ui-treenode-icon {
+  width: 20px;
+  height: 20px;
+}
+.ui-tree .ui-icon {
+  margin-right: 3px;
+}
+.ui-tree .ui-icon-triangle-1-e {
+  background-image: url("/modena/javax.faces.resource/images/rightarrow-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+.ui-tree .ui-icon-triangle-1-s {
+  background-image: url("/modena/javax.faces.resource/images/downarrow-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 130%;
+}
+.ui-tree .ui-icon-triangle-1-w {
+  background-image: url("/modena/javax.faces.resource/images/leftarrow-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+.ui-tree .ui-icon-folder-collapsed {
+  background-image: url("/modena/javax.faces.resource/images/folder-close-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 140%;
+}
+.ui-tree .ui-icon-folder-open {
+  background-image: url("/modena/javax.faces.resource/images/folder-open-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 160%;
+}
+.ui-tree .ui-icon-document {
+  background-image: url("/modena/javax.faces.resource/images/document-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 160%;
+}
+.ui-tree .ui-icon-note {
+  background-image: url("/modena/javax.faces.resource/images/note-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 150%;
+}
+.ui-tree .ui-icon-image {
+  background-image: url("/modena/javax.faces.resource/images/image-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 150%;
+}
+.ui-tree .ui-icon-video {
+  background-image: url("/modena/javax.faces.resource/images/video-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 160%;
+}
+.ui-tree .ui-icon-music {
+  background-image: url("/modena/javax.faces.resource/images/music-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 160%;
+}
+/*Style For TreeTable --------------------------------------------------------------------------------------*/
+.ui-treetable {
+  border: solid 1px #e0e0e0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  color: #778d9b !important;
+  background-color: #ffffff;
+  font-family: get-font-family('body');
+}
+.ui-treetable table tbody tr td .ui-chkbox-box {
+  margin-top: 0px;
+  width: 12px !important;
+  height: 12px !important;
+}
+.ui-treetable table tbody tr td .ui-chkbox-box .ui-icon {
+  width: 3px;
+  height: 6px;
+  border-bottom: solid 2px transparent;
+  border-right: solid 2px transparent;
+}
+.ui-treetable table tbody tr td .ui-chkbox-box .ui-icon-check {
+  width: 5px;
+  height: 9px;
+  border-bottom: solid 2px #26c6da;
+  border-right: solid 2px #26c6da;
+  margin-top: -5px;
+}
+.ui-treetable table tbody tr td .ui-chkbox-box .ui-icon-minus {
+  width: 12px;
+  height: 12px;
+}
+.ui-treetable .ui-treetable-header {
+  background-color: #69b66d;
+  border-top-left-radius: 1px !important;
+  border-top-right-radius: 1px !important;
+  font-size: 20px;
+  font-weight: normal !important;
+  -webkit-border-top-left-radius: 1px !important;
+  -webkit-border-top-right-radius: 1px !important;
+  -moz-border-top-left-radius: 1px !important;
+  -moz-border-top-right-radius: 1px !important;
+  color: #ffffff !important;
+  padding: 12px 5px !important;
+  font-family: get-font-family('body'); font-weight: lighter;
+}
+.ui-treetable table {
+  margin: 0px 0px 1px;
+  font-size: 14px;
+  line-height: 14px;
+}
+.ui-treetable .ui-treetable-scrollable-body table {
+  margin: 0px !important;
+}
+.ui-treetable .ui-treetable-scrollable-header-box table {
+  margin-bottom: 0px !important;
+}
+.ui-treetable table thead tr th {
+  color: #b0e7b2;
+  background-color: #43a047;
+  border: solid 1px #69b66d;
+  outline: none;
+  padding: 12px 5px;
+  font-family: get-font-family('body'); font-weight: lighter;
+  font-size: 16px;
+}
+.ui-treetable table thead tr th.ui-state-active,
+.ui-treetable table thead tr th.ui-state-hover {
+  background-color: #4fad53;
+  color: #ffffff;
+}
+.ui-treetable table tbody tr td {
+  color: #546e7a;
+  border: dashed 1px #c5d5e2;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 10px 7px;
+  font-size: 16px;
+}
+.ui-treetable table tbody .ui-state-hover td {
+  color: #03a9f4 !important;
+  background-color: #f5f5f5;
+}
+.ui-treetable table tbody .ui-state-highlight td {
+  color: #03a9f4 !important;
+  background-color: #eff3f5;
+  font-family: get-font-family('body');
+}
+.ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection {
+  float: left;
+}
+.ui-treetable .ui-icon {
+  margin-right: 7px;
+}
+.ui-treetable .ui-icon-triangle-1-e {
+  background-image: url("/modena/javax.faces.resource/images/rightarrow-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.ui-treetable .ui-icon-triangle-1-s {
+  background-image: url("/modena/javax.faces.resource/images/downarrow-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.ui-treetable .ui-icon-triangle-1-s {
+  background-image: url("/modena/javax.faces.resource/images/downarrow-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.ui-treetable .ui-chkbox-box .ui-icon-minus {
+  background-image: url("/modena/javax.faces.resource/images/minus-sign-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.ui-treetable table thead tr th .ui-icon-triangle-1-n {
+  background-image: url("/modena/javax.faces.resource/images/uparrow.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.ui-treetable table thead tr th .ui-icon-triangle-1-s {
+  background-image: url("/modena/javax.faces.resource/images/downarrow-white.svg.xhtml?ln=primefaces-modena") !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.ui-treetable table thead tr th .ui-icon-carat-2-n-s {
+  background-image: url("/modena/javax.faces.resource/images/updown-navy-arrow-softgreen.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.ui-treetable table thead tr th.ui-state-hover .ui-icon-carat-2-n-s {
+  background-image: url("/modena/javax.faces.resource/images/updown-arrow.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.ui-treetable-scrollable {
+  border: 0px;
+}
+.ui-treetable-scrollable:hover {
+  border: none;
+}
+.ui-tree-horizontal .ui-treenode {
+  padding: 5px 40px !important;
+}
+.ui-tree-horizontal .ui-treenode .ui-state-hover {
+  color: #03a9f4;
+}
+.ui-tree-horizontal .ui-treenode .ui-state-highlight {
+  color: #03a9f4;
+  border: solid 1px #03a9f4 !important;
+}
+.ui-tree-horizontal .ui-treenode-collapsed,
+.ui-tree-horizontal .ui-treenode-leaf {
+  padding: 5px 0px 5px 40px !important;
+}
+.ui-tree-horizontal .ui-treenode .ui-treenode-content {
+  border: solid 1px #e0e0e0;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+.ui-tree-horizontal .ui-icon-plus {
+  background-image: url("/modena/javax.faces.resource/images/plus-sign-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 115%;
+  float: left;
+  margin-top: 1px;
+}
+.ui-tree-horizontal .ui-icon-minus {
+  background-image: url("/modena/javax.faces.resource/images/minus-sign-navy.svg.xhtml?ln=primefaces-modena");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  float: left;
+  margin-top: 1px;
+}
+.ui-treetable-footer {
+  height: auto !important;
+  background-color: #f5f5f5;
+  padding: 10px 10px !important;
+  font-size: 14px;
+  color: #7a8f98;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  -webkit-border-top-left-radius: 0px !important;
+  -webkit-border-top-right-radius: 0px !important;
+  -moz-border-top-left-radius: 0px !important;
+  -moz-border-top-right-radius: 0px !important;
+}
+.ui-treetable-resizable th.ui-state-hover.ui-sortable-column,
+.ui-treetable-resizable th {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.ui-treetable .ui-column-resizer-helper {
+  background-color: #33AFDE;
+}

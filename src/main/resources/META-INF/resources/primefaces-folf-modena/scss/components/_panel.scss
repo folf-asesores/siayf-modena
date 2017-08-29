@@ -1,0 +1,89 @@
+/*Style For UI Panel ------------------------------------------------------------------------------------- */
+
+.ui-panel {
+    @include border-radius(2px);
+    border: 1px solid $md-color-grey-300;
+    padding: 2px !important;
+    background-color: $md-color-white;
+    
+    &.ui-panel-collapsed-h .ui-panel-titlebar 
+        .ui-panel-titlebar-icon 
+            .ui-icon.ui-icon-plusthick { margin-right: -0.6em; }
+
+    .ui-panel-titlebar {
+        @include border-radius(1px !important);
+        padding: 15px 20px !important;
+        font-size: 18px;
+        color: get-theme-color('primary-color-text');
+        z-index: 100;
+        font-family: get-font-family('header');
+        font-weight: lighter;
+        background-color: get-theme-color('primary-color');
+        margin: -2px;
+        .ui-panel-title {
+            margin: 0 !important;
+        }
+        
+        .ui-panel-titlebar-icon {
+            margin-top: 0;
+            
+            &:hover {
+                margin-top: 0;
+            }
+            
+            &:focus {
+                margin-top: 0;
+            }
+            
+            .ui-icon{
+                display: inline-block;
+                margin-right: -0.2em;
+                color: get-theme-color('primary-color-text');
+            }
+        }
+        
+        .ui-icon-closethick {
+            color: get-theme-color('primary-color-text');
+        }
+        
+        .ui-icon-minusthick {
+            color: get-theme-color('primary-color-text');
+        }
+        
+        .ui-icon-plusthick {
+            color: get-theme-color('primary-color-text');
+        }
+        
+        .ui-icon-gear {
+            color: get-theme-color('primary-color-text');
+        }
+    }
+    
+    .ui-panel-content {
+        padding: 5px !important;
+        font-size: 14px;
+        color: get-theme-color('primary-text-color');
+        font-family: get-font-family('body');
+    }
+    
+    .ui-panel-footer {
+        @include border-bottom-right-radius(1px);
+        @include border-bottom-left-radius(1px);
+        background-color: $md-color-grey-100;
+        margin: 0 -2px -2px -2px !important;
+        font-size: 14px;
+        color: get-theme-color('secondary-text-color');
+        padding: 10px 15px !important;
+    }
+}
+
+.ui-datagrid .ui-panel .ui-panel-titlebar {
+    @include border-radius(2px !important);
+    padding: 6px 10px 6px 10px !important;
+    font-size: 16px;
+    color: $color_cutty_sark_approx;
+    z-index: 100;
+    font-family: get-font-family('body');
+    background-color: $md-color-white;
+    border-bottom: dashed 1px $md-color-grey-300;
+}

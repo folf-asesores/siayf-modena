@@ -1,0 +1,237 @@
+///
+/// _messages.scss
+/// Creado el Sep 12, 2015, 10:15:03 AM
+///
+/// @author Freddy Barrera
+/// 
+/// Este archivo define los estilos para la UI del componente Messages.
+///
+
+//urls
+$url_messages_0: put-image-theme-url('delete-gray.svg');
+$url_messages_1: put-image-theme-url('warn-pink.svg');
+$url_messages_2: put-image-theme-url('warn-blue.svg');
+$url_messages_3: put-image-theme-url('warn-hardal.svg');
+$url_messages_4: put-image-theme-url('warn-red.svg');
+
+//original selectors
+//.ui-messages-info, 
+//.ui-message-info
+%extend_messages_2 {
+    color: $md-color-white !important;
+    background-color: get-color-indicativo('color-informacion') !important;
+    border-color: get-color-indicativo('color-informacion') !important;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 10px !important;
+    font-family: get-font-family('body');
+}
+
+//original selectors
+//.ui-messages-warn,
+//.ui-message-warn
+%extend_messages_4 {
+    color: $md-color-white !important;
+    background-color: get-color-indicativo('color-advertencia') !important;
+    border-color: get-color-indicativo('color-advertencia') !important;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 10px !important;
+    font-family: get-font-family('body');
+}
+
+//@extend-elements
+//original selectors
+//.ui-messages-error, 
+//.ui-message-error
+%extend_messages_1 {
+    color: $md-color-white !important;
+    background-color: get-color-indicativo('color-error') !important;
+    border-color: get-color-indicativo('color-error') !important;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 10px !important;
+    font-family: get-font-family('body');
+}
+
+//original selectors
+//.ui-messages-fatal,
+//.ui-message-fatal
+%extend_messages_5 {
+    color: $md-color-white !important;
+    background-color: get-color-indicativo('color-peligro') !important;
+    border-color: get-color-indicativo('color-peligro') !important;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 10px !important;
+    font-family: get-font-family('body');
+}
+
+//original selectors
+//.ui-messages-info .ui-icon-close, 
+//.ui-messages-warn .ui-icon-close, 
+//.ui-messages-error .ui-icon-close, 
+//.ui-messages-fatal .ui-icon-close
+%extend_messages_3 {
+    background-image: $url_messages_0 !important;
+    background-size: 110%;
+    background-position: center;
+}
+
+//original selectors
+//.ui-messages-info-icon, 
+//.ui-messages-warn-icon, 
+//.ui-messages-error-icon, 
+//.ui-message-error-icon, 
+//.ui-messages-fatal-icon
+%extend_messages_6 {
+    margin: 2px !important;
+    background-repeat: no-repeat !important;
+    background: none;
+    background-position: center !important;
+    background-size: 70% !important;
+}
+
+//original selectors
+//.ui-message-icon-only .ui-messages-warn-icon, 
+//.ui-message-icon-only .ui-messages-error-icon, 
+//.ui-message-icon-only .ui-message-error-icon, 
+//.ui-message-icon-only .ui-messages-fatal-icon
+%extend_messages_7 {
+    margin: 0 !important;
+    background-repeat: no-repeat !important;
+    background: none;
+    background-position: center !important;
+    background-size: 135% !important;
+}
+
+.ui-messages-info {
+    @extend %extend_messages_2;
+
+    .ui-icon-close {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        @extend %extend_messages_3;
+    }
+}
+
+.ui-messages-warn {
+    @extend %extend_messages_4;
+    
+    .ui-icon-close {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        @extend %extend_messages_3;
+    }
+}
+
+.ui-messages-error {
+    @extend %extend_messages_1;
+    
+    .ui-icon-close {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        @extend %extend_messages_3;
+    }
+}
+
+.ui-messages-fatal {
+    @extend %extend_messages_5;
+    
+    .ui-icon-close {
+        @include fm-restaurar-icono;
+        @include fm-eliminar-font-icon;
+        @extend %extend_messages_3;
+    }
+}
+
+.ui-message-error {
+	border: none !important;
+	background: none !important;
+}
+
+.ui-message-warn {
+    @extend %extend_messages_4;
+}
+
+.ui-message-fatal {
+    @extend %extend_messages_5;
+}
+
+.ui-messages-info-icon {
+    @extend %extend_messages_6;
+    background-image: $url_messages_2 !important;
+    background-position: top !important;
+    background-size: 90% !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.ui-messages-warn-icon {
+    @extend %extend_messages_6;
+    background-image: $url_messages_3 !important;
+    background-position: top !important;
+    background-size: 90% !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.ui-messages-error-icon {
+    @extend %extend_messages_6;
+    background-image: $url_messages_1 !important;
+    background-position: top !important;
+    background-size: 90% !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.ui-message-error-icon {
+    @extend %extend_messages_6;
+    background-image: $url_messages_1 !important;
+    //background-position: top !important;
+    background-size: 120% !important;
+}
+
+.ui-messages-fatal-icon {
+    @extend %extend_messages_6;
+    background-image: $url_messages_4 !important;
+    background-position: top !important;
+    background-size: 90% !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.ui-message-icon-only {
+    .ui-messages-warn-icon {
+        @extend %extend_messages_7;
+    }
+    .ui-messages-error-icon {
+        @extend %extend_messages_7;
+    }
+    .ui-message-error-icon {
+        @extend %extend_messages_7;
+    }
+    .ui-messages-fatal-icon {
+        @extend %extend_messages_7;
+    }
+}
+
+.ui-dialog-message {
+    &.ui-messages-info-icon {
+        margin: -6px 0 0 0 !important;
+    }
+    &.ui-messages-warn-icon {
+        margin: -6px 0 0 0 !important;
+    }
+    &.ui-messages-error-icon {
+        margin: -6px 0 0 0 !important;
+    }
+    &.ui-messages-fatal-icon {
+        margin: -6px 0 0 0 !important;
+    }
+}
+
+.ui-messages ul {
+    margin-left: 45px !important;
+    margin-top: 9px !important;
+}
