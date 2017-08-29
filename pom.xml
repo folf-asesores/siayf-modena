@@ -98,7 +98,7 @@
         <connection>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</connection>
         <url>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</url>
         <developerConnection>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</developerConnection>
-      <tag>folf-modena-saludtlax-0.0.7</tag>
-  </scm>
+        <tag>folf-modena-saludtlax-0.0.7</tag>
+    </scm>
 </project>
 
