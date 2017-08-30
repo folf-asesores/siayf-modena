@@ -8,8 +8,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- The Basics -->
-    <groupId>mx.com.folfasesores</groupId>
-    <artifactId>folf-modena-saludtlax</artifactId>
+    <groupId>mx.gob.saludtlax</groupId>
+    <artifactId>saludtlax-modena</artifactId>
     <version>0.0.8-SNAPSHOT</version>
     <packaging>jar</packaging>
     <dependencies>
@@ -35,15 +35,13 @@
     <build>
         <resources>
             <resource>
-                <targetPath>META-INF</targetPath>
-                <directory>${basedir}/src/main/resources/META-INF</directory>
-                <excludes>
-                    <exclude>**/*.scss</exclude>
-                </excludes>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>false</filtering>
             </resource>
             <resource>
-                <targetPath>mx/com/folfasesores/modena</targetPath>
-                <directory>${basedir}/src/main/resources/mx/com/folfasesores/modena</directory>
+                <targetPath>mx/gob/saludtlax/modena</targetPath>
+                <directory>${basedir}/src/main/resources/mx/gob/saludtlax/modena</directory>
+                <filtering>true</filtering>
                 <includes>
                     <include>build.properties</include>
                 </includes>

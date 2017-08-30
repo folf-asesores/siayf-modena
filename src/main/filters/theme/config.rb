@@ -3,8 +3,8 @@ require 'compass/import-once/activate'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "/src/main/resources/META-INF/resources/primefaces-folf-modena/"
-sass_dir = "/src/main/resources/META-INF/resources/primefaces-folf-modena/scss"
+css_dir = "../../../main/resources/META-INF/resources/primefaces-saludtlax-modena/"
+sass_dir = "scss"
 images_dir = "imagenes"
 javascripts_dir = "js"
 

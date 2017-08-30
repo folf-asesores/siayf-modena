@@ -1,7 +1,7 @@
 ///Cargar los fonts icons de Fontello
-$font_icon_url_prefix: unquote("url(\"\#\{resource[\'primefaces-folf-modena:fuentes/modena-icons/");
+$font_icon_url_prefix: unquote("url(\"\#\{resource[\'primefaces-saludtlax-modena:fuentes/modena-icons/");
 $font_icon_url_sufix: unquote("\']\}\")");
-
+//Prueba
 @font-face {
     font-family: 'modena';
     src: $font_icon_url_prefix + 'modena.eot' + $font_icon_url_sufix;
