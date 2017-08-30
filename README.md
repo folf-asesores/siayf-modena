@@ -1,11 +1,10 @@
-                                  FOLF Modena
-                               Salud de Tlaxcala
+# Modena <br /> Salud de Tlaxcala
 
-  ¿Qué es?
-  -----------
+## ¿Qué es?
+
 
   Son plantillas JSF además de un tema personalizado para PrimeFaces. Basado en 
-  el tema Modena (http://primefaces.org/modena/) y tiene como objetivo principal
+  el tema Modena (https://www.primefaces.org/eos/modena) y tiene como objetivo principal
   seguir las recomendaciones de diseño de Google Material Design 
   (https://www.google.com/design/spec/material-design/introduction.html). 
 
@@ -17,8 +16,8 @@
 
   Notas de lanzamiento
   -------------
-  * Se añadio el área de notificación a la segunda plantilla.
-  * Se elimino la importación de paquetes innecesarios
+  * Cambio de gruopId y artifactId.
+  * Actualización de rutas para que coincidan con el gruopId y el artifactId.
 
   Requerimientos de sistema
   -------------------
@@ -35,7 +34,7 @@
     Sistemas basado en Unix (Linux, Solaris y Mac OS X) y otros:
       
 
-  Instalando FOLF-modena-saludtlax
+  Instalando saludtlax-modena
   ----------------
 
   1) 
