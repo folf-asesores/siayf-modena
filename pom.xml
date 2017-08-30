@@ -3,13 +3,16 @@
     https://maven.apache.org/pom.html
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     
     <modelVersion>4.0.0</modelVersion>
 
     <!-- The Basics -->
-    <groupId>mx.gob.saludtlax</groupId>
-    <artifactId>saludtlax-modena</artifactId>
+    <groupId>mx.gob.saludtlax.siayf</groupId>
+    <artifactId>modena</artifactId>
     <version>0.0.8-SNAPSHOT</version>
     <packaging>jar</packaging>
     <dependencies>
@@ -39,8 +42,8 @@
                 <filtering>false</filtering>
             </resource>
             <resource>
-                <targetPath>mx/gob/saludtlax/modena</targetPath>
-                <directory>${basedir}/src/main/resources/mx/gob/saludtlax/modena</directory>
+                <targetPath>mx/gob/saludtlax/siayf/modena</targetPath>
+                <directory>${basedir}/src/main/resources/mx/gob/saludtlax/siayf/modena</directory>
                 <filtering>true</filtering>
                 <includes>
                     <include>build.properties</include>
@@ -73,9 +76,10 @@
     </build>
     
     <!-- More Project Information -->
-    <name>Theme and Layout para el proyecto de Salud de Tlaxcala</name>
+    <name>Theme and Layout para el proyecto siayf</name>
     <description>Este proyecto define un tema y diseño personalizado para los 
-        componetes de PrimeFaces basado en Modena</description>
+        componetes de PrimeFaces basado en Modena para el proyecto Sistema 
+        Integral de Administración y Finanzas (siayf)</description>
     <organization>
         <name>FOLF Asesores</name>
         <url>folfasesores.com.mx</url>
@@ -93,9 +97,9 @@
     
     <!-- Environment Settings -->
     <scm>
-        <connection>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</connection>
-        <url>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</url>
-        <developerConnection>scm:git:git@github.com:folf-asesores/saludtlax-modena.git</developerConnection>
+        <connection>scm:git:git@github.com:folf-asesores/siayf-modena.git</connection>
+        <url>scm:git:git@github.com:folf-asesores/siayf-modena.git</url>
+        <developerConnection>scm:git:git@github.com:folf-asesores/siayf-modena.git</developerConnection>
         <tag>folf-modena-saludtlax-0.0.7</tag>
     </scm>
 </project>

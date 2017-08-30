@@ -34,8 +34,8 @@ $fm-fonts : (
 ) !default;
 
 $fm-fonts-URLs : (
-    'header_url_prefix' : unquote("url(\"\#\{resource[\'primefaces-saludtlax-modena:fuentes/varela-round/"),
-    'body_url_prefix'   : unquote("url(\"\#\{resource[\'primefaces-saludtlax-modena:fuentes/oxygen/"),
+    'header_url_prefix' : unquote("url(\"\#\{resource[\'primefaces-siayf-modena:fuentes/varela-round/"),
+    'body_url_prefix'   : unquote("url(\"\#\{resource[\'primefaces-siayf-modena:fuentes/oxygen/"),
     'url_sufix'         : unquote("\']\}\")")
 );
 
@@ -81,7 +81,7 @@ $fm-themes : (
         'divider-color'        : $md-color-grey-300, /* 1 */
     ),
     
-    'salud-tlax' : (
+    'siayf' : (
         'primary-color'        : rgb(50, 132, 76),
         'primary-color-dark'   : rgb(42, 111, 64),
         'primary-color-light'  : rgb(70, 185, 106),
@@ -122,7 +122,7 @@ $fm-layout-colors : (
     'footer-bar'       : $md-color-black,
     ),
     
-    'saludtlax-modena' : (
+    'siayf-modena' : (
     'app-bar'          : $md-color-grey-100,
     'background'       : $md-color-grey-50,
     'cards-background' : $md-color-white,
@@ -130,7 +130,7 @@ $fm-layout-colors : (
     ),
 );
 
-$fm-layout-active : 'saludtlax-modena' !default;
+$fm-layout-active : 'siayf-modena' !default;
 
 $fm-colores: (
     "white"        : White,
@@ -157,7 +157,7 @@ $fm-colores: (
 
 $fm-images-URLs : (
     'implementer-url-prefix' : unquote("url(\"\#\{resource[\'imagenes:/"),  
-    'theme-url-prefix' : unquote("url(\"\#\{resource[\'primefaces-saludtlax-modena:imagenes/"),
+    'theme-url-prefix' : unquote("url(\"\#\{resource[\'primefaces-siayf-modena:imagenes/"),
     'url_sufix' : unquote("\']\}\")"),
 );
 
