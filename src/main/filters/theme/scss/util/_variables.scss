@@ -91,6 +91,16 @@ $fm-themes : (
         'secondary-text-color' : rgba($md-color-black, 0.54),
         'divider-color'        : rgba($md-color-black, 0.38), /* 1 */
     ),
+    'cobaez-demo' : (
+        'primary-color'        : rgb(0, 102, 0),
+        'primary-color-dark'   : rgb(1, 53, 0),
+        'primary-color-light'  : rgb(0, 127, 0),
+        'primary-color-text'   : $md-color-white,
+        'accent-color'         : rgb(27, 125, 60), /* 2 */
+        'primary-text-color'   : rgba($md-color-black, 0.87),
+        'secondary-text-color' : rgba($md-color-black, 0.54),
+        'divider-color'        : rgba($md-color-black, 0.38), /* 1 */
+    ),
 ) !default;
 
 /// Esta varibla indica un tema para los componentes como valor predefinido,
@@ -130,7 +140,7 @@ $fm-layout-colors : (
     ),
 );
 
-$fm-layout-active : 'siayf-modena' !default;
+$fm-layout-active : 'light' !default;
 
 $fm-colores: (
     "white"        : White,
