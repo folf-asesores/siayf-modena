@@ -8,7 +8,7 @@ principal seguir las recomendaciones de diseño de [Google Material Design](http
 
 ## Documentación
 
-La mayor parte de la documentación se encuentra en http://folfqa.dyndns.org/folf-showcase
+La mayor parte de la documentación se encuentra en https://folf-asesores.github.io/siayf-modena/
 
 ## Notas de lanzamiento
  * Cambio de gruopId y artifactId.
@@ -31,9 +31,6 @@ PrimeFaces | 5.3
   4) 
 
   5) 
-
-Para la documentación completa, véase 
-http://folfqa.dyndns.org/folf-showcase/secciones/documentacion/implementacion.xhtml#instalacion
 
 # Licencia
 
