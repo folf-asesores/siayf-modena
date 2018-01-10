@@ -8,10 +8,10 @@
 
 Esta documentación está dividida en las siguientes áreas:
 
-    **Implementación:** En esta parte de la documentación hallarás lo necesario
-    para poder tener disponible el tema en tu proyecto.
-    **Disposición (layout):** En esta sección encontrarás lo que necesitas para
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[Implementación](implementacion.md):** En esta parte de la documentación hallarás lo necesario
+    para poder tener disponible el tema en tu proyecto.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Disposición (layout):** En esta sección encontrarás lo que necesitas para
     poder organizar los componentes de tu proyecto sin perder de vista la
-    responsibidad.
-    **Diseño (Clases CSS):** En esta última área encontrarás la explicación de
+    responsibidad.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Diseño (Clases CSS):** En esta última área encontrarás la explicación de
     algunas clases que te apoyarán en presentación de los componentes.
