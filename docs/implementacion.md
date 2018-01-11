@@ -297,7 +297,7 @@ En este elemento se coloca propiamente la vista puesto que aquí es donde se
 
     <ui:define name="moduloContenido">
         <h:form>
-            <p:inputText value="\#{bean.value}" />
+            <p:inputText value="#{bean.value}" />
         </h:form>
     </ui:define>
 
