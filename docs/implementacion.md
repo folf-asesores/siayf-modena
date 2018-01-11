@@ -161,7 +161,6 @@ Este elemento representa el menú del sistema, se recomienda principalmente que
             </p:panelMenu>
         </h:form>
     </ui:define>
-                        
 
 #### menuTareasUsuario
 
@@ -239,7 +238,6 @@ El objetivo principal de este elemento es definir un pequeño texto indicando el
 Este elemento sirve para indicar la versión de la aplicación.
 
     <ui:param name="pieVersion" value="#{modena.version}" />
-                
 
 Una vez creada la plantilla con los menús y el pie de página todas las páginas
  que requieran usar la plantilla principal deben hacer referencia a la plantilla
@@ -254,7 +252,7 @@ Una vez creada la plantilla con los menús y el pie de página todas las página
         template="/plantillas/principal-con-menu.xhtml">
 
         <!-- Su implementación va aquí -->
-    </ui:composition>        
+    </ui:composition>
 
 #### headExtra
 
@@ -268,14 +266,14 @@ Este elemento no será visible al usuario que utilice la aplicación sino que su
         <!-- Ejemplo de inclusión de biblioteca Javascript externa (Google Maps) -->
         <script src="http://maps.google.com/maps/api/js?sensor=true|false"
             type="text/javascript" />
-    </ui:define>                
+    </ui:define>
 
 #### ventanaTitulo
 
 Este elemento representa el título de la ventana por lo cual sólo se debe
  incluir texto dentro de él.
 
-    <ui:param name="ventanaTitulo" value="Tablero :: Modena" />            
+    <ui:param name="ventanaTitulo" value="Tablero :: Modena" />
 
 #### moduloTitulo
 
@@ -382,12 +380,11 @@ Es idéntico al de las plantillas principal.xhtml y secundaria.xhtml. Este
                     styleClass="fm-icon-location">
                 <h:outputText value="Avenida Libertad No. 1107 A" /><br/>
                 <h:outputText styleClass="tab" value="Col. Jesús y San Juan Apizaco, Tlax." /><br/>
-                <h:outputText styleClass="tab" value="C.P 90358" /><br/>    
+                <h:outputText styleClass="tab" value="C.P 90358" /><br/>
             </p:link>
             <h:outputText styleClass="fm-icon-phone" value="(246) 46 26-40" />
         </address>
     </ui:define>
-                        
 
 Los siguientes elementos deben ser implementados por cada página llamando a la
  plantilla local.
@@ -429,7 +426,6 @@ En este elemento se coloca propiamente la vista puesto que aquí es donde se
             <p:button value="Iniciar sesión" href="/inicio.xhtml"/>
         </h:form>
     </ui:define>
-                        
 
 ## Imágenes
 
