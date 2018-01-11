@@ -97,7 +97,7 @@ Muchas aplicaciones Web siguen un patrón muy similar en sus páginas lo cual
 
 ### La estructura de las plantillas: ``principal.xhtml`` y ``secundaria.xhtml``
 
-![Ubicación del plantilla local](/imagenes/documentacion/implementacion--plantilla-principal__plantilla-local.png)
+![Diagrama con la estructura de las plantillas: principal.xhtml y secundaria.xhtml](imagenes/documentacion/implementacion--plantilla-principal__estructura.png)
 
 En la imagen se puede observar cómo están estructuradas de manera internamente
  las plantillas.
@@ -113,6 +113,8 @@ Para su implementación solo habrá que crear un archivo xhtml incluyendo en él
         template="/primefaces-folf-modena/plantillas/principal.xhtml">
         <!-- Su implementación va aquí -->
     </ui:composition>
+
+![Ubicación del plantilla local](imagenes/documentacion/implementacion--plantilla-principal__plantilla-local.png)
 
 Se recomienda crear una plantilla dentro del proyecto que incluya los menús y
  los elementos del pie de página ya que sin ellos se requerirá que en cada
@@ -316,10 +318,18 @@ Lo que se incluya en esta etiqueta puede ser mostrado en la vista y/o puede
         </h:outputScript>
     </ui:define>
 
+![Vista previa con la estructura de las plantillas: principal.xhtml y secundaria.xhtml](imagenes/documentacion/implementacion--plantilla-principal__partes.png)
+
+![Vista previa con la estructura de las plantillas: principal.xhtml y secundaria.xhtml](imagenes/documentacion/implementacion--plantilla-principal__partes-2.png)
+
 ### La estructura de la plantilla miniform.xhtml
+
+![Diagrama con la estructura de las plantilla: miniform.xhtml](imagenes/documentacion/implementacion--miniform__estuctura.png)
 
 En la imagen se puede observar cómo está estructurada de manera internamente la
  plantilla.
+
+![Ubicación de la plantilla local](imagenes/documentacion/implementacion--plantilla-miniform__plantilla-local.png)
 
 De manera semejante a la plantilla principal.xhtml y secundaria.xhtml se
  recomienda crear una plantilla local que implemente las partes comunes de los
@@ -422,6 +432,8 @@ En este elemento se coloca propiamente la vista puesto que aquí es donde se
                         
 
 ## Imágenes
+
+![Ubicación y nombre las imágenes](imagenes/documentacion/implementacion--miniform__imagenes.png)
 
 Dentro de la implementación de la plantilla se requiere de cinco imágenes las
  cuales se emplean en la presentación de la misma, siendo que la primera se
