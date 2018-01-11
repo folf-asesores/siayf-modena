@@ -29,8 +29,8 @@ Agregar el tema Modena es muy sencillo ya que el tema esta empaquetado en un
  artifactory.
 
     <dependency>
-        <groupId>mx.com.folfasesores</groupId>
-        <artifactId>folf-modena</artifactId>
+        <groupId>siayf</groupId>
+        <artifactId>siayf-modena</artifactId>
         <version>{version-mas-actual}</version>
     </dependency>
 
@@ -42,7 +42,7 @@ La única configuración requerida para aplicar el tema se realiza dentro del
 
     <context-param>
         <param-name>primefaces.THEME</param-name>
-        <param-value>folf-modena</param-value>
+        <param-value>siayf-modena</param-value>
     </context-param>
 
 Adicionalmente para el caso de JBoss o Wild**Fly** se debe añadir una
@@ -104,13 +104,13 @@ En la imagen se puede observar cómo están estructuradas de manera internamente
 
 Para su implementación solo habrá que crear un archivo xhtml incluyendo en él la
  etiqueta ``ui:composition`` y colocando en la propiedad template el valor
- ``/primefaces-folf-modena-templates/principal.xhtml``.
+ ``/primefaces-siayf-modena-templates/principal.xhtml``.
 
     <ui:composition xmlns="http://www.w3.org/1999/xhtml"
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
         xmlns:h="http://xmlns.jcp.org/jsf/html"
         xmlns:p="http://primefaces.org/ui"
-        template="/primefaces-folf-modena/plantillas/principal.xhtml">
+        template="/primefaces-siayf-modena/plantillas/principal.xhtml">
         <!-- Su implementación va aquí -->
     </ui:composition>
 
@@ -337,7 +337,7 @@ De manera semejante a la plantilla principal.xhtml y secundaria.xhtml se
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
         xmlns:h="http://xmlns.jcp.org/jsf/html"
         xmlns:p="http://primefaces.org/ui"
-        template="/primefaces-folf-modena/plantillas/miniform.xhtml">
+        template="/primefaces-siayf-modena/plantillas/miniform.xhtml">
 
         <!-- Su implementación va aquí -->
 
