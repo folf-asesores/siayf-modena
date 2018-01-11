@@ -404,7 +404,7 @@ Este elemento representa el título de la ventana por lo cual sólo se debe
 Este elemento se emplea sólo como título de la página, por ello se recomienda
  escribir únicamente texto.
 
-<ui:param name="moduloEncabezadoTitulo" value="Inicio de sesión" />
+    <ui:param name="moduloEncabezadoTitulo" value="Inicio de sesión" />
 
 #### moduloEncabezadoIcono
 
@@ -437,9 +437,9 @@ En este elemento se coloca propiamente la vista puesto que aquí es donde se
 
 Dentro de la implementación de la plantilla se requiere de cinco imágenes las
  cuales se emplean en la presentación de la misma, siendo que la primera se
- emplea para el icono de favoritos (favicon), dos se usan el encabezado
+ emplea para el icono de favoritos (favicon), dos se usan en el encabezado
  (header), una para el fondo y la última en el pie (footer); las imágenes deben
- llevar los siguientes nombres: favicon.png, logo-encabezado-izquierdo.png,
+ llevar los siguientes nombres: ``favicon.png``, ``logo-encabezado-izquierdo.png``,
  ``logo-encabezado-derecho.png``, ``fondo-contenido.svg`` y 
  ``logo-pie-izquierdo.png`` los tipos de imagen son importantes por ellos deben
  ser de la misma extensión; también es importante colocar estos archivo con la
