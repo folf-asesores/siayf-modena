@@ -16,14 +16,14 @@
 
 ## Instalación del tema
 
-Instalación del tema
+### Instalación del tema
 
 Agregar el tema Modena es muy sencillo ya que el tema esta empaquetado en un
  archivo JAR de Java por ello sólo requiere de incluirlo en el classpath de la
  aplicación o en su caso sí se está usando Maven solo se debe incluir la
  dependencia dentro del archivo POM del proyecto.
 
-**Artefacto Maven**:
+### Artefacto Maven
 
 **Requisitos previos**: Haber configurado el archivo ``settings.xml`` para que apunte al
  artifactory.
